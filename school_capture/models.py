@@ -24,7 +24,7 @@ class SourceType(str, Enum):
     OTHER = "other"
 
 
-ENGINE_VERSION = "0.2.0"
+ENGINE_VERSION = "0.3.0"
 
 
 @dataclass
@@ -52,6 +52,7 @@ class SubjectAreaAssessment:
     confidence: float
     summary: str
     themes: list[str] = field(default_factory=list)
+    offerings: list[str] = field(default_factory=list)
     signals: list[QualitativeSignal] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, Any]:
@@ -61,6 +62,7 @@ class SubjectAreaAssessment:
             "confidence": round(self.confidence, 3),
             "summary": self.summary,
             "themes": self.themes,
+            "offerings": self.offerings,
             "signals": [s.to_dict() for s in self.signals],
         }
 

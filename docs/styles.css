@@ -259,6 +259,16 @@ input[type="search"] {
   font-size: 0.78rem;
 }
 
+.offerings {
+  margin-bottom: 0.65rem;
+  font-size: 0.9rem;
+}
+
+.offerings .theme {
+  margin: 0.2rem 0.25rem 0.2rem 0;
+  display: inline-block;
+}
+
 .signal {
   border-left: 3px solid var(--accent);
   padding: 0.45rem 0 0.45rem 0.75rem;

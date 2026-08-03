@@ -176,16 +176,17 @@ pytest -q
 
 Offline tests mock HTTP and use HTML fixtures under `tests/fixtures/pages/`.
 
-## Quality filters (v0.2)
+## Quality filters (v0.3)
 
-Phase 1 deterministic filters reduce boilerplate noise:
+Phase 1–2 deterministic filters reduce boilerplate and vague marketing copy:
 
 - URL blocklist (privacy, cookies, accessibility statements, login, etc.)
 - Sentence blocklist (cookie banners, compliance text, form labels)
 - Main-content HTML extraction (skips nav/footer/aside)
-- Relevance-ranked signals with school-context requirement
-- Evidence thresholds — scores stay low unless ≥2 high-quality excerpts
-- Page-type confidence penalties (accessibility/policy pages)
+- **Specificity gate** — rejects unevidenced claims ("we are inclusive", "caring community")
+- **Concrete offerings** — extracts clubs, subjects, wraparound/breakfast care where listed
+- Relevance-ranked signals; scores favour specific provision over generic values language
+- Evidence thresholds — scores stay low unless concrete offerings or specific excerpts found
 
 Re-run the pilot after engine changes:
 

@@ -192,6 +192,13 @@ function renderDetail(record) {
       <p class="summary">${escapeHtml(area.summary)}</p>
       ${area.confidence < 0.35 ? `<p class="summary"><em>Low confidence — treat as indicative only; visit source links to verify.</em></p>` : ""}
           ${themes ? `<div class="themes">${themes}</div>` : ""}
+      ${
+        (area.offerings || []).length
+          ? `<div class="offerings"><strong>Specific offerings:</strong> ${(area.offerings || [])
+              .map((o) => `<span class="theme">${escapeHtml(o)}</span>`)
+              .join("")}</div>`
+          : ""
+      }
           ${signals || "<p class='summary'>No footnoted excerpts for this area.</p>"}
         </section>`;
     })
