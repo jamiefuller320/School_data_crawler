@@ -176,8 +176,28 @@ pytest -q
 
 Offline tests mock HTTP and use HTML fixtures under `tests/fixtures/pages/`.
 
+## Pilot viewer (GitHub Pages)
+
+A static viewer for pilot results lives in `docs/`:
+
+```bash
+# Re-run pilot and publish JSON to docs/data/
+./scripts/publish-pilot.sh
+
+# Or copy existing output without re-capturing
+cp output/pilot-qualitative-capture.json docs/data/qualitative-capture.json
+```
+
+After pushing to `main`, GitHub Actions deploys to Pages:
+**https://jamiefuller320.github.io/School_data_crawler/**
+
+Enable **Settings → Pages → Source: GitHub Actions** on first deploy.
+
+The viewer shows per-school area scores, themes, and footnoted excerpts from the Hampshire pilot batch.
+
 ## Roadmap
 
+- [x] Hampshire pilot batch + GitHub Pages viewer
 - [ ] LLM-assisted extraction **with mandatory verbatim quotes** (opt-in, never replace footnotes)
 - [ ] Per-URN incremental cache (`output/cache/{urn}.json`)
 - [ ] GitHub Actions workflow with `--limit` for Hampshire soft-launch
