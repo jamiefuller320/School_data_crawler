@@ -18,6 +18,27 @@ UA = (
 DEFAULT_TIMEOUT = 30
 RATE_LIMIT_SECONDS = 0.75
 
+SKIP_TAGS = frozenset(
+    {
+        "script",
+        "style",
+        "noscript",
+        "svg",
+        "nav",
+        "header",
+        "footer",
+        "aside",
+        "form",
+        "iframe",
+    }
+)
+
+MAIN_LANDMARK_TAGS = frozenset({"main", "article"})
+MAIN_CLASS_HINTS = re.compile(
+    r"(^|[\s_-])(main|content|page-body|entry-content|post-content|article)([\s_-]|$)",
+    re.I,
+)
+
 
 def normalize_url(url: str, base: str | None = None) -> str | None:
     url = (url or "").strip()
@@ -58,47 +79,86 @@ def polite_sleep(seconds: float = RATE_LIMIT_SECONDS) -> None:
 
 
 class _LinkTextParser(HTMLParser):
+    """Extract links and text, skipping chrome and preferring main content."""
+
     def __init__(self) -> None:
         super().__init__()
         self.links: list[tuple[str, str]] = []
         self._in_title = False
         self.title = ""
-        self._text_parts: list[str] = []
+        self._all_parts: list[str] = []
+        self._main_parts: list[str] = []
         self._skip_depth = 0
+        self._main_depth = 0
+
+    def _class_attr(self, attrs: list[tuple[str, str | None]]) -> str:
+        return next((v or "" for k, v in attrs if k == "class"), "")
+
+    def _role_attr(self, attrs: list[tuple[str, str | None]]) -> str:
+        return next((v or "" for k, v in attrs if k == "role"), "")
+
+    def _opens_main(self, tag: str, attrs: list[tuple[str, str | None]]) -> bool:
+        if tag in MAIN_LANDMARK_TAGS:
+            return True
+        role = self._role_attr(attrs)
+        if role in ("main", "article"):
+            return True
+        classes = self._class_attr(attrs)
+        return bool(classes and MAIN_CLASS_HINTS.search(classes))
+
+    def _closes_main(self, tag: str) -> bool:
+        return tag in MAIN_LANDMARK_TAGS
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
-        attr = {k: (v or "") for k, v in attrs}
-        if tag in ("script", "style", "noscript"):
+        if tag in SKIP_TAGS:
             self._skip_depth += 1
             return
+        if self._opens_main(tag, attrs):
+            self._main_depth += 1
         if tag == "title":
             self._in_title = True
-        if tag == "a" and attr.get("href"):
-            self.links.append((attr["href"], ""))
+        if tag == "a":
+            href = next((v or "" for k, v in attrs if k == "href"), "")
+            if href:
+                self.links.append((href, ""))
         if tag in ("p", "li", "h1", "h2", "h3", "h4", "td", "th", "div", "span"):
-            self._text_parts.append(" ")
+            self._all_parts.append(" ")
+            if self._main_depth:
+                self._main_parts.append(" ")
 
     def handle_endtag(self, tag: str) -> None:
-        if tag in ("script", "style", "noscript") and self._skip_depth:
+        if tag in SKIP_TAGS and self._skip_depth:
             self._skip_depth -= 1
+        if self._closes_main(tag) and self._main_depth:
+            self._main_depth -= 1
         if tag == "title":
             self._in_title = False
         if tag in ("p", "li", "h1", "h2", "h3", "h4", "td", "th", "div"):
-            self._text_parts.append("\n")
+            self._all_parts.append("\n")
+            if self._main_depth:
+                self._main_parts.append("\n")
 
     def handle_data(self, data: str) -> None:
         if self._skip_depth:
             return
         if self._in_title:
             self.title += data
-        self._text_parts.append(data)
+        self._all_parts.append(data)
+        if self._main_depth:
+            self._main_parts.append(data)
 
-    @property
-    def text(self) -> str:
-        raw = "".join(self._text_parts)
+    def _normalise(self, parts: list[str]) -> str:
+        raw = "".join(parts)
         raw = re.sub(r"[ \t]+", " ", raw)
         raw = re.sub(r"\n{2,}", "\n", raw)
         return raw.strip()
+
+    @property
+    def text(self) -> str:
+        main = self._normalise(self._main_parts)
+        if len(main) >= 120:
+            return main
+        return self._normalise(self._all_parts)
 
 
 def parse_html(html: str) -> _LinkTextParser:

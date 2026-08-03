@@ -139,7 +139,7 @@ function renderCards() {
       (record) => `
       <article class="card" tabindex="0" data-urn="${escapeHtml(record.urn)}" aria-label="View ${escapeHtml(record.name)}">
         <h2>${escapeHtml(record.name)}</h2>
-        <div class="meta">URN ${escapeHtml(record.urn)} · ${record.sourcesScanned} source page(s)</div>
+        <div class="meta">URN ${escapeHtml(record.urn)} · ${record.sourcesScanned} source page(s) · engine ${escapeHtml(record.engineVersion || "")}</div>
         <div class="area-bars">${renderAreaBars(record.areas)}</div>
       </article>`,
     )
@@ -188,8 +188,9 @@ function renderDetail(record) {
 
       return `
         <section class="area-block">
-          <h3>${escapeHtml(AREA_LABELS[area.area] || area.area)} · score ${area.score} · confidence ${Math.round(area.confidence * 100)}%</h3>
-          <p class="summary">${escapeHtml(area.summary)}</p>
+      <h3>${escapeHtml(AREA_LABELS[area.area] || area.area)} · score ${area.score} · confidence ${Math.round(area.confidence * 100)}%</h3>
+      <p class="summary">${escapeHtml(area.summary)}</p>
+      ${area.confidence < 0.35 ? `<p class="summary"><em>Low confidence — treat as indicative only; visit source links to verify.</em></p>` : ""}
           ${themes ? `<div class="themes">${themes}</div>` : ""}
           ${signals || "<p class='summary'>No footnoted excerpts for this area.</p>"}
         </section>`;

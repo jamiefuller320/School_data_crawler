@@ -5,6 +5,7 @@ from __future__ import annotations
 import re
 from urllib.parse import urlparse
 
+from school_capture.filters import classify_page_type, is_blocked_url
 from school_capture.http_utils import (
     link_matches,
     normalize_url,
@@ -59,7 +60,6 @@ SECTION_PATTERNS: dict[str, tuple[str, ...]] = {
         "spiritual",
         "moral",
         "british-values",
-        "inclusion",
     ),
     "behaviour": (
         "behaviour",
@@ -75,18 +75,19 @@ SECTION_PATTERNS: dict[str, tuple[str, ...]] = {
         "send",
         "sen",
         "special-needs",
+        "special-needs",
         "special educational",
+        "send-provision",
         "inclusion",
-        "accessibility",
         "ehcp",
+        "senco",
     ),
     "community": (
         "community",
         "parents",
         "governors",
         "pta",
-        "friends of",
-        "local",
+        "friends-of",
         "partnership",
         "charity",
     ),
@@ -117,6 +118,8 @@ class SchoolWebsiteAdapter:
                 continue
             if not same_site(abs_url, final):
                 continue
+            if is_blocked_url(abs_url):
+                continue
             seen.add(abs_url)
             score = 0
             section = "general"
@@ -127,25 +130,29 @@ class SchoolWebsiteAdapter:
             if score:
                 candidates.append((score, abs_url, section))
 
-        # Always include homepage; prioritise themed pages.
         candidates.sort(key=lambda x: (-x[0], x[1]))
-        urls = [final]
-        for _, url, _ in candidates[: MAX_PAGES - 1]:
+        urls = [final] if not is_blocked_url(final) else []
+        for _, url, _ in candidates[: MAX_PAGES - len(urls)]:
             if url not in urls:
                 urls.append(url)
-        return urls
+        return urls or [final]
 
     def capture(self, school: SchoolInput, url: str) -> RawCapture | None:
+        if is_blocked_url(url):
+            return None
         final, html = safe_fetch(url)
         if not final or not html:
+            return None
+        if is_blocked_url(final):
             return None
         parser = parse_html(html)
         text = parser.text
         if len(text) < 80:
             return None
 
-        section = self._infer_section(final, parser.title)
-        # Trim boilerplate nav noise: keep substantive paragraphs.
+        title = parser.title.strip() or school.name
+        page_type = classify_page_type(final, title)
+        section = self._infer_section(final, title)
         text = re.sub(r"\n{3,}", "\n\n", text)
         if len(text) > 12000:
             text = text[:12000]
@@ -154,8 +161,9 @@ class SchoolWebsiteAdapter:
             url=final,
             source_type=self.source_type,
             text=text,
-            page_title=parser.title.strip() or school.name,
+            page_title=title,
             section=section,
+            meta={"pageType": page_type.value},
         )
 
     def _infer_section(self, url: str, title: str) -> str:
