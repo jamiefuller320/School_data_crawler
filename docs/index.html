@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>School Compass · Qualitative capture pilot</title>
+    <meta
+      name="description"
+      content="Experimental pilot viewer for curriculum, enrichment and ethos evidence captured from school websites and local news."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Qualitative capture pilot</h1>
+      <p>
+        Experimental evidence viewer for
+        <a href="https://schoolcompass.uk" style="color: #d7efe6">schoolcompass.uk</a>
+        — curriculum, enrichment, ethos and related areas from public school
+        websites and positively associated local news.
+      </p>
+      <span class="badge">Pilot · Hampshire · generated <span id="generated-at">—</span></span>
+    </header>
+
+    <main>
+      <div class="disclaimer">
+        <strong>Research preview.</strong> Scores reflect how much relevant
+        evidence was found in scanned public sources — not school quality or
+        Ofsted grades. Every excerpt footnotes to its source URL. Do not use
+        for admissions decisions without visiting schools and reading original
+        sources.
+      </div>
+
+      <section class="stats" aria-label="Pilot summary">
+        <div class="stat">
+          <div class="label">Schools</div>
+          <div class="value" id="stat-schools">—</div>
+        </div>
+        <div class="stat">
+          <div class="label">Excerpts</div>
+          <div class="value" id="stat-signals">—</div>
+        </div>
+        <div class="stat">
+          <div class="label">With evidence</div>
+          <div class="value" id="stat-covered">—</div>
+        </div>
+        <div class="stat">
+          <div class="label">Avg area score</div>
+          <div class="value" id="stat-avg">—</div>
+        </div>
+        <div class="stat">
+          <div class="label">Local authority</div>
+          <div class="value" id="pilot-la">—</div>
+        </div>
+      </section>
+
+      <div class="controls">
+        <input id="search" type="search" placeholder="Search by school name or URN…" />
+        <select id="sort" aria-label="Sort schools">
+          <option value="name">Sort: name</option>
+          <option value="score">Sort: average score</option>
+          <option value="signals">Sort: excerpt count</option>
+        </select>
+      </div>
+
+      <section id="school-grid" class="grid" aria-label="School results"></section>
+      <section id="detail-panel" class="detail hidden" aria-live="polite"></section>
+    </main>
+
+    <footer>
+      Built by the
+      <a href="https://github.com/jamiefuller320/School_data_crawler">School_data_crawler</a>
+      project for potential inclusion in School Compass. Engine version 0.1.0.
+    </footer>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
