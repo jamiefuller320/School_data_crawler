@@ -36,6 +36,40 @@ def test_website_adapter_discovers_themed_pages():
     assert "https://example.testvalley.sch.uk/" in urls
 
 
+def test_assessor_rejects_boilerplate():
+    captures = [
+        RawCapture(
+            url="https://school.example/accessibility-statement",
+            source_type="school-website",
+            text=(
+                "Responsive Design: Our website is designed to work on various devices. "
+                "Form auto complete: adding validation to forms enables our forms. "
+                "The Equality and Human Rights Commission is responsible for enforcement."
+            ),
+            page_title="Accessibility",
+            section="send",
+            meta={"pageType": "accessibility"},
+        ),
+        RawCapture(
+            url="https://school.example/curriculum",
+            source_type="school-website",
+            text=(
+                "We provide a broad and balanced curriculum that is ambitious for all pupils. "
+                "Pupils study reading, writing, mathematics and science across the school. "
+                "Our curriculum is carefully sequenced so knowledge builds over time."
+            ),
+            page_title="Curriculum",
+            section="curriculum",
+            meta={"pageType": "substantive"},
+        ),
+    ]
+    areas = {a.area: a for a in assess_captures(captures)}
+    assert areas["send"].score <= 25
+    assert areas["curriculum"].score >= 40
+    for signal in areas["curriculum"].signals:
+        assert "cookie" not in signal.text.lower()
+
+
 def test_assessor_scores_curriculum_and_enrichment():
     captures = [
         RawCapture(
@@ -63,11 +97,12 @@ def test_assessor_scores_curriculum_and_enrichment():
     areas = {a.area: a for a in assess_captures(captures)}
 
     assert areas["curriculum"].score >= 40
-    assert areas["curriculum"].confidence > 0.2
+    assert areas["curriculum"].confidence >= 0.3
     assert any("curriculum" in t or "gcse" in t for t in areas["curriculum"].themes)
     assert areas["enrichment"].score >= 35
     assert areas["ethos"].score >= 30
-    assert all(a.signals for a in areas.values() if a.score >= 30)
+    for key in ("curriculum", "enrichment", "ethos"):
+        assert areas[key].signals
 
 
 def test_engine_offline_with_mocked_fetch():

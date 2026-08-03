@@ -176,6 +176,23 @@ pytest -q
 
 Offline tests mock HTTP and use HTML fixtures under `tests/fixtures/pages/`.
 
+## Quality filters (v0.2)
+
+Phase 1 deterministic filters reduce boilerplate noise:
+
+- URL blocklist (privacy, cookies, accessibility statements, login, etc.)
+- Sentence blocklist (cookie banners, compliance text, form labels)
+- Main-content HTML extraction (skips nav/footer/aside)
+- Relevance-ranked signals with school-context requirement
+- Evidence thresholds — scores stay low unless ≥2 high-quality excerpts
+- Page-type confidence penalties (accessibility/policy pages)
+
+Re-run the pilot after engine changes:
+
+```bash
+./scripts/publish-pilot.sh
+```
+
 ## Pilot viewer (GitHub Pages)
 
 A static viewer for pilot results lives in `docs/`:
