@@ -1,0 +1,3 @@
+# Runtime: stdlib only (urllib, html.parser, json).
+# Optional dev:
+# pytest>=8.0

@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schoolcompass.uk/schemas/qualitative-capture.schema.json",
+  "title": "QualitativeCaptureIndex",
+  "description": "Experimental qualitative capture sidecar for School Compass comparison_tool",
+  "type": "object",
+  "required": ["generatedAt", "engineVersion", "schoolCount", "records"],
+  "properties": {
+    "generatedAt": { "type": "string", "format": "date" },
+    "engineVersion": { "type": "string" },
+    "schoolCount": { "type": "integer", "minimum": 0 },
+    "stats": { "type": "object" },
+    "records": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/QualitativeCaptureRecord" }
+    }
+  },
+  "$defs": {
+    "QualitativeSignal": {
+      "type": "object",
+      "required": ["text", "sourceUrl", "sourceType", "capturedAt"],
+      "properties": {
+        "text": { "type": "string", "minLength": 1 },
+        "sourceUrl": { "type": "string", "format": "uri" },
+        "sourceType": {
+          "enum": ["school-website", "local-news", "social-media", "other"]
+        },
+        "capturedAt": { "type": "string", "format": "date" },
+        "pageTitle": { "type": "string" },
+        "section": { "type": "string" }
+      }
+    },
+    "SubjectAreaAssessment": {
+      "type": "object",
+      "required": ["area", "score", "confidence", "summary", "themes", "signals"],
+      "properties": {
+        "area": {
+          "enum": [
+            "curriculum",
+            "enrichment",
+            "ethos",
+            "behaviour",
+            "send",
+            "community"
+          ]
+        },
+        "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "summary": { "type": "string" },
+        "themes": { "type": "array", "items": { "type": "string" } },
+        "signals": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/QualitativeSignal" }
+        }
+      }
+    },
+    "QualitativeCaptureRecord": {
+      "type": "object",
+      "required": [
+        "urn",
+        "name",
+        "assessedAt",
+        "engineVersion",
+        "sourcesScanned",
+        "areas"
+      ],
+      "properties": {
+        "urn": { "type": "string" },
+        "name": { "type": "string" },
+        "assessedAt": { "type": "string", "format": "date" },
+        "engineVersion": { "type": "string" },
+        "sourcesScanned": { "type": "integer", "minimum": 0 },
+        "sourceTypes": {
+          "type": "array",
+          "items": {
+            "enum": ["school-website", "local-news", "social-media", "other"]
+          }
+        },
+        "captureNotes": { "type": "array", "items": { "type": "string" } },
+        "areas": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/SubjectAreaAssessment" }
+        }
+      }
+    }
+  }
+}
