@@ -193,6 +193,8 @@ After pushing to `main`, GitHub Actions deploys to Pages:
 
 Enable **Settings → Pages → Source: GitHub Actions** on first deploy.
 
+Deployments run from `main` only (feature branches validate via PR checks, not Pages deploy).
+
 The viewer shows per-school area scores, themes, and footnoted excerpts from the Hampshire pilot batch.
 
 ## Roadmap
