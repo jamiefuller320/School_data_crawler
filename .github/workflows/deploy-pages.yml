@@ -2,7 +2,7 @@ name: Deploy pilot viewer to GitHub Pages
 
 on:
   push:
-    branches: [main, "cursor/**"]
+    branches: [main]
     paths:
       - "docs/**"
       - ".github/workflows/deploy-pages.yml"
