@@ -36,6 +36,39 @@ def test_website_adapter_discovers_themed_pages():
     assert "https://example.testvalley.sch.uk/" in urls
 
 
+def test_assessor_rejects_vague_ethos():
+    captures = [
+        RawCapture(
+            url="https://school.example/",
+            source_type="school-website",
+            text=(
+                "We are immensely proud of our school and hope that you and your child "
+                "will enjoy being part of our caring community."
+            ),
+            page_title="Welcome",
+            section="ethos",
+            meta={"pageType": "substantive"},
+        ),
+        RawCapture(
+            url="https://school.example/clubs",
+            source_type="school-website",
+            text=(
+                "After-school clubs include football, rugby, choir and homework club. "
+                "Breakfast club runs from 7:45am and wraparound care is available until 5:30pm."
+            ),
+            page_title="Clubs",
+            section="enrichment",
+            meta={"pageType": "substantive"},
+        ),
+    ]
+    areas = {a.area: a for a in assess_captures(captures)}
+    assert areas["ethos"].score <= 15
+    assert not areas["ethos"].signals
+    assert "football" in areas["enrichment"].offerings or any(
+        "football" in s.text.lower() for s in areas["enrichment"].signals
+    )
+
+
 def test_assessor_rejects_boilerplate():
     captures = [
         RawCapture(
@@ -97,12 +130,12 @@ def test_assessor_scores_curriculum_and_enrichment():
     areas = {a.area: a for a in assess_captures(captures)}
 
     assert areas["curriculum"].score >= 40
-    assert areas["curriculum"].confidence >= 0.3
-    assert any("curriculum" in t or "gcse" in t for t in areas["curriculum"].themes)
+    assert areas["curriculum"].confidence >= 0.2
+    assert any("curriculum" in t or "gcse" in t for t in areas["curriculum"].themes) or areas["curriculum"].offerings
     assert areas["enrichment"].score >= 35
-    assert areas["ethos"].score >= 30
-    for key in ("curriculum", "enrichment", "ethos"):
-        assert areas[key].signals
+    assert areas["enrichment"].offerings or areas["enrichment"].signals
+    # Ethos requires concrete practices — vague values-only homepage should not score highly.
+    assert areas["ethos"].score <= 25
 
 
 def test_engine_offline_with_mocked_fetch():

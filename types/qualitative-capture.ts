@@ -36,6 +36,8 @@ export interface SubjectAreaAssessment {
   confidence: number;
   summary: string;
   themes: string[];
+  /** Concrete listable items: clubs, subjects, wraparound care, etc. */
+  offerings?: string[];
   signals: QualitativeSignal[];
 }
 
