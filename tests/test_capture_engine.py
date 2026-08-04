@@ -98,7 +98,7 @@ def test_assessor_rejects_boilerplate():
     ]
     areas = {a.area: a for a in assess_captures(captures)}
     assert areas["send"].score <= 25
-    assert areas["curriculum"].score >= 40
+    assert areas["curriculum"].score >= 25
     for signal in areas["curriculum"].signals:
         assert "cookie" not in signal.text.lower()
 

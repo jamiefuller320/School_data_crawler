@@ -1,51 +1,162 @@
 {
-  "generatedAt": "2026-08-03",
-  "engineVersion": "0.3.0",
+  "generatedAt": "2026-08-04",
+  "engineVersion": "0.4.0",
   "schoolCount": 12,
   "records": [
     {
       "urn": "116482",
       "name": "Abbotswood Junior School",
-      "assessedAt": "2026-08-03",
-      "engineVersion": "0.3.0",
-      "sourcesScanned": 3,
+      "assessedAt": "2026-08-04",
+      "engineVersion": "0.4.0",
+      "sourcesScanned": 8,
       "sourceTypes": [
         "school-website"
       ],
       "areas": [
         {
           "area": "curriculum",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about curriculum from scanned sources.",
-          "themes": [],
-          "offerings": [],
-          "signals": []
+          "score": 60,
+          "confidence": 0.755,
+          "summary": "Moderate publicly visible evidence for curriculum (4 specific items). Listed provision includes Personal Development Curriculum, Whole School Curriculum, Year Group Curriculum.",
+          "themes": [
+            "curriculum"
+          ],
+          "offerings": [
+            "Personal Development Curriculum",
+            "Whole School Curriculum",
+            "Year Group Curriculum"
+          ],
+          "signals": [
+            {
+              "text": "Subject Curriculum Overviews",
+              "sourceUrl": "https://www.abbotswoodjuniorschool.org.uk/page/?title=Subject+Curriculum+Overviews&pid=58",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Abbotswood Junior School - Subject Curriculum Overviews",
+              "section": "curriculum"
+            },
+            {
+              "text": "Personal Development Curriculum",
+              "sourceUrl": "https://www.abbotswoodjuniorschool.org.uk/page/?title=Personal+Development+Curriculum&pid=111",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Abbotswood Junior School - Personal Development Curriculum",
+              "section": "curriculum"
+            },
+            {
+              "text": "Whole School Curriculum",
+              "sourceUrl": "https://www.abbotswoodjuniorschool.org.uk/page/?title=Whole+School+Curriculum&pid=56",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Abbotswood Junior School - Whole School Curriculum",
+              "section": "curriculum"
+            },
+            {
+              "text": "Year Group Curriculum",
+              "sourceUrl": "https://www.abbotswoodjuniorschool.org.uk/page/?title=Year+Group+Curriculum&pid=57",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Abbotswood Junior School - Year Group Curriculum",
+              "section": "curriculum"
+            }
+          ]
         },
         {
           "area": "enrichment",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about enrichment and extra-curricular activity from scanned sources.",
-          "themes": [],
-          "offerings": [],
-          "signals": []
+          "score": 66,
+          "confidence": 0.685,
+          "summary": "Strong publicly visible evidence for enrichment and extra-curricular activity (4 specific items). Listed provision includes Holiday Multisport Clubs.",
+          "themes": [
+            "after school",
+            "club",
+            "clubs",
+            "enrichment",
+            "opportunities",
+            "sport"
+          ],
+          "offerings": [
+            "Holiday Multisport Clubs"
+          ],
+          "signals": [
+            {
+              "text": "Holiday Multisport Clubs",
+              "sourceUrl": "https://www.abbotswoodjuniorschool.org.uk/page/?title=Holiday+Multisport+Clubs&pid=47",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Abbotswood Junior School - Holiday Multisport Clubs",
+              "section": "enrichment"
+            },
+            {
+              "text": "Clubs We have a wide variety of clubs at Abbotswood, both before school and after school and they change each term.",
+              "sourceUrl": "https://www.abbotswoodjuniorschool.org.uk/page/?title=Clubs&pid=39",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Abbotswood Junior School - Clubs",
+              "section": "enrichment"
+            },
+            {
+              "text": "We have designed our curriculum around our local context, with a focus on developing vocabulary and speaking and listening skills, while also providing a range of cultural capital enrichment opportunities.",
+              "sourceUrl": "https://www.abbotswoodjuniorschool.org.uk/page/?title=Curriculum&pid=9",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Abbotswood Junior School - Curriculum",
+              "section": "curriculum"
+            },
+            {
+              "text": "Holiday Multisport Clubs At Abbotswood, our sports coaches run Multi-sports clubs on selected days of the school holidays.",
+              "sourceUrl": "https://www.abbotswoodjuniorschool.org.uk/page/?title=Holiday+Multisport+Clubs&pid=47",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Abbotswood Junior School - Holiday Multisport Clubs",
+              "section": "enrichment"
+            }
+          ]
         },
         {
           "area": "ethos",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about ethos and values from scanned sources.",
-          "themes": [],
-          "offerings": [],
-          "signals": []
+          "score": 57,
+          "confidence": 0.565,
+          "summary": "Moderate publicly visible evidence for ethos and values (2 specific items). Listed provision includes citizenship.",
+          "themes": [
+            "british values",
+            "caring",
+            "character",
+            "community",
+            "happy",
+            "respect",
+            "values"
+          ],
+          "offerings": [
+            "citizenship"
+          ],
+          "signals": [
+            {
+              "text": "Abbotswood is a happy and caring school community built on five core school values: Stickability, Teamwork, Aspiration, Respect and Stretch To encourage children to remember our values, they spell out the word STARS which is integral to our school logo.",
+              "sourceUrl": "https://www.abbotswoodjuniorschool.org.uk/page/?title=Curriculum&pid=9",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Abbotswood Junior School - Curriculum",
+              "section": "curriculum"
+            },
+            {
+              "text": "Personal Development Curriculum Our Personal Development Curriculum is broken down into the 5 areas: British Values - Character Development - Citizenship - SMSC - PSHE and RSE curriculum Ongoing across all Year Groups: Protected characteristics SMSC topics through RE days and assemblies Personal Development Curriculum",
+              "sourceUrl": "https://www.abbotswoodjuniorschool.org.uk/page/?title=Personal+Development+Curriculum&pid=111",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Abbotswood Junior School - Personal Development Curriculum",
+              "section": "curriculum"
+            }
+          ]
         },
         {
           "area": "behaviour",
           "score": 0,
           "confidence": 0.05,
           "summary": "Little public evidence found about behaviour and pastoral care from scanned sources.",
-          "themes": [],
+          "themes": [
+            "positive",
+            "well-being"
+          ],
           "offerings": [],
           "signals": []
         },
@@ -75,9 +186,9 @@
     {
       "urn": "116266",
       "name": "Abbotts Ann Church of England Primary School",
-      "assessedAt": "2026-08-03",
-      "engineVersion": "0.3.0",
-      "sourcesScanned": 7,
+      "assessedAt": "2026-08-04",
+      "engineVersion": "0.4.0",
+      "sourcesScanned": 6,
       "sourceTypes": [
         "school-website"
       ],
@@ -100,9 +211,9 @@
         },
         {
           "area": "enrichment",
-          "score": 85,
-          "confidence": 0.92,
-          "summary": "Strong publicly visible evidence for enrichment and extra-curricular activity (4 specific excerpts). Specific offerings include football, netball, coding, drama, art, singing\u2026.",
+          "score": 94,
+          "confidence": 0.94,
+          "summary": "Strong publicly visible evidence for enrichment and extra-curricular activity (13 specific items). Listed provision includes Climate Ambassador, Collective Worship Monitors, Eco Team, House Captain, Junior Librarian, Junior Road Safety Officer, School Council, Sport Champion\u2026.",
           "themes": [
             "after school",
             "art",
@@ -113,52 +224,59 @@
             "sport"
           ],
           "offerings": [
+            "Climate Ambassador",
+            "Collective Worship Monitors",
+            "Eco Team",
+            "House Captain",
+            "Junior Librarian",
+            "Junior Road Safety Officer",
+            "School Council",
+            "Sport Champion",
             "football",
             "netball",
             "coding",
             "drama",
             "art",
-            "singing",
-            "board games",
-            "much more",
-            "mini momentum netball https:",
-            "minimomentum.co.uk",
-            "(thursday after school)",
-            "ph sports football https:",
-            "phactiveed.co.uk",
-            "pages",
-            "contact-our-clubs (thursday after school)"
+            "wraparound care"
           ],
           "signals": [
             {
-              "text": "Abbotts Ann Church of England Primary School - Clubs Clubs We are pleased to offer a range of extra curricular activities including; art, singing, coding, football, netball, board games, drama and much more.",
-              "sourceUrl": "https://www.abbottsann.hants.sch.uk/Parents/Clubs/",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "Abbotts Ann Church of England Primary School - Clubs",
-              "section": "enrichment"
-            },
-            {
-              "text": "The clubs which do run in Spring 1 are: Young Heroes (Monday lunchtime), Mini Momentum Netball https://minimomentum.co.uk/ (Thursday after school) and PH Sports Football https://phactiveed.co.uk/pages/contact-our-clubs (Thursday after school).",
-              "sourceUrl": "https://www.abbottsann.hants.sch.uk/Parents/Clubs/",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "Abbotts Ann Church of England Primary School - Clubs",
-              "section": "enrichment"
-            },
-            {
-              "text": "Summer Term School Clubs 2026 Club List - Summer Term 2026 Spring Term School Clubs 2026 During Spring 1, we do not expect teachers to run lunchtime or afterschool clubs to ensure we support and prioritise their wellbeing and work load.",
-              "sourceUrl": "https://www.abbottsann.hants.sch.uk/Parents/Clubs/",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "Abbotts Ann Church of England Primary School - Clubs",
-              "section": "enrichment"
-            },
-            {
-              "text": "The children in Year 6 are offered opportunities throughout the year to take part in leading aspects of our Collective Worship traditions and routines.",
+              "text": "Pupil Enrichment and Leadership: Climate Ambassador",
               "sourceUrl": "https://www.abbottsann.hants.sch.uk/Curriculum/Pupil-Enrichment-and-Leadership/",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Abbotts Ann Church of England Primary School - Pupil Enrichment and Leadership",
+              "section": "curriculum"
+            },
+            {
+              "text": "Pupil Enrichment and Leadership: Collective Worship Monitors",
+              "sourceUrl": "https://www.abbottsann.hants.sch.uk/Curriculum/Pupil-Enrichment-and-Leadership/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Abbotts Ann Church of England Primary School - Pupil Enrichment and Leadership",
+              "section": "curriculum"
+            },
+            {
+              "text": "Pupil Enrichment and Leadership: Eco Team",
+              "sourceUrl": "https://www.abbottsann.hants.sch.uk/Curriculum/Pupil-Enrichment-and-Leadership/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Abbotts Ann Church of England Primary School - Pupil Enrichment and Leadership",
+              "section": "curriculum"
+            },
+            {
+              "text": "Pupil Enrichment and Leadership: House Captain",
+              "sourceUrl": "https://www.abbottsann.hants.sch.uk/Curriculum/Pupil-Enrichment-and-Leadership/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Abbotts Ann Church of England Primary School - Pupil Enrichment and Leadership",
+              "section": "curriculum"
+            },
+            {
+              "text": "Pupil Enrichment and Leadership: Junior Librarian",
+              "sourceUrl": "https://www.abbottsann.hants.sch.uk/Curriculum/Pupil-Enrichment-and-Leadership/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
               "pageTitle": "Abbotts Ann Church of England Primary School - Pupil Enrichment and Leadership",
               "section": "curriculum"
             }
@@ -167,23 +285,20 @@
         {
           "area": "ethos",
           "score": 20,
-          "confidence": 0.23,
-          "summary": "Some concrete ethos and values details found on the school website. Specific offerings include charity, worship.",
+          "confidence": 0.13,
+          "summary": "Limited public evidence for ethos and values (1 excerpt; mostly general statements rather than specific provision).",
           "themes": [
             "character",
             "ethos",
             "safe"
           ],
-          "offerings": [
-            "charity",
-            "worship"
-          ],
+          "offerings": [],
           "signals": [
             {
               "text": "We will continue to work on our: \u2018Keep Safe\u2019 messages, Environment and charity work \u2018 Learning behaviours\u2019 Collective Worship Monitors Collective Worship Monitors play an integral role in upholding our distinct Christian character and whole school ethos at Abbotts Ann CE Primary.",
               "sourceUrl": "https://www.abbottsann.hants.sch.uk/Curriculum/Pupil-Enrichment-and-Leadership/",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
+              "capturedAt": "2026-08-04",
               "pageTitle": "Abbotts Ann Church of England Primary School - Pupil Enrichment and Leadership",
               "section": "curriculum"
             }
@@ -209,12 +324,31 @@
         },
         {
           "area": "community",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about community and parental engagement from scanned sources.",
+          "score": 32,
+          "confidence": 0.485,
+          "summary": "Limited publicly visible evidence for community and parental engagement (2 specific items). Listed provision includes mathematics.",
           "themes": [],
-          "offerings": [],
-          "signals": []
+          "offerings": [
+            "mathematics"
+          ],
+          "signals": [
+            {
+              "text": "Information for Parents: Primary National Curriculum - English",
+              "sourceUrl": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Abbotts Ann Church of England Primary School - Curriculum Information",
+              "section": "curriculum"
+            },
+            {
+              "text": "Information for Parents: Primary National Curriculum - Mathematics",
+              "sourceUrl": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Abbotts Ann Church of England Primary School - Curriculum Information",
+              "section": "curriculum"
+            }
+          ]
         }
       ],
       "captureNotes": [
@@ -224,8 +358,8 @@
     {
       "urn": "116234",
       "name": "Alderwood School",
-      "assessedAt": "2026-08-03",
-      "engineVersion": "0.3.0",
+      "assessedAt": "2026-08-04",
+      "engineVersion": "0.4.0",
       "sourcesScanned": 8,
       "sourceTypes": [
         "school-website"
@@ -233,18 +367,34 @@
       "areas": [
         {
           "area": "curriculum",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about curriculum from scanned sources.",
-          "themes": [],
+          "score": 20,
+          "confidence": 0.13,
+          "summary": "Limited public evidence for curriculum (1 excerpt; mostly general statements rather than specific provision).",
+          "themes": [
+            "curriculum",
+            "key stage",
+            "progress",
+            "reading",
+            "stem",
+            "subjects"
+          ],
           "offerings": [],
-          "signals": []
+          "signals": [
+            {
+              "text": "The school ethos throughout the school is centred on our school values of Kindness, Honesty, Respect, Commitment, Resilience and Independence, not only within the curriculum but also through our House System on the junior and senior sites.",
+              "sourceUrl": "https://www.alderwood.hants.sch.uk/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Alderwood School - Home",
+              "section": "homepage"
+            }
+          ]
         },
         {
           "area": "enrichment",
-          "score": 71,
-          "confidence": 0.9,
-          "summary": "Strong publicly visible evidence for enrichment and extra-curricular activity (3 specific excerpts). Specific offerings include after school club, operates between 3pm, 6pm at maple vue, art club, art, including an art club\u2026.",
+          "score": 70,
+          "confidence": 0.885,
+          "summary": "Strong publicly visible evidence for enrichment and extra-curricular activity (5 specific items). Listed provision includes after school club, breakfast club, after school club for infant, art club, art.",
           "themes": [
             "after school",
             "art",
@@ -253,19 +403,17 @@
           ],
           "offerings": [
             "after school club",
-            "operates between 3pm",
-            "6pm at maple vue",
+            "breakfast club",
+            "after school club for infant",
             "art club",
-            "art",
-            "including an art club",
-            "run monday to friday during term time"
+            "art"
           ],
           "signals": [
             {
-              "text": "The After School Club operates between 3pm and 6pm at Maple Vue.",
+              "text": "Breakfast/After School Clubs Our Breakfast Club and After School Club for infant and junior children operate daily from the Maple Vue Children\u2019s Centre (across the playground from the infant school).",
               "sourceUrl": "https://www.alderwood.hants.sch.uk/Breakfast-After-School-Clubs/",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
+              "capturedAt": "2026-08-04",
               "pageTitle": "Alderwood School - Breakfast/After School Clubs",
               "section": "enrichment"
             },
@@ -273,28 +421,58 @@
               "text": "All these children are included in a planned programme of induction activities, including an art club.",
               "sourceUrl": "https://www.alderwood.hants.sch.uk/Parents/Admissions/",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
+              "capturedAt": "2026-08-04",
               "pageTitle": "Alderwood School - Admissions",
               "section": "ethos"
+            },
+            {
+              "text": "The After School Club operates between 3pm and 6pm at Maple Vue.",
+              "sourceUrl": "https://www.alderwood.hants.sch.uk/Breakfast-After-School-Clubs/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Alderwood School - Breakfast/After School Clubs",
+              "section": "enrichment"
             },
             {
               "text": "The clubs run Monday to Friday during term time.",
               "sourceUrl": "https://www.alderwood.hants.sch.uk/Breakfast-After-School-Clubs/",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
+              "capturedAt": "2026-08-04",
               "pageTitle": "Alderwood School - Breakfast/After School Clubs",
+              "section": "enrichment"
+            },
+            {
+              "text": "Clubs & Activities Rock and Pop Foundation delivers high-quality instrumental lessons here within our school.",
+              "sourceUrl": "https://www.alderwood.hants.sch.uk/Clubs-Activities-09042020145748/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Alderwood School - Clubs &amp; Activities",
               "section": "enrichment"
             }
           ]
         },
         {
           "area": "ethos",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about ethos and values from scanned sources.",
-          "themes": [],
+          "score": 20,
+          "confidence": 0.13,
+          "summary": "Limited public evidence for ethos and values (1 excerpt; mostly general statements rather than specific provision).",
+          "themes": [
+            "ethos",
+            "kindness",
+            "respect",
+            "values"
+          ],
           "offerings": [],
-          "signals": []
+          "signals": [
+            {
+              "text": "The school ethos throughout the school is centred on our school values of Kindness, Honesty, Respect, Commitment, Resilience and Independence, not only within the curriculum but also through our House System on the junior and senior sites.",
+              "sourceUrl": "https://www.alderwood.hants.sch.uk/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Alderwood School - Home",
+              "section": "homepage"
+            }
+          ]
         },
         {
           "area": "behaviour",
@@ -331,132 +509,83 @@
     {
       "urn": "116358",
       "name": "All Saints Church of England Aided Junior School",
-      "assessedAt": "2026-08-03",
-      "engineVersion": "0.3.0",
-      "sourcesScanned": 8,
+      "assessedAt": "2026-08-04",
+      "engineVersion": "0.4.0",
+      "sourcesScanned": 6,
       "sourceTypes": [
         "school-website"
       ],
       "areas": [
         {
           "area": "curriculum",
-          "score": 72,
-          "confidence": 0.87,
-          "summary": "Strong publicly visible evidence for curriculum (2 specific excerpts). Specific offerings include music, as well as our own, allowing for a broad, balanced range of learning, computing, geography\u2026.",
+          "score": 30,
+          "confidence": 0.17,
+          "summary": "Concrete curriculum details found on the school website. Listed provision includes music.",
           "themes": [
             "balanced",
             "broad",
             "curriculum",
-            "reading",
-            "science",
-            "subjects",
-            "writing"
+            "subjects"
           ],
           "offerings": [
-            "music",
-            "as well as our own",
-            "allowing for a broad",
-            "balanced range of learning",
-            "computing",
-            "geography",
-            "science",
-            "history",
-            "maths",
-            "art"
+            "music"
           ],
           "signals": [
             {
               "text": "The curriculum offered combines planning provided by the Hampshire Music Service, as well as our own, allowing for a broad and balanced range of learning.",
               "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/music",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
+              "capturedAt": "2026-08-04",
               "pageTitle": "All Saints Junior School - Music",
-              "section": "curriculum"
-            },
-            {
-              "text": "Subjects Maths Writing Reading Science Geography History RE PE DT PHSE Art Music Computing MFL All Saints Junior School | Hosted by New Era Technology X",
-              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "All Saints Junior School - Subjects",
               "section": "curriculum"
             }
           ]
         },
         {
           "area": "enrichment",
-          "score": 100,
-          "confidence": 0.92,
-          "summary": "Strong publicly visible evidence for enrichment and extra-curricular activity (15 specific excerpts). Specific offerings include at all saints, promoting a positive approach to health, fitness, sports clubs at all saints, choir, music\u2026.",
+          "score": 55,
+          "confidence": 0.72,
+          "summary": "Moderate publicly visible evidence for enrichment and extra-curricular activity (4 specific items). Listed provision includes music, geography.",
           "themes": [
-            "after school",
             "art",
-            "choir",
-            "club",
-            "clubs",
-            "extra-curricular",
-            "festival",
             "music",
             "opportunities",
-            "orchestra",
-            "participate",
-            "sport"
+            "trip"
           ],
           "offerings": [
-            "at all saints",
-            "promoting a positive approach to health",
-            "fitness",
-            "sports clubs at all saints",
-            "choir",
             "music",
-            "singing our choir",
-            "mix of children from all year groups",
-            "song\u2019 concert",
-            "fleet lions christmas carol concert",
-            "fleet christmas festivities",
-            "christmas tree festival at st philips",
-            "st james\u2019 church",
-            "athletics",
-            "football"
+            "geography"
           ],
           "signals": [
-            {
-              "text": "Sports Clubs At All Saints, we aim to provide opportunities for all children to participate in activities, promoting a positive approach to health and fitness.",
-              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/performingarts/artsandsport",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "All Saints Junior School - Sport",
-              "section": "enrichment"
-            },
-            {
-              "text": "Singing Our choir, a mix of children from all year groups, have sung at a range of community events including the Hampshire Music Service \u2018My Voice, Our Song\u2019 concert, the Fleet Lions Christmas Carol Concert, Fleet Christmas Festivities and the Christmas Tree Festival at St Philips and St James\u2019 Church.",
-              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/performingarts/music",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "All Saints Junior School - Music",
-              "section": "enrichment"
-            },
-            {
-              "text": "Clubs on offer include: football, hockey, athletics and judo.",
-              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/performingarts/artsandsport",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "All Saints Junior School - Sport",
-              "section": "enrichment"
-            },
-            {
-              "text": "We employ peripatetic instrumental music teachers who visit the school on a weekly basis to teach the children brass, woodwind, keyboard, guitars, string and percussion instruments.",
-              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/performingarts/musiclessons",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "All Saints Junior School - Music lessons",
-              "section": "enrichment"
-            },
             {
               "text": "Through music the children increase their self-confidence, creativity and imagination and are provided with opportunities for self-expression and a sense of personal achievement, ensuring that every child fulfils their musical potential.",
               "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/music",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "All Saints Junior School - Music",
+              "section": "curriculum"
+            },
+            {
+              "text": "Our children will have opportunities to explore geography in action (completing fieldwork trips in every year group).",
+              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/geography",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "All Saints Junior School - Geography",
+              "section": "curriculum"
+            },
+            {
+              "text": "All Saints Junior School At All Saints Junior School we feel whole-heartedly that music contributes to the development of the whole child emotionally, spiritually and socially.",
+              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/music",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "All Saints Junior School - Music",
+              "section": "curriculum"
+            },
+            {
+              "text": "Singing is a highly important part of our music curriculum.",
+              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/music",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
               "pageTitle": "All Saints Junior School - Music",
               "section": "curriculum"
             }
@@ -464,12 +593,47 @@
         },
         {
           "area": "ethos",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about ethos and values from scanned sources.",
-          "themes": [],
-          "offerings": [],
-          "signals": []
+          "score": 67,
+          "confidence": 0.66,
+          "summary": "Strong publicly visible evidence for ethos and values (3 specific items). Listed provision includes geography, computing.",
+          "themes": [
+            "belong",
+            "community",
+            "moral",
+            "nurturing",
+            "safe",
+            "spiritual"
+          ],
+          "offerings": [
+            "geography",
+            "computing"
+          ],
+          "signals": [
+            {
+              "text": "At the heart of our school curriculum is a desire to spark our children\u2019s curiosity about the wider world, nurturing a sense of belonging, care and responsibility; technology allows us to do this in new and effective ways, acting as a gateway to the world.",
+              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/computing",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "All Saints Junior School - Computing",
+              "section": "curriculum"
+            },
+            {
+              "text": "Geography helps children to develop a range of investigative and problem-solving skills that are transferable to other curriculum areas and which can be used to promote children\u2019s spiritual, moral, social and cultural development, whilst also feeding their natural curiosity.",
+              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/geography",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "All Saints Junior School - Geography",
+              "section": "curriculum"
+            },
+            {
+              "text": "For us at All Saints, on-line safety is a focal point throughout each computing module, preparing our children to be responsible members of our ever-growing on-line community.",
+              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/computing",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "All Saints Junior School - Computing",
+              "section": "curriculum"
+            }
+          ]
         },
         {
           "area": "behaviour",
@@ -506,39 +670,159 @@
     {
       "urn": "116326",
       "name": "All Saints Church of England Primary School",
-      "assessedAt": "2026-08-03",
-      "engineVersion": "0.3.0",
-      "sourcesScanned": 1,
+      "assessedAt": "2026-08-04",
+      "engineVersion": "0.4.0",
+      "sourcesScanned": 7,
       "sourceTypes": [
         "school-website"
       ],
       "areas": [
         {
           "area": "curriculum",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about curriculum from scanned sources.",
-          "themes": [],
-          "offerings": [],
-          "signals": []
+          "score": 99,
+          "confidence": 0.94,
+          "summary": "Strong publicly visible evidence for curriculum (23 specific items). Listed provision includes music, computing, geography, mathematics, physical education, religious education, Curriculum and Assessment, Teaching & Learning\u2026. 3 items corroborated across multiple pages.",
+          "themes": [
+            "ambitious",
+            "curriculum",
+            "mathematics",
+            "progress",
+            "science"
+          ],
+          "offerings": [
+            "music",
+            "computing",
+            "geography",
+            "mathematics",
+            "physical education",
+            "religious education",
+            "Curriculum and Assessment",
+            "Teaching & Learning",
+            "All Saints Curriculum Overview",
+            "Year R LTP",
+            "art"
+          ],
+          "signals": [
+            {
+              "text": "Our Music Curriculum: Our Music Curriculum",
+              "sourceUrl": "https://www.allsaintsceprimary.co.uk/our-music-curriculum/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Our Music Curriculum | All Saints Church of England Primary School",
+              "section": "curriculum"
+            },
+            {
+              "text": "Our Safeguarding Curriculum: Our Computing Curriculum",
+              "sourceUrl": "https://www.allsaintsceprimary.co.uk/curriculum-and-assessment/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Curriculum and Assessment | All Saints Church of England Primary School",
+              "section": "curriculum"
+            },
+            {
+              "text": "Our Safeguarding Curriculum: Our English Curriculum",
+              "sourceUrl": "https://www.allsaintsceprimary.co.uk/curriculum-and-assessment/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Curriculum and Assessment | All Saints Church of England Primary School",
+              "section": "curriculum"
+            },
+            {
+              "text": "Our Safeguarding Curriculum: Our Geography Curriculum",
+              "sourceUrl": "https://www.allsaintsceprimary.co.uk/curriculum-and-assessment/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Curriculum and Assessment | All Saints Church of England Primary School",
+              "section": "curriculum"
+            },
+            {
+              "text": "Our Safeguarding Curriculum: Our History Curriculum",
+              "sourceUrl": "https://www.allsaintsceprimary.co.uk/curriculum-and-assessment/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Curriculum and Assessment | All Saints Church of England Primary School",
+              "section": "curriculum"
+            }
+          ]
         },
         {
           "area": "enrichment",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about enrichment and extra-curricular activity from scanned sources.",
-          "themes": [],
-          "offerings": [],
-          "signals": []
+          "score": 64,
+          "confidence": 0.78,
+          "summary": "Moderate publicly visible evidence for enrichment and extra-curricular activity (5 specific items). Listed provision includes music, after school club.",
+          "themes": [
+            "after school",
+            "club",
+            "clubs",
+            "music"
+          ],
+          "offerings": [
+            "music",
+            "after school club"
+          ],
+          "signals": [
+            {
+              "text": "Music Long Term Plan Overview: Music Long Term Plan",
+              "sourceUrl": "https://www.allsaintsceprimary.co.uk/our-music-curriculum/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Our Music Curriculum | All Saints Church of England Primary School",
+              "section": "curriculum"
+            },
+            {
+              "text": "Music Progression Document: Music progression document",
+              "sourceUrl": "https://www.allsaintsceprimary.co.uk/our-music-curriculum/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Our Music Curriculum | All Saints Church of England Primary School",
+              "section": "curriculum"
+            },
+            {
+              "text": "Wraparound Earlybirds and After School Clubs: Wraparound Earlybirds and After School Clubs",
+              "sourceUrl": "https://www.allsaintsceprimary.co.uk/wraparound-earlybirds-and-after-school-clubs/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Wraparound Earlybirds and After School Clubs | All Saints Church of England Primary School",
+              "section": "enrichment"
+            },
+            {
+              "text": "For more information please contact Mrs Naylor in the school office by phone on 01962 853179 or by email at adminoffice@allsaints-pri.hants.sch.uk Wraparound After School Clubs Each session will be from 3.30pm - 5.00pm From September 2025, clubs will cost \u00a38.50 per session.",
+              "sourceUrl": "https://www.allsaintsceprimary.co.uk/wraparound-earlybirds-and-after-school-clubs/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Wraparound Earlybirds and After School Clubs | All Saints Church of England Primary School",
+              "section": "enrichment"
+            },
+            {
+              "text": "All children on the school roll are eligible to apply, using the Application Form for After School Clubs.",
+              "sourceUrl": "https://www.allsaintsceprimary.co.uk/wraparound-earlybirds-and-after-school-clubs/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Wraparound Earlybirds and After School Clubs | All Saints Church of England Primary School",
+              "section": "enrichment"
+            }
+          ]
         },
         {
           "area": "ethos",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about ethos and values from scanned sources.",
-          "themes": [],
+          "score": 20,
+          "confidence": 0.13,
+          "summary": "Limited public evidence for ethos and values (1 excerpt; mostly general statements rather than specific provision).",
+          "themes": [
+            "community",
+            "values"
+          ],
           "offerings": [],
-          "signals": []
+          "signals": [
+            {
+              "text": "Through our curriculum, we develop the essential knowledge, skills and understanding children need - foundations built on our values of Love, Hope and Community.",
+              "sourceUrl": "https://www.allsaintsceprimary.co.uk/curriculum-and-assessment/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Curriculum and Assessment | All Saints Church of England Primary School",
+              "section": "curriculum"
+            }
+          ]
         },
         {
           "area": "behaviour",
@@ -551,35 +835,81 @@
         },
         {
           "area": "send",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about SEND and inclusion from scanned sources.",
-          "themes": [],
-          "offerings": [],
-          "signals": []
-        },
-        {
-          "area": "community",
-          "score": 49,
-          "confidence": 0.27,
-          "summary": "Some concrete community and parental engagement details found on the school website. Specific offerings include catherine's road, winchester, wednesday 4th november 2026 1.30pm.",
+          "score": 65,
+          "confidence": 0.885,
+          "summary": "Strong publicly visible evidence for SEND and inclusion (6 specific items). Listed provision includes Illness & Absence, Key Information, Hampshire Local Offer, SEND Information, Statutory Info.",
           "themes": [
-            "community",
-            "parents"
+            "sen",
+            "send"
           ],
           "offerings": [
-            "catherine's road",
-            "winchester",
-            "wednesday 4th november 2026 1.30pm"
+            "Illness & Absence",
+            "Key Information",
+            "Hampshire Local Offer",
+            "SEND Information",
+            "Statutory Info"
           ],
           "signals": [
             {
-              "text": "Catherine's Road, Winchester, SO23 0PS Useful Links About Us Teaching & Learning Parents Info Statutory Info News & Events Community Important Notice Year R 2027 School Tours - Friday 2nd October 2026 9.30 am and Wednesday 4th November 2026 1.30pm.",
-              "sourceUrl": "https://www.allsaintsceprimary.co.uk",
+              "text": "Illness & Absence: Illness & Absence",
+              "sourceUrl": "https://www.allsaintsceprimary.co.uk/illness-absence/",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "Home | All Saints Church of England Primary School",
-              "section": "homepage"
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Illness & Absence | All Saints Church of England Primary School",
+              "section": "send"
+            },
+            {
+              "text": "Illness & Absence: Key Information",
+              "sourceUrl": "https://www.allsaintsceprimary.co.uk/illness-absence/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Illness & Absence | All Saints Church of England Primary School",
+              "section": "send"
+            },
+            {
+              "text": "SEND Information: Hampshire Local Offer",
+              "sourceUrl": "https://www.allsaintsceprimary.co.uk/send-information/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "SEND Information | All Saints Church of England Primary School",
+              "section": "send"
+            },
+            {
+              "text": "SEND Information: SEND Information",
+              "sourceUrl": "https://www.allsaintsceprimary.co.uk/send-information/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "SEND Information | All Saints Church of England Primary School",
+              "section": "send"
+            },
+            {
+              "text": "SEND Information: Statutory Info",
+              "sourceUrl": "https://www.allsaintsceprimary.co.uk/send-information/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "SEND Information | All Saints Church of England Primary School",
+              "section": "send"
+            }
+          ]
+        },
+        {
+          "area": "community",
+          "score": 20,
+          "confidence": 0.13,
+          "summary": "Limited public evidence for community and parental engagement (1 excerpt; mostly general statements rather than specific provision).",
+          "themes": [
+            "local",
+            "partnership"
+          ],
+          "offerings": [],
+          "signals": [
+            {
+              "text": "Statutory Info SEND Information Hampshire Local Offer Ordinarily Available Provision and SEND support Information from Hampshire County Council - Local SEND Partnership Strategy School policy on supporting children with SEND Below is our SEND Padlet.",
+              "sourceUrl": "https://www.allsaintsceprimary.co.uk/send-information/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "SEND Information | All Saints Church of England Primary School",
+              "section": "send"
             }
           ]
         }
@@ -591,35 +921,31 @@
     {
       "urn": "151336",
       "name": "All's Well",
-      "assessedAt": "2026-08-03",
-      "engineVersion": "0.3.0",
-      "sourcesScanned": 4,
+      "assessedAt": "2026-08-04",
+      "engineVersion": "0.4.0",
+      "sourcesScanned": 6,
       "sourceTypes": [
         "school-website"
       ],
       "areas": [
         {
           "area": "curriculum",
-          "score": 49,
-          "confidence": 0.27,
-          "summary": "Some concrete curriculum details found on the school website. Specific offerings include emotional, balanced, ambitious education.",
+          "score": 20,
+          "confidence": 0.13,
+          "summary": "Limited public evidence for curriculum (1 excerpt; mostly general statements rather than specific provision).",
           "themes": [
             "ambitious",
             "balanced",
             "broad",
             "curriculum"
           ],
-          "offerings": [
-            "emotional",
-            "balanced",
-            "ambitious education"
-          ],
+          "offerings": [],
           "signals": [
             {
               "text": "Our curriculum is designed to meet the complex social, emotional and mental health (SEMH) needs of our pupils while providing a broad, balanced and ambitious education.",
               "sourceUrl": "https://www.allswellschool.co.uk/curriculum",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
+              "capturedAt": "2026-08-04",
               "pageTitle": "Subjects \u2014 All's Well",
               "section": "curriculum"
             }
@@ -627,39 +953,53 @@
         },
         {
           "area": "enrichment",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about enrichment and extra-curricular activity from scanned sources.",
-          "themes": [],
+          "score": 20,
+          "confidence": 0.13,
+          "summary": "Limited public evidence for enrichment and extra-curricular activity (1 excerpt; mostly general statements rather than specific provision).",
+          "themes": [
+            "art",
+            "visit"
+          ],
           "offerings": [],
-          "signals": []
+          "signals": [
+            {
+              "text": "Of course, a website can only tell part of our story and the best way to experience our school is to visit us, meet our pupils and staff, and see our values in action.",
+              "sourceUrl": "https://www.allswellschool.co.uk/welcome-from-the-head",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Welcome from the Head \u2014 All's Well",
+              "section": "ethos"
+            }
+          ]
         },
         {
           "area": "ethos",
-          "score": 59,
-          "confidence": 0.35,
-          "summary": "Some concrete ethos and values details found on the school website. Specific offerings include by placing safety, community, kindness, grow, succeed.",
+          "score": 43,
+          "confidence": 0.53,
+          "summary": "Moderate publicly visible evidence for ethos and values (2 specific items). Themes include community, kindness, respect, safe.",
           "themes": [
             "community",
             "kindness",
             "respect",
             "safe"
           ],
-          "offerings": [
-            "by placing safety",
-            "community",
-            "kindness",
-            "grow",
-            "succeed"
-          ],
+          "offerings": [],
           "signals": [
             {
               "text": "By placing safety, community, kindness and respect at the heart of everything we do, we enable every pupil to learn, grow and succeed.",
               "sourceUrl": "https://www.allswellschool.co.uk/curriculum",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
+              "capturedAt": "2026-08-04",
               "pageTitle": "Subjects \u2014 All's Well",
               "section": "curriculum"
+            },
+            {
+              "text": "At the heart of our school is a strong commitment to learning in al of its forms, as well as a commitment to being a safe, respectcul and kind community.",
+              "sourceUrl": "https://www.allswellschool.co.uk/welcome-from-the-head",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Welcome from the Head \u2014 All's Well",
+              "section": "ethos"
             }
           ]
         },
@@ -698,8 +1038,8 @@
     {
       "urn": "115850",
       "name": "Alton Infant School",
-      "assessedAt": "2026-08-03",
-      "engineVersion": "0.3.0",
+      "assessedAt": "2026-08-04",
+      "engineVersion": "0.4.0",
       "sourcesScanned": 6,
       "sourceTypes": [
         "school-website"
@@ -707,105 +1047,119 @@
       "areas": [
         {
           "area": "curriculum",
-          "score": 64,
-          "confidence": 0.87,
-          "summary": "Moderate publicly visible evidence for curriculum (2 specific excerpts). Specific offerings include exciting, broad, educational visits, memorable experiences, home curriculum, useful information & send curriculum\u2026.",
+          "score": 34,
+          "confidence": 0.17,
+          "summary": "Concrete curriculum details found on the school website. Listed provision includes Curriculum Maps and Vision.",
           "themes": [
-            "balanced",
-            "broad",
-            "curriculum",
-            "key stage"
+            "curriculum"
           ],
           "offerings": [
-            "exciting",
-            "broad",
-            "educational visits",
-            "memorable experiences",
-            "home curriculum",
-            "useful information & send curriculum",
-            "useful information & send our curriculum",
-            "vision for learning in key stage 1"
+            "Curriculum Maps and Vision"
           ],
           "signals": [
             {
-              "text": "We offer an exciting, broad and balanced curriculum that is enriched by visitors, educational visits and memorable experiences.",
-              "sourceUrl": "https://www.alton-inf.hants.sch.uk/page/?title=About+Us+%26amp%3B+Safeguarding&pid=20",
+              "text": "Curriculum Maps and Vision",
+              "sourceUrl": "https://www.alton-inf.hants.sch.uk/page/?title=Curriculum+Maps+and+Vision&pid=73",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "About Us & Safeguarding - Alton Infant School",
-              "section": "ethos"
-            },
-            {
-              "text": "Home Curriculum, useful information & SEND Curriculum, useful information & SEND Our curriculum and vision for learning in key stage 1 and Early Years can be accessed by clicking the links below to find out more.",
-              "sourceUrl": "https://www.alton-inf.hants.sch.uk/page/?title=Curriculum%2C+useful+information+%26amp%3B+SEND&pid=68",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "Curriculum, useful information & SEND - Alton Infant School",
-              "section": "send"
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Curriculum Maps and Vision - Alton Infant School",
+              "section": "curriculum"
             }
           ]
         },
         {
           "area": "enrichment",
-          "score": 20,
-          "confidence": 0.19,
-          "summary": "Some concrete enrichment and extra-curricular activity details found on the school website. Specific offerings include services that extend the day in the mornings.",
+          "score": 73,
+          "confidence": 0.805,
+          "summary": "Strong publicly visible evidence for enrichment and extra-curricular activity (5 specific items). Listed provision includes childcare, cricket, tennis, drama, after school club.",
           "themes": [
             "after school",
+            "club",
+            "clubs",
+            "drama",
             "extra-curricular",
-            "opportunities"
+            "sport",
+            "visit"
           ],
           "offerings": [
-            "services that extend the day in the mornings"
+            "childcare",
+            "cricket",
+            "tennis",
+            "drama",
+            "after school club"
           ],
           "signals": [
             {
-              "text": "We offer services that extend the day in the mornings and afternoons as well as a range of extra-curricular after school learning opportunities.",
-              "sourceUrl": "https://www.alton-inf.hants.sch.uk/page/?title=About+Us+%26amp%3B+Safeguarding&pid=20",
+              "text": "Wraparound Childcare & Extra-Curricular Activities",
+              "sourceUrl": "https://www.alton-inf.hants.sch.uk/page/?title=Wraparound+Childcare+%26amp%3B+Extra%2DCurricular+Activities&pid=77",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "About Us & Safeguarding - Alton Infant School",
-              "section": "ethos"
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Wraparound Childcare & Extra-Curricular Activities - Alton Infant School",
+              "section": "enrichment"
+            },
+            {
+              "text": "The club is run by qualified tennis coach William May-Miller, and he can be contacted on willmaymiller@hotmail.com For more information visit, https://clubspark.lta.org.uk/WilliamMayMillerCoaching JC Sports Cricket Club.",
+              "sourceUrl": "https://www.alton-inf.hants.sch.uk/page/?title=Wraparound+Childcare+%26amp%3B+Extra%2DCurricular+Activities&pid=77",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Wraparound Childcare & Extra-Curricular Activities - Alton Infant School",
+              "section": "enrichment"
+            },
+            {
+              "text": "Little Voices \u2013 Singing and Drama club Little Voices is held each Thursday between 3.15pm and 4.30pm.",
+              "sourceUrl": "https://www.alton-inf.hants.sch.uk/page/?title=Wraparound+Childcare+%26amp%3B+Extra%2DCurricular+Activities&pid=77",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Wraparound Childcare & Extra-Curricular Activities - Alton Infant School",
+              "section": "enrichment"
+            },
+            {
+              "text": "Anstey Junior School After School Club Please contact Anstey Junior School on: 01420 84486 for further information or collect an information pack from our school office.",
+              "sourceUrl": "https://www.alton-inf.hants.sch.uk/page/?title=Wraparound+Childcare+%26amp%3B+Extra%2DCurricular+Activities&pid=77",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Wraparound Childcare & Extra-Curricular Activities - Alton Infant School",
+              "section": "enrichment"
+            },
+            {
+              "text": "This club is run after school on a Tuesday from 3.15pm - 4.30pm.",
+              "sourceUrl": "https://www.alton-inf.hants.sch.uk/page/?title=Wraparound+Childcare+%26amp%3B+Extra%2DCurricular+Activities&pid=77",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Wraparound Childcare & Extra-Curricular Activities - Alton Infant School",
+              "section": "enrichment"
             }
           ]
         },
         {
           "area": "ethos",
-          "score": 68,
-          "confidence": 0.87,
-          "summary": "Strong publicly visible evidence for ethos and values (2 specific excerpts). Specific offerings include vision is for teaching, engaging, confident, creative learners, secure, safe\u2026.",
+          "score": 46,
+          "confidence": 0.565,
+          "summary": "Moderate publicly visible evidence for ethos and values (2 specific items). Listed provision includes About Us & Safeguarding.",
           "themes": [
-            "caring",
             "happy",
             "safe",
             "vision"
           ],
           "offerings": [
-            "vision is for teaching",
-            "engaging",
-            "confident",
-            "creative learners",
-            "secure",
-            "safe",
-            "support to explore",
-            "grow as they learn"
+            "About Us & Safeguarding"
           ],
           "signals": [
+            {
+              "text": "About Us & Safeguarding",
+              "sourceUrl": "https://www.alton-inf.hants.sch.uk/page/?title=About+Us+%26amp%3B+Safeguarding&pid=20",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "About Us & Safeguarding - Alton Infant School",
+              "section": "ethos"
+            },
             {
               "text": "Our vision is for teaching and learning to be an enjoyable, engaging and memorable experience so that children become happy, confident and creative learners.",
               "sourceUrl": "https://www.alton-inf.hants.sch.uk",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
+              "capturedAt": "2026-08-04",
               "pageTitle": "Home - Alton Infant School",
               "section": "homepage"
-            },
-            {
-              "text": "We also provide our children with a caring, secure and safe, learning environment and the support to explore and grow as they learn.",
-              "sourceUrl": "https://www.alton-inf.hants.sch.uk/page/?title=About+Us+%26amp%3B+Safeguarding&pid=20",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "About Us & Safeguarding - Alton Infant School",
-              "section": "ethos"
             }
           ]
         },
@@ -820,39 +1174,41 @@
         },
         {
           "area": "send",
-          "score": 62,
-          "confidence": 0.83,
-          "summary": "Moderate publicly visible evidence for SEND and inclusion (2 specific excerpts). Specific offerings include home curriculum, useful information & send curriculum, useful information & send our curriculum, vision for learning in key stage 1, computing, software\u2026.",
+          "score": 53,
+          "confidence": 0.66,
+          "summary": "Moderate publicly visible evidence for SEND and inclusion (3 specific items). Listed provision includes art, computing.",
           "themes": [
-            "access",
             "sen",
             "send"
           ],
           "offerings": [
-            "home curriculum",
-            "useful information & send curriculum",
-            "useful information & send our curriculum",
-            "vision for learning in key stage 1",
-            "computing",
-            "software",
-            "safe internet platforms"
+            "art",
+            "computing"
           ],
           "signals": [
             {
-              "text": "Home Curriculum, useful information & SEND Curriculum, useful information & SEND Our curriculum and vision for learning in key stage 1 and Early Years can be accessed by clicking the links below to find out more.",
-              "sourceUrl": "https://www.alton-inf.hants.sch.uk/page/?title=Curriculum%2C+useful+information+%26amp%3B+SEND&pid=68",
+              "text": "Details of our Curriculum and SEND: Art intent, implementation and impact pdf",
+              "sourceUrl": "https://www.alton-inf.hants.sch.uk/page/?title=Details+of+our+Curriculum+and+SEND&pid=76",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "Curriculum, useful information & SEND - Alton Infant School",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Details of our Curriculum and SEND - Alton Infant School",
               "section": "send"
             },
             {
-              "text": "Home Curriculum, useful information & SEND Children's ICT Activities Children's ICT Activities Internet Safety Our computing learning takes place using a range of equipment, software and safe internet platforms.",
-              "sourceUrl": "https://www.alton-inf.hants.sch.uk/page/?title=Children%27s+ICT+Activities&pid=85",
+              "text": "Details of our Curriculum and SEND: Computing intent, implementation and impact pdf",
+              "sourceUrl": "https://www.alton-inf.hants.sch.uk/page/?title=Details+of+our+Curriculum+and+SEND&pid=76",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "Children's ICT Activities - Alton Infant School",
-              "section": "enrichment"
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Details of our Curriculum and SEND - Alton Infant School",
+              "section": "send"
+            },
+            {
+              "text": "Curriculum, useful information & SEND Details of our intent, implementation and impact of each curriculum subject can be found within 'Details of our Curriculum'.",
+              "sourceUrl": "https://www.alton-inf.hants.sch.uk/page/?title=Curriculum%2C+useful+information+%26amp%3B+SEND&pid=68",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Curriculum, useful information & SEND - Alton Infant School",
+              "section": "send"
             }
           ]
         },
@@ -873,66 +1229,266 @@
     {
       "urn": "116174",
       "name": "Alver Valley Infant and Nursery School",
-      "assessedAt": "2026-08-03",
-      "engineVersion": "0.3.0",
-      "sourcesScanned": 1,
+      "assessedAt": "2026-08-04",
+      "engineVersion": "0.4.0",
+      "sourcesScanned": 8,
       "sourceTypes": [
         "school-website"
       ],
       "areas": [
         {
           "area": "curriculum",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about curriculum from scanned sources.",
+          "score": 77,
+          "confidence": 0.94,
+          "summary": "Strong publicly visible evidence for curriculum (180 specific items). Listed provision includes Absence Reporting & Request, Alver Valley Creative Hub, Alver Valley Gets Growing, Alver Valley School Nursery, Alver Valley Troopers, Anti-Bullying, Arts Council, Before and After School Provision\u2026. 20 items corroborated across multiple pages.",
           "themes": [],
-          "offerings": [],
-          "signals": []
+          "offerings": [
+            "Absence Reporting & Request",
+            "Alver Valley Creative Hub",
+            "Alver Valley Gets Growing",
+            "Alver Valley School Nursery",
+            "Alver Valley Troopers",
+            "Anti-Bullying",
+            "Arts Council",
+            "Before and After School Provision",
+            "Current Vacancies",
+            "Diversity & Inclusion",
+            "EY Network",
+            "Financial Information",
+            "Food and School Meals",
+            "Forest School",
+            "General Data Protection Regulations",
+            "Hampshire School Holidays",
+            "Home and School Partnerships",
+            "Junior School Ofsted Report",
+            "Junior School Performance Table",
+            "Online Payments"
+          ],
+          "signals": [
+            {
+              "text": "Clubs and Sports",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Our Curriculum - Alver Valley Schools",
+              "section": "curriculum"
+            },
+            {
+              "text": "Clubs and Sports",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/diversity-inclusion/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Diversity & Inclusion - Alver Valley Schools",
+              "section": "curriculum"
+            },
+            {
+              "text": "Clubs and Sports",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/forest-school/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Forest School - Alver Valley Schools",
+              "section": "curriculum"
+            },
+            {
+              "text": "Clubs and Sports",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/personal-development/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Personal Development - Alver Valley Schools",
+              "section": "curriculum"
+            },
+            {
+              "text": "Clubs and Sports",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/six-strands/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "The Six Strands - Alver Valley Schools",
+              "section": "curriculum"
+            }
+          ]
         },
         {
           "area": "enrichment",
           "score": 0,
           "confidence": 0.05,
           "summary": "Little public evidence found about enrichment and extra-curricular activity from scanned sources.",
-          "themes": [],
+          "themes": [
+            "art",
+            "award"
+          ],
           "offerings": [],
           "signals": []
         },
         {
           "area": "ethos",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about ethos and values from scanned sources.",
-          "themes": [],
-          "offerings": [],
-          "signals": []
+          "score": 50,
+          "confidence": 0.565,
+          "summary": "Moderate publicly visible evidence for ethos and values (2 specific items). Listed provision includes health education (pshe).",
+          "themes": [
+            "british values",
+            "moral",
+            "respect",
+            "spiritual",
+            "values"
+          ],
+          "offerings": [
+            "health education (pshe)"
+          ],
+          "signals": [
+            {
+              "text": "For videos and articles about personal development curriculum please see below and https://www.coramlifeeducation.org.uk/family-scarf Personal, Social and Health Education (PSHE); Social, Moral, Spiritual and Cultural education (SMSC); Wellbeing; British Values; and our Six Strands learning behaviours curriculum.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/personal-development/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Personal Development - Alver Valley Schools",
+              "section": "curriculum"
+            },
+            {
+              "text": "The aim In introducing the Six Strands in our school was to provide children and adults with a clear, positive framework for developing the key values of Respect, Resilience, Focus, Self-Regulation, Boundaries and Independence.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/six-strands/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "The Six Strands - Alver Valley Schools",
+              "section": "curriculum"
+            }
+          ]
         },
         {
           "area": "behaviour",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about behaviour and pastoral care from scanned sources.",
-          "themes": [],
-          "offerings": [],
-          "signals": []
+          "score": 54,
+          "confidence": 0.625,
+          "summary": "Moderate publicly visible evidence for behaviour and pastoral care (3 specific items). Listed provision includes health education (pshe).",
+          "themes": [
+            "behaviour",
+            "positive",
+            "respectful",
+            "wellbeing"
+          ],
+          "offerings": [
+            "health education (pshe)"
+          ],
+          "signals": [
+            {
+              "text": "For videos and articles about personal development curriculum please see below and https://www.coramlifeeducation.org.uk/family-scarf Personal, Social and Health Education (PSHE); Social, Moral, Spiritual and Cultural education (SMSC); Wellbeing; British Values; and our Six Strands learning behaviours curriculum.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/personal-development/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Personal Development - Alver Valley Schools",
+              "section": "curriculum"
+            },
+            {
+              "text": "The impact on respectful behaviour was so significant, with children, staff and parents all focused and using the language related to the strand after only one term, that we now also use this approach for an additional strand each half term.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/six-strands/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "The Six Strands - Alver Valley Schools",
+              "section": "curriculum"
+            },
+            {
+              "text": "There is now a common language which is focused on developing children\u2019s learning behaviours, working from a starting point of what they can do and targeting the areas for development in a positive, strategic way which children can understand.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/six-strands/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "The Six Strands - Alver Valley Schools",
+              "section": "curriculum"
+            }
+          ]
         },
         {
           "area": "send",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about SEND and inclusion from scanned sources.",
-          "themes": [],
-          "offerings": [],
-          "signals": []
+          "score": 83,
+          "confidence": 0.94,
+          "summary": "Strong publicly visible evidence for SEND and inclusion (75 specific items). Listed provision includes Absence Reporting & Request, Alver Valley Creative Hub, Alver Valley Gets Growing, Alver Valley School Nursery, Alver Valley Troopers, Anti-Bullying, Arts Council, Before and After School Provision\u2026. 20 items corroborated across multiple pages.",
+          "themes": [
+            "inclusion",
+            "sen",
+            "send"
+          ],
+          "offerings": [
+            "Absence Reporting & Request",
+            "Alver Valley Creative Hub",
+            "Alver Valley Gets Growing",
+            "Alver Valley School Nursery",
+            "Alver Valley Troopers",
+            "Anti-Bullying",
+            "Arts Council",
+            "Before and After School Provision",
+            "Current Vacancies",
+            "Diversity & Inclusion",
+            "EY Network",
+            "Financial Information",
+            "Food and School Meals",
+            "Forest School",
+            "General Data Protection Regulations",
+            "Hampshire School Holidays",
+            "Home and School Partnerships",
+            "Junior School Ofsted Report",
+            "Junior School Performance Table",
+            "Online Payments"
+          ],
+          "signals": [
+            {
+              "text": "Clubs and Sports",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/send-provision/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "SEND Provision - Alver Valley Schools",
+              "section": "send"
+            },
+            {
+              "text": "Clubs and Sports",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/absence/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Absence - Alver Valley Schools",
+              "section": "send"
+            },
+            {
+              "text": "Absence Reporting & Request",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/send-provision/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "SEND Provision - Alver Valley Schools",
+              "section": "send"
+            },
+            {
+              "text": "Absence Reporting & Request",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/absence/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Absence - Alver Valley Schools",
+              "section": "send"
+            },
+            {
+              "text": "Alver Valley Creative Hub",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/send-provision/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "SEND Provision - Alver Valley Schools",
+              "section": "send"
+            }
+          ]
         },
         {
           "area": "community",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about community and parental engagement from scanned sources.",
-          "themes": [],
+          "score": 20,
+          "confidence": 0.13,
+          "summary": "Limited public evidence for community and parental engagement (1 excerpt; mostly general statements rather than specific provision).",
+          "themes": [
+            "local",
+            "parents"
+          ],
           "offerings": [],
-          "signals": []
+          "signals": [
+            {
+              "text": "Hampshire\u2019s Local Offer (co-produced with parents, carers and young people) aims to help you find your way through the maze of information to reach the best solutions for you / your child.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/send-provision/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "SEND Provision - Alver Valley Schools",
+              "section": "send"
+            }
+          ]
         }
       ],
       "captureNotes": [
@@ -942,66 +1498,266 @@
     {
       "urn": "116172",
       "name": "Alver Valley Junior School",
-      "assessedAt": "2026-08-03",
-      "engineVersion": "0.3.0",
-      "sourcesScanned": 1,
+      "assessedAt": "2026-08-04",
+      "engineVersion": "0.4.0",
+      "sourcesScanned": 8,
       "sourceTypes": [
         "school-website"
       ],
       "areas": [
         {
           "area": "curriculum",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about curriculum from scanned sources.",
+          "score": 77,
+          "confidence": 0.94,
+          "summary": "Strong publicly visible evidence for curriculum (180 specific items). Listed provision includes Absence Reporting & Request, Alver Valley Creative Hub, Alver Valley Gets Growing, Alver Valley School Nursery, Alver Valley Troopers, Anti-Bullying, Arts Council, Before and After School Provision\u2026. 20 items corroborated across multiple pages.",
           "themes": [],
-          "offerings": [],
-          "signals": []
+          "offerings": [
+            "Absence Reporting & Request",
+            "Alver Valley Creative Hub",
+            "Alver Valley Gets Growing",
+            "Alver Valley School Nursery",
+            "Alver Valley Troopers",
+            "Anti-Bullying",
+            "Arts Council",
+            "Before and After School Provision",
+            "Current Vacancies",
+            "Diversity & Inclusion",
+            "EY Network",
+            "Financial Information",
+            "Food and School Meals",
+            "Forest School",
+            "General Data Protection Regulations",
+            "Hampshire School Holidays",
+            "Home and School Partnerships",
+            "Junior School Ofsted Report",
+            "Junior School Performance Table",
+            "Online Payments"
+          ],
+          "signals": [
+            {
+              "text": "Clubs and Sports",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Our Curriculum - Alver Valley Schools",
+              "section": "curriculum"
+            },
+            {
+              "text": "Clubs and Sports",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/diversity-inclusion/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Diversity & Inclusion - Alver Valley Schools",
+              "section": "curriculum"
+            },
+            {
+              "text": "Clubs and Sports",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/forest-school/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Forest School - Alver Valley Schools",
+              "section": "curriculum"
+            },
+            {
+              "text": "Clubs and Sports",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/personal-development/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Personal Development - Alver Valley Schools",
+              "section": "curriculum"
+            },
+            {
+              "text": "Clubs and Sports",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/six-strands/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "The Six Strands - Alver Valley Schools",
+              "section": "curriculum"
+            }
+          ]
         },
         {
           "area": "enrichment",
           "score": 0,
           "confidence": 0.05,
           "summary": "Little public evidence found about enrichment and extra-curricular activity from scanned sources.",
-          "themes": [],
+          "themes": [
+            "art",
+            "award"
+          ],
           "offerings": [],
           "signals": []
         },
         {
           "area": "ethos",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about ethos and values from scanned sources.",
-          "themes": [],
-          "offerings": [],
-          "signals": []
+          "score": 50,
+          "confidence": 0.565,
+          "summary": "Moderate publicly visible evidence for ethos and values (2 specific items). Listed provision includes health education (pshe).",
+          "themes": [
+            "british values",
+            "moral",
+            "respect",
+            "spiritual",
+            "values"
+          ],
+          "offerings": [
+            "health education (pshe)"
+          ],
+          "signals": [
+            {
+              "text": "For videos and articles about personal development curriculum please see below and https://www.coramlifeeducation.org.uk/family-scarf Personal, Social and Health Education (PSHE); Social, Moral, Spiritual and Cultural education (SMSC); Wellbeing; British Values; and our Six Strands learning behaviours curriculum.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/personal-development/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Personal Development - Alver Valley Schools",
+              "section": "curriculum"
+            },
+            {
+              "text": "The aim In introducing the Six Strands in our school was to provide children and adults with a clear, positive framework for developing the key values of Respect, Resilience, Focus, Self-Regulation, Boundaries and Independence.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/six-strands/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "The Six Strands - Alver Valley Schools",
+              "section": "curriculum"
+            }
+          ]
         },
         {
           "area": "behaviour",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about behaviour and pastoral care from scanned sources.",
-          "themes": [],
-          "offerings": [],
-          "signals": []
+          "score": 54,
+          "confidence": 0.625,
+          "summary": "Moderate publicly visible evidence for behaviour and pastoral care (3 specific items). Listed provision includes health education (pshe).",
+          "themes": [
+            "behaviour",
+            "positive",
+            "respectful",
+            "wellbeing"
+          ],
+          "offerings": [
+            "health education (pshe)"
+          ],
+          "signals": [
+            {
+              "text": "For videos and articles about personal development curriculum please see below and https://www.coramlifeeducation.org.uk/family-scarf Personal, Social and Health Education (PSHE); Social, Moral, Spiritual and Cultural education (SMSC); Wellbeing; British Values; and our Six Strands learning behaviours curriculum.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/personal-development/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Personal Development - Alver Valley Schools",
+              "section": "curriculum"
+            },
+            {
+              "text": "The impact on respectful behaviour was so significant, with children, staff and parents all focused and using the language related to the strand after only one term, that we now also use this approach for an additional strand each half term.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/six-strands/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "The Six Strands - Alver Valley Schools",
+              "section": "curriculum"
+            },
+            {
+              "text": "There is now a common language which is focused on developing children\u2019s learning behaviours, working from a starting point of what they can do and targeting the areas for development in a positive, strategic way which children can understand.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/six-strands/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "The Six Strands - Alver Valley Schools",
+              "section": "curriculum"
+            }
+          ]
         },
         {
           "area": "send",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about SEND and inclusion from scanned sources.",
-          "themes": [],
-          "offerings": [],
-          "signals": []
+          "score": 83,
+          "confidence": 0.94,
+          "summary": "Strong publicly visible evidence for SEND and inclusion (75 specific items). Listed provision includes Absence Reporting & Request, Alver Valley Creative Hub, Alver Valley Gets Growing, Alver Valley School Nursery, Alver Valley Troopers, Anti-Bullying, Arts Council, Before and After School Provision\u2026. 20 items corroborated across multiple pages.",
+          "themes": [
+            "inclusion",
+            "sen",
+            "send"
+          ],
+          "offerings": [
+            "Absence Reporting & Request",
+            "Alver Valley Creative Hub",
+            "Alver Valley Gets Growing",
+            "Alver Valley School Nursery",
+            "Alver Valley Troopers",
+            "Anti-Bullying",
+            "Arts Council",
+            "Before and After School Provision",
+            "Current Vacancies",
+            "Diversity & Inclusion",
+            "EY Network",
+            "Financial Information",
+            "Food and School Meals",
+            "Forest School",
+            "General Data Protection Regulations",
+            "Hampshire School Holidays",
+            "Home and School Partnerships",
+            "Junior School Ofsted Report",
+            "Junior School Performance Table",
+            "Online Payments"
+          ],
+          "signals": [
+            {
+              "text": "Clubs and Sports",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/send-provision/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "SEND Provision - Alver Valley Schools",
+              "section": "send"
+            },
+            {
+              "text": "Clubs and Sports",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/absence/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Absence - Alver Valley Schools",
+              "section": "send"
+            },
+            {
+              "text": "Absence Reporting & Request",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/send-provision/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "SEND Provision - Alver Valley Schools",
+              "section": "send"
+            },
+            {
+              "text": "Absence Reporting & Request",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/absence/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Absence - Alver Valley Schools",
+              "section": "send"
+            },
+            {
+              "text": "Alver Valley Creative Hub",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/send-provision/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "SEND Provision - Alver Valley Schools",
+              "section": "send"
+            }
+          ]
         },
         {
           "area": "community",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about community and parental engagement from scanned sources.",
-          "themes": [],
+          "score": 20,
+          "confidence": 0.13,
+          "summary": "Limited public evidence for community and parental engagement (1 excerpt; mostly general statements rather than specific provision).",
+          "themes": [
+            "local",
+            "parents"
+          ],
           "offerings": [],
-          "signals": []
+          "signals": [
+            {
+              "text": "Hampshire\u2019s Local Offer (co-produced with parents, carers and young people) aims to help you find your way through the maze of information to reach the best solutions for you / your child.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/send-provision/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "SEND Provision - Alver Valley Schools",
+              "section": "send"
+            }
+          ]
         }
       ],
       "captureNotes": [
@@ -1011,8 +1767,8 @@
     {
       "urn": "116392",
       "name": "Alverstoke Church of England Aided Junior School",
-      "assessedAt": "2026-08-03",
-      "engineVersion": "0.3.0",
+      "assessedAt": "2026-08-04",
+      "engineVersion": "0.4.0",
       "sourcesScanned": 8,
       "sourceTypes": [
         "school-website"
@@ -1020,12 +1776,31 @@
       "areas": [
         {
           "area": "curriculum",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about curriculum from scanned sources.",
-          "themes": [],
+          "score": 20,
+          "confidence": 0.13,
+          "summary": "Limited public evidence for curriculum (1 excerpt; mostly general statements rather than specific provision).",
+          "themes": [
+            "ambitious",
+            "balanced",
+            "broad",
+            "challenge",
+            "curriculum",
+            "high expectations",
+            "progress",
+            "reading",
+            "writing"
+          ],
           "offerings": [],
-          "signals": []
+          "signals": [
+            {
+              "text": "Assessment of Learning Assessment at Alverstoke Junior School At Alverstoke Junior School we have adopted the Hampshire model of assessment for tracking attainment and progress in reading, writing and maths.",
+              "sourceUrl": "https://alverstoke-jun.hants.sch.uk/Assessment-of-Learning/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Alverstoke Church of England Junior School - Assessment of Learning",
+              "section": "curriculum"
+            }
+          ]
         },
         {
           "area": "enrichment",
@@ -1043,25 +1818,39 @@
         },
         {
           "area": "ethos",
-          "score": 54,
-          "confidence": 0.31,
-          "summary": "Some concrete ethos and values details found on the school website. Specific offerings include caring environment, working in close partnership with pupils, parents, local community.",
+          "score": 52,
+          "confidence": 0.59,
+          "summary": "Moderate publicly visible evidence for ethos and values (3 specific items). Themes include caring, community, respect, spiritual.",
           "themes": [
             "caring",
-            "community"
+            "community",
+            "respect",
+            "spiritual",
+            "values"
           ],
-          "offerings": [
-            "caring environment",
-            "working in close partnership with pupils",
-            "parents",
-            "local community"
-          ],
+          "offerings": [],
           "signals": [
+            {
+              "text": "Our core Christian values of love, respect and courage firmly underpin our curriculum, thus shaping pupils\u2019 attitudes to life, the world around them and other people.",
+              "sourceUrl": "https://alverstoke-jun.hants.sch.uk/Our-Curriculum/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Alverstoke Church of England Junior School - Our Curriculum",
+              "section": "curriculum"
+            },
+            {
+              "text": "Through the promotion of Evaluation, Independence and Creativity, three of our EPIC learning skills, children develop their relationship with their world, forming their values as well as looking beyond one\u2019s self to the wider and the spiritual world.",
+              "sourceUrl": "https://alverstoke-jun.hants.sch.uk/Our-Curriculum/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Alverstoke Church of England Junior School - Our Curriculum",
+              "section": "curriculum"
+            },
             {
               "text": "Our aim is to provide high quality education for every child in a friendly, caring environment, working in close partnership with pupils, parents and the local community.",
               "sourceUrl": "https://alverstoke-jun.hants.sch.uk/",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
+              "capturedAt": "2026-08-04",
               "pageTitle": "Alverstoke Church of England Junior School - Home",
               "section": "homepage"
             }
@@ -1087,27 +1876,22 @@
         },
         {
           "area": "community",
-          "score": 54,
-          "confidence": 0.31,
-          "summary": "Some concrete community and parental engagement details found on the school website. Specific offerings include caring environment, working in close partnership with pupils, parents, local community.",
+          "score": 20,
+          "confidence": 0.13,
+          "summary": "Limited public evidence for community and parental engagement (1 excerpt; mostly general statements rather than specific provision).",
           "themes": [
             "community",
             "local",
             "parents",
             "partnership"
           ],
-          "offerings": [
-            "caring environment",
-            "working in close partnership with pupils",
-            "parents",
-            "local community"
-          ],
+          "offerings": [],
           "signals": [
             {
               "text": "Our aim is to provide high quality education for every child in a friendly, caring environment, working in close partnership with pupils, parents and the local community.",
               "sourceUrl": "https://alverstoke-jun.hants.sch.uk/",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
+              "capturedAt": "2026-08-04",
               "pageTitle": "Alverstoke Church of England Junior School - Home",
               "section": "homepage"
             }
@@ -1121,8 +1905,8 @@
     {
       "urn": "116169",
       "name": "Alverstoke Community Infant and Pre-School",
-      "assessedAt": "2026-08-03",
-      "engineVersion": "0.3.0",
+      "assessedAt": "2026-08-04",
+      "engineVersion": "0.4.0",
       "sourcesScanned": 8,
       "sourceTypes": [
         "school-website"
@@ -1130,38 +1914,115 @@
       "areas": [
         {
           "area": "curriculum",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about curriculum from scanned sources.",
-          "themes": [],
-          "offerings": [],
-          "signals": []
+          "score": 94,
+          "confidence": 0.94,
+          "summary": "Strong publicly visible evidence for curriculum (57 specific items). Listed provision includes COVID Risk Assessment, Contact Details, Cool Milk, Data Protection, E-Safety, Extra Curricular Offers, Friends of Alverstoke, Home Link Support\u2026. 20 items corroborated across multiple pages.",
+          "themes": [
+            "curriculum",
+            "phonics",
+            "reading",
+            "science",
+            "writing"
+          ],
+          "offerings": [
+            "COVID Risk Assessment",
+            "Contact Details",
+            "Cool Milk",
+            "Data Protection",
+            "E-Safety",
+            "Extra Curricular Offers",
+            "Friends of Alverstoke",
+            "Home Link Support",
+            "Job Vacancies",
+            "Learning Characters",
+            "Lunch Menus",
+            "Ofsted Report",
+            "Online Payments",
+            "PE and Sports Funding",
+            "Pre-School",
+            "Pupil Premium",
+            "Safeguarding Support",
+            "School Council",
+            "School Development Plan",
+            "School Performance Tables"
+          ],
+          "signals": [
+            {
+              "text": "Our Learning Characters: COVID Risk Assessment",
+              "sourceUrl": "https://alverstokeinfant.co.uk/children/learning-characters/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Learning Characters | Alverstoke Infant School",
+              "section": "curriculum"
+            },
+            {
+              "text": "Our Learning Characters: Contact Details",
+              "sourceUrl": "https://alverstokeinfant.co.uk/children/learning-characters/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Learning Characters | Alverstoke Infant School",
+              "section": "curriculum"
+            },
+            {
+              "text": "Our Learning Characters: Cool Milk",
+              "sourceUrl": "https://alverstokeinfant.co.uk/children/learning-characters/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Learning Characters | Alverstoke Infant School",
+              "section": "curriculum"
+            },
+            {
+              "text": "Our Learning Characters: Data Protection",
+              "sourceUrl": "https://alverstokeinfant.co.uk/children/learning-characters/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Learning Characters | Alverstoke Infant School",
+              "section": "curriculum"
+            },
+            {
+              "text": "Our Learning Characters: E-Safety",
+              "sourceUrl": "https://alverstokeinfant.co.uk/children/learning-characters/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Learning Characters | Alverstoke Infant School",
+              "section": "curriculum"
+            }
+          ]
         },
         {
           "area": "enrichment",
-          "score": 71,
-          "confidence": 0.92,
-          "summary": "Strong publicly visible evidence for enrichment and extra-curricular activity (4 specific excerpts). Specific offerings include after school club, breakfast, after school club is called the treehouse, is based in school, services club, after october half-term.",
+          "score": 83,
+          "confidence": 0.925,
+          "summary": "Strong publicly visible evidence for enrichment and extra-curricular activity (5 specific items). Listed provision includes geography, computing, music, art, after school club. 1 item corroborated across multiple pages.",
           "themes": [
             "after school",
+            "art",
             "club",
             "clubs",
+            "music",
             "wide range"
           ],
           "offerings": [
-            "after school club",
-            "breakfast",
-            "after school club is called the treehouse",
-            "is based in school",
-            "services club",
-            "after october half-term"
+            "geography",
+            "computing",
+            "music",
+            "art",
+            "after school club"
           ],
           "signals": [
+            {
+              "text": "Phonics Maths Computing PE Art Reading Geography RE PSHE Forest School Writing History DT Music Science Year 2 Curriculum Plan 2024-2025 Year 2 Curriculum overview 2022-2023 For our half termly overviews please click here.",
+              "sourceUrl": "https://alverstokeinfant.co.uk/key-information/curriculum/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Curriculum | Alverstoke Infant School",
+              "section": "curriculum"
+            },
             {
               "text": "Breakfast/After school provision Our Breakfast and after School Club is called The Treehouse and is based in school.",
               "sourceUrl": "https://alverstokeinfant.co.uk/about-us/breakfast-after-school-provision/",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
+              "capturedAt": "2026-08-04",
               "pageTitle": "Breakfast/After school provision | Alverstoke Infant School",
               "section": "ethos"
             },
@@ -1169,7 +2030,7 @@
               "text": "Please also refer to the About Us menu on our website for information about the Cabin Crew Breakfast & After School Club and Services Club.",
               "sourceUrl": "https://alverstokeinfant.co.uk/parents/extra-curricular-offers/",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
+              "capturedAt": "2026-08-04",
               "pageTitle": "Extra Curricular Offers | Alverstoke Infant School",
               "section": "enrichment"
             },
@@ -1177,7 +2038,7 @@
               "text": "Extra Curricular Offers We are keen for children to experience a wide range of activities, and so we offer a good selection of after school clubs.",
               "sourceUrl": "https://alverstokeinfant.co.uk/parents/extra-curricular-offers/",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
+              "capturedAt": "2026-08-04",
               "pageTitle": "Extra Curricular Offers | Alverstoke Infant School",
               "section": "enrichment"
             },
@@ -1185,8 +2046,293 @@
               "text": "Year R children will be invited to attend clubs after October Half-Term.",
               "sourceUrl": "https://alverstokeinfant.co.uk/parents/extra-curricular-offers/",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
+              "capturedAt": "2026-08-04",
               "pageTitle": "Extra Curricular Offers | Alverstoke Infant School",
+              "section": "enrichment"
+            }
+          ]
+        },
+        {
+          "area": "ethos",
+          "score": 80,
+          "confidence": 0.94,
+          "summary": "Strong publicly visible evidence for ethos and values (56 specific items). Listed provision includes COVID Risk Assessment, Contact Details, Cool Milk, Data Protection, E-Safety, Extra Curricular Offers, Friends of Alverstoke, Home Link Support\u2026. 20 items corroborated across multiple pages.",
+          "themes": [
+            "character",
+            "safe"
+          ],
+          "offerings": [
+            "COVID Risk Assessment",
+            "Contact Details",
+            "Cool Milk",
+            "Data Protection",
+            "E-Safety",
+            "Extra Curricular Offers",
+            "Friends of Alverstoke",
+            "Home Link Support",
+            "Job Vacancies",
+            "Learning Characters",
+            "Lunch Menus",
+            "Ofsted Report",
+            "Online Payments",
+            "PE and Sports Funding",
+            "Pre-School",
+            "Pupil Premium",
+            "Safeguarding Support",
+            "School Council",
+            "School Development Plan",
+            "School Performance Tables"
+          ],
+          "signals": [
+            {
+              "text": "About Us: COVID Risk Assessment",
+              "sourceUrl": "https://alverstokeinfant.co.uk/about-us/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "About Us | Alverstoke Infant School",
+              "section": "ethos"
+            },
+            {
+              "text": "About Us: Contact Details",
+              "sourceUrl": "https://alverstokeinfant.co.uk/about-us/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "About Us | Alverstoke Infant School",
+              "section": "ethos"
+            },
+            {
+              "text": "About Us: Cool Milk",
+              "sourceUrl": "https://alverstokeinfant.co.uk/about-us/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "About Us | Alverstoke Infant School",
+              "section": "ethos"
+            },
+            {
+              "text": "About Us: Data Protection",
+              "sourceUrl": "https://alverstokeinfant.co.uk/about-us/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "About Us | Alverstoke Infant School",
+              "section": "ethos"
+            },
+            {
+              "text": "About Us: E-Safety",
+              "sourceUrl": "https://alverstokeinfant.co.uk/about-us/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "About Us | Alverstoke Infant School",
+              "section": "ethos"
+            }
+          ]
+        },
+        {
+          "area": "behaviour",
+          "score": 63,
+          "confidence": 0.94,
+          "summary": "Moderate publicly visible evidence for behaviour and pastoral care (28 specific items). Listed provision includes COVID Risk Assessment, Contact Details, Cool Milk, Data Protection, E-Safety, Extra Curricular Offers, Friends of Alverstoke, Home Link Support\u2026.",
+          "themes": [
+            "safeguarding"
+          ],
+          "offerings": [
+            "COVID Risk Assessment",
+            "Contact Details",
+            "Cool Milk",
+            "Data Protection",
+            "E-Safety",
+            "Extra Curricular Offers",
+            "Friends of Alverstoke",
+            "Home Link Support",
+            "Job Vacancies",
+            "Learning Characters",
+            "Lunch Menus",
+            "Ofsted Report",
+            "Online Payments",
+            "PE and Sports Funding",
+            "Pre-School",
+            "Pupil Premium",
+            "Safeguarding Support",
+            "School Council",
+            "School Development Plan",
+            "School Performance Tables"
+          ],
+          "signals": [
+            {
+              "text": "Safeguarding: COVID Risk Assessment",
+              "sourceUrl": "https://alverstokeinfant.co.uk/parents/safeguarding-support/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Safeguarding Support | Alverstoke Infant School",
+              "section": "behaviour"
+            },
+            {
+              "text": "Safeguarding: Contact Details",
+              "sourceUrl": "https://alverstokeinfant.co.uk/parents/safeguarding-support/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Safeguarding Support | Alverstoke Infant School",
+              "section": "behaviour"
+            },
+            {
+              "text": "Safeguarding: Cool Milk",
+              "sourceUrl": "https://alverstokeinfant.co.uk/parents/safeguarding-support/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Safeguarding Support | Alverstoke Infant School",
+              "section": "behaviour"
+            },
+            {
+              "text": "Safeguarding: Data Protection",
+              "sourceUrl": "https://alverstokeinfant.co.uk/parents/safeguarding-support/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Safeguarding Support | Alverstoke Infant School",
+              "section": "behaviour"
+            },
+            {
+              "text": "Safeguarding: E-Safety",
+              "sourceUrl": "https://alverstokeinfant.co.uk/parents/safeguarding-support/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Safeguarding Support | Alverstoke Infant School",
+              "section": "behaviour"
+            }
+          ]
+        },
+        {
+          "area": "send",
+          "score": 0,
+          "confidence": 0.05,
+          "summary": "Little public evidence found about SEND and inclusion from scanned sources.",
+          "themes": [],
+          "offerings": [],
+          "signals": []
+        },
+        {
+          "area": "community",
+          "score": 20,
+          "confidence": 0.13,
+          "summary": "Limited public evidence for community and parental engagement (1 excerpt; mostly general statements rather than specific provision).",
+          "themes": [
+            "governors",
+            "parents"
+          ],
+          "offerings": [],
+          "signals": [
+            {
+              "text": "Our Governors We have a very committed Governing Body which includes parents in its membership.",
+              "sourceUrl": "https://alverstokeinfant.co.uk/about-us/our-governors/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Our Governors | Alverstoke Infant School",
+              "section": "ethos"
+            }
+          ]
+        }
+      ],
+      "captureNotes": [
+        "No URLs discovered for local-news."
+      ]
+    },
+    {
+      "urn": "137535",
+      "name": "Amery Hill School",
+      "assessedAt": "2026-08-04",
+      "engineVersion": "0.4.0",
+      "sourcesScanned": 7,
+      "sourceTypes": [
+        "school-website"
+      ],
+      "areas": [
+        {
+          "area": "curriculum",
+          "score": 61,
+          "confidence": 0.745,
+          "summary": "Moderate publicly visible evidence for curriculum (8 specific items). Listed provision includes science (either double.",
+          "themes": [
+            "broad",
+            "curriculum",
+            "gcse",
+            "key stage",
+            "options",
+            "science",
+            "subjects"
+          ],
+          "offerings": [
+            "science (either double"
+          ],
+          "signals": [
+            {
+              "text": "At the end of Year 8, students choose options for Year 9, transitioning during that year to GCSE courses in core and optional subjects.",
+              "sourceUrl": "https://www.ameryhill.hants.sch.uk/175/curriculum",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Curriculum - Amery Hill School",
+              "section": "curriculum"
+            },
+            {
+              "text": "Year 9 Options In Years 10 and 11, all students will continue to study: English Language and Literature, Maths, Science (either Double or Triple Award) and Core P.E.",
+              "sourceUrl": "https://www.ameryhill.hants.sch.uk/2266/year-9-options",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Year 9 Options - Amery Hill School",
+              "section": "curriculum"
+            },
+            {
+              "text": "For their Foundation Options, students are not choosing their full GCSE options, but most students select subjects that they may wish to study for their GCSEs.",
+              "sourceUrl": "https://www.ameryhill.hants.sch.uk/2423/year-8-foundation-options",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Year 8 Foundation Options - Amery Hill School",
+              "section": "curriculum"
+            },
+            {
+              "text": "Most students will also be able to choose to 4 further Options subjects to study.",
+              "sourceUrl": "https://www.ameryhill.hants.sch.uk/2266/year-9-options",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Year 9 Options - Amery Hill School",
+              "section": "curriculum"
+            },
+            {
+              "text": "Students will also be able to choose to study 3 Foundation Options subjects to study.",
+              "sourceUrl": "https://www.ameryhill.hants.sch.uk/2423/year-8-foundation-options",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Year 8 Foundation Options - Amery Hill School",
+              "section": "curriculum"
+            }
+          ]
+        },
+        {
+          "area": "enrichment",
+          "score": 48,
+          "confidence": 0.565,
+          "summary": "Moderate publicly visible evidence for enrichment and extra-curricular activity (2 specific items). Listed provision includes science (either double.",
+          "themes": [
+            "award",
+            "extra-curricular",
+            "opportunities",
+            "trip"
+          ],
+          "offerings": [
+            "science (either double"
+          ],
+          "signals": [
+            {
+              "text": "Year 9 Options In Years 10 and 11, all students will continue to study: English Language and Literature, Maths, Science (either Double or Triple Award) and Core P.E.",
+              "sourceUrl": "https://www.ameryhill.hants.sch.uk/2266/year-9-options",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Year 9 Options - Amery Hill School",
+              "section": "curriculum"
+            },
+            {
+              "text": "Extra-curricular Activities At Amery Hill School we offer exceptional opportunities, both within and beyond the classroom and strongly believe that extra-curricular activities play an important role in the education and personal development of our students.",
+              "sourceUrl": "https://www.ameryhill.hants.sch.uk/198/extra-curricular-activities",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Extra-curricular Activities - Amery Hill School",
               "section": "enrichment"
             }
           ]
@@ -1205,189 +2351,34 @@
           "score": 0,
           "confidence": 0.05,
           "summary": "Little public evidence found about behaviour and pastoral care from scanned sources.",
-          "themes": [
-            "safeguarding",
-            "well-being"
-          ],
-          "offerings": [],
-          "signals": []
-        },
-        {
-          "area": "send",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about SEND and inclusion from scanned sources.",
-          "themes": [],
-          "offerings": [],
-          "signals": []
-        },
-        {
-          "area": "community",
-          "score": 20,
-          "confidence": 0.19,
-          "summary": "Some concrete community and parental engagement details found on the school website. Specific offerings include parents in its membership.",
-          "themes": [
-            "governors",
-            "parents"
-          ],
-          "offerings": [
-            "parents in its membership"
-          ],
-          "signals": [
-            {
-              "text": "Our Governors We have a very committed Governing Body which includes parents in its membership.",
-              "sourceUrl": "https://alverstokeinfant.co.uk/about-us/our-governors/",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "Our Governors | Alverstoke Infant School",
-              "section": "ethos"
-            }
-          ]
-        }
-      ],
-      "captureNotes": [
-        "No URLs discovered for local-news."
-      ]
-    },
-    {
-      "urn": "137535",
-      "name": "Amery Hill School",
-      "assessedAt": "2026-08-03",
-      "engineVersion": "0.3.0",
-      "sourcesScanned": 8,
-      "sourceTypes": [
-        "school-website"
-      ],
-      "areas": [
-        {
-          "area": "curriculum",
-          "score": 66,
-          "confidence": 0.79,
-          "summary": "Strong publicly visible evidence for curriculum (2 specific excerpts). Specific offerings include options, gcse, for year 9, optional subjects, at the end of year 8, students choose options for year 9.",
-          "themes": [
-            "gcse",
-            "options",
-            "progress",
-            "subjects"
-          ],
-          "offerings": [
-            "options",
-            "gcse",
-            "for year 9",
-            "optional subjects",
-            "at the end of year 8",
-            "students choose options for year 9"
-          ],
-          "signals": [
-            {
-              "text": "At the end of Year 8, students choose options for Year 9, transitioning during that year to GCSE courses in core and optional subjects.",
-              "sourceUrl": "https://www.ameryhill.hants.sch.uk/175/curriculum",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "Curriculum - Amery Hill School",
-              "section": "curriculum"
-            },
-            {
-              "text": "Note: for GCSE exams in 2025 and 2026, no Progress 8 figures will be calculated as students in these year groups did not complete KS2 exams due to the Covid Pandemic.",
-              "sourceUrl": "https://www.ameryhill.hants.sch.uk/173/gcse-results",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "GCSE Results - Amery Hill School",
-              "section": "curriculum"
-            }
-          ]
-        },
-        {
-          "area": "enrichment",
-          "score": 66,
-          "confidence": 0.75,
-          "summary": "Strong publicly visible evidence for enrichment and extra-curricular activity (2 specific excerpts). Specific offerings include both within, beyond the classroom, personal development of our students, including educational trips, visits.",
-          "themes": [
-            "extra-curricular",
-            "opportunities",
-            "trip",
-            "visit"
-          ],
-          "offerings": [
-            "both within",
-            "beyond the classroom",
-            "personal development of our students",
-            "including educational trips",
-            "visits"
-          ],
-          "signals": [
-            {
-              "text": "Extra-curricular Activities At Amery Hill School we offer exceptional opportunities, both within and beyond the classroom and strongly believe that extra-curricular activities play an important role in the education and personal development of our students.",
-              "sourceUrl": "https://www.ameryhill.hants.sch.uk/198/extra-curricular-activities",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "Extra-curricular Activities - Amery Hill School",
-              "section": "enrichment"
-            },
-            {
-              "text": "Our inclusive ethos ensures that all students can be accommodated in both curricular and extra-curricular activities, including educational trips and visits.",
-              "sourceUrl": "https://www.ameryhill.hants.sch.uk/177/send-student-hub",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "SEND Student Hub - Amery Hill School",
-              "section": "send"
-            }
-          ]
-        },
-        {
-          "area": "ethos",
-          "score": 20,
-          "confidence": 0.23,
-          "summary": "Some concrete ethos and values details found on the school website. Specific offerings include including educational trips, visits.",
-          "themes": [
-            "ethos",
-            "inclusive"
-          ],
-          "offerings": [
-            "including educational trips",
-            "visits"
-          ],
-          "signals": [
-            {
-              "text": "Our inclusive ethos ensures that all students can be accommodated in both curricular and extra-curricular activities, including educational trips and visits.",
-              "sourceUrl": "https://www.ameryhill.hants.sch.uk/177/send-student-hub",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "SEND Student Hub - Amery Hill School",
-              "section": "send"
-            }
-          ]
-        },
-        {
-          "area": "behaviour",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about behaviour and pastoral care from scanned sources.",
           "themes": [],
           "offerings": [],
           "signals": []
         },
         {
           "area": "send",
-          "score": 54,
-          "confidence": 0.31,
-          "summary": "Some concrete SEND and inclusion details found on the school website. Specific offerings include to enquire about these routes, costs, vice versa, which many students use.",
+          "score": 34,
+          "confidence": 0.53,
+          "summary": "Limited publicly visible evidence for SEND and inclusion (2 specific items). Themes include sen, send.",
           "themes": [
             "sen",
             "send"
           ],
-          "offerings": [
-            "to enquire about these routes",
-            "costs",
-            "vice versa",
-            "which many students use"
-          ],
+          "offerings": [],
           "signals": [
+            {
+              "text": "Speaking about the success of the celebration, Mr Board, Progress Leader, commented: \"All the students and staff thoroughly enjoyed themselves and it was the perfect way to send the Year 11 students on to the next stage of their journey.",
+              "sourceUrl": "https://www.ameryhill.hants.sch.uk/193/latest-news/post/179/year-11-prom-a-spectacular-send-off",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Year 11 Prom: A Spectacular Send-Off - Year 11 Prom: A Spectacular Send-Off - Latest News - Amery Hill School",
+              "section": "send"
+            },
             {
               "text": "To enquire about these routes and costs, please send an email to contactus@ameryhill.school There are also a number of Stagecoach Public Buses which run from Basingstoke to Bordon and vice versa, which many students use.",
               "sourceUrl": "https://www.ameryhill.hants.sch.uk/1408/transport-to-school",
               "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
+              "capturedAt": "2026-08-04",
               "pageTitle": "Transport to School - Amery Hill School",
               "section": "enrichment"
             }
@@ -1395,44 +2386,12 @@
         },
         {
           "area": "community",
-          "score": 53,
-          "confidence": 0.7,
-          "summary": "Moderate publicly visible evidence for community and parental engagement (3 specific excerpts). Specific offerings include friends of, youth literacy.",
-          "themes": [
-            "community",
-            "local",
-            "partnership"
-          ],
-          "offerings": [
-            "friends of",
-            "youth literacy"
-          ],
-          "signals": [
-            {
-              "text": "In this section Headteacher's Welcome Vision, Values and Aims Safeguarding Teaching and Learning Trustees Prospectus GCSE Results Ofsted Alumni School Trust Friends of Amery Hill School Community House Championship Student Voice Awards and Partnerships SEND Student Hub",
-              "sourceUrl": "https://www.ameryhill.hants.sch.uk/173/gcse-results",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "GCSE Results - Amery Hill School",
-              "section": "curriculum"
-            },
-            {
-              "text": "The school community extends its sincere gratitude to the members of the Alton Lions Club for their continued investment in local education and youth literacy.",
-              "sourceUrl": "https://www.ameryhill.hants.sch.uk/193/latest-news/post/164/gcse-results-2025",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "GCSE Results 2025 - GCSE Results 2025 - Latest News - Amery Hill School",
-              "section": "curriculum"
-            },
-            {
-              "text": "The school community extends its sincere gratitude to the members of the Alton Lions Club for their continued investment in local education and youth literacy.",
-              "sourceUrl": "https://www.ameryhill.hants.sch.uk/193/latest-news/post/176/british-science-week",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-03",
-              "pageTitle": "British Science Week - British Science Week - Latest News - Amery Hill School",
-              "section": "curriculum"
-            }
-          ]
+          "score": 0,
+          "confidence": 0.05,
+          "summary": "Little public evidence found about community and parental engagement from scanned sources.",
+          "themes": [],
+          "offerings": [],
+          "signals": []
         }
       ],
       "captureNotes": [
