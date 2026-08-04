@@ -232,6 +232,18 @@ Output: `output/contact-capture.json` · schema: `schemas/contact-capture.schema
 
 Merged schools gain `contactCapture` and, when missing, a top-level `telephone` from GIAS/office contacts.
 
+## URL discovery (v0.6)
+
+The website adapter uses **hub-and-spoke** crawling: after scanning the homepage it follows curriculum hub pages (e.g. “Subject curriculum overviews”) and discovers linked subject pages (Maths, English, etc.). A redirect-aware same-site check handles schools whose live domain differs from the index URL (e.g. Abbotswood).
+
+**Learned cross-school terms** — when a page yields useful evidence, its URL path segments and anchor text are saved to `output/learned-url-terms.json` and boost discovery scores on later schools in the same batch:
+
+```bash
+python -m school_capture.cli --learned-terms output/learned-url-terms.json ...
+```
+
+Disable with `--no-learned-terms` or `--no-hub-spoke`.
+
 Re-run the pilot after engine changes:
 
 ```bash

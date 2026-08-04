@@ -73,6 +73,21 @@ def infer_role(text: str) -> str:
     return "other"
 
 
+def infer_role_from_email(email: str) -> str:
+    local = email.split("@", 1)[0].lower()
+    if any(t in local for t in ("senco", "send", "sen.", "sen-")):
+        return "senco"
+    if any(t in local for t in ("admission", "admissions")):
+        return "admissions"
+    if any(t in local for t in ("office", "admin", "reception", "enquir")):
+        return "office"
+    if any(t in local for t in ("head", "principal")):
+        return "headteacher"
+    if "safeguard" in local:
+        return "safeguarding"
+    return "other"
+
+
 def normalize_phone(raw: str) -> str | None:
     value = re.sub(r"[^\d+]", "", (raw or "").strip())
     if not value:
@@ -250,7 +265,11 @@ def parse_contact_html(
     for raw in parser.entries:
         if "email" in raw:
             label = raw.get("label") or ""
-            add(role=infer_role(label), email=raw["email"], label=label or None)
+            email = raw["email"]
+            role = infer_role(label)
+            if role == "other":
+                role = infer_role_from_email(email)
+            add(role=role, email=email, label=label or None)
         elif "phone" in raw:
             label = raw.get("label") or ""
             add(role=infer_role(label), phone=raw["phone"], label=label or None)
