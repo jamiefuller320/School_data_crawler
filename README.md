@@ -203,6 +203,35 @@ Summarise documents found across a batch:
 python scripts/document-inventory-report.py output/qualitative-capture.json
 ```
 
+## Contact capture (v0.1)
+
+A separate sidecar captures **factual directory data** — headteacher, SENCO, postal address, email and telephone — with provenance on every field.
+
+Sources (in trust order):
+
+1. **DfE index baseline** — address, town, postcode already on `schools-index.json`
+2. **GIAS Edubase** — official telephone, school email, headteacher name, postal address
+3. **School website** — contact/staff pages: `mailto:` / `tel:` links, definition lists, schema.org
+
+```bash
+# Hampshire pilot batch (downloads Edubase on first run)
+python -m school_capture.contact_cli \
+  --comparison-tool /path/to/Comparison-tool \
+  --la Hampshire --require-website --limit 12
+
+# Index + GIAS only (no website scrape)
+python -m school_capture.contact_cli --no-website ...
+
+# Merge into Comparison-tool index
+python scripts/merge-contacts.py \
+  --index /path/to/Comparison-tool/public/data/schools-index.json \
+  --capture output/contact-capture.json
+```
+
+Output: `output/contact-capture.json` · schema: `schemas/contact-capture.schema.json` · types: `types/contact-capture.ts`
+
+Merged schools gain `contactCapture` and, when missing, a top-level `telephone` from GIAS/office contacts.
+
 Re-run the pilot after engine changes:
 
 ```bash

@@ -130,6 +130,9 @@ class SchoolInput:
     town: str | None = None
     localAuthority: str | None = None
     postcode: str | None = None
+    address: str | None = None
+    telephone: str | None = None
+    giasUrl: str | None = None
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> SchoolInput:
@@ -140,6 +143,9 @@ class SchoolInput:
             town=(data.get("town") or None),
             localAuthority=(data.get("localAuthority") or None),
             postcode=(data.get("postcode") or None),
+            address=(data.get("address") or None),
+            telephone=(data.get("telephone") or None),
+            giasUrl=(data.get("giasUrl") or None),
         )
 
 
