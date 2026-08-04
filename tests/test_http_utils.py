@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from school_capture.http_utils import parse_html
+from school_capture.http_utils import normalize_url, parse_html
 
 
 def test_parse_html_prefers_main_content():
@@ -22,3 +22,13 @@ def test_parse_html_prefers_main_content():
     assert "broad and balanced curriculum" in text
     assert "cookies" not in text
     assert "arbor management" not in text
+
+
+def test_normalize_url_encodes_spaces_in_path():
+    url = normalize_url(
+        "/docs/Parents-Complete-Guide to the National Curriculum.pdf",
+        "https://school.example",
+    )
+    assert url == (
+        "https://school.example/docs/Parents-Complete-Guide%20to%20the%20National%20Curriculum.pdf"
+    )

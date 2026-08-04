@@ -19,7 +19,7 @@ from school_capture.index_loader import (  # noqa: E402
     load_schools_index,
     resolve_comparison_tool_index,
 )
-from school_capture.models import QualitativeCaptureIndex, SchoolInput, today_iso  # noqa: E402
+from school_capture.learned_terms import load_learned_terms, save_learned_terms  # noqa: E402
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -69,6 +69,27 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Disable social media adapter",
     )
+    p.add_argument(
+        "--no-documents",
+        action="store_true",
+        help="Disable school document (PDF) extraction",
+    )
+    p.add_argument(
+        "--learned-terms",
+        type=Path,
+        default=Path("output/learned-url-terms.json"),
+        help="Read/write cross-school learned URL terms (disable with --no-learned-terms)",
+    )
+    p.add_argument(
+        "--no-learned-terms",
+        action="store_true",
+        help="Disable learned cross-school URL term boosting",
+    )
+    p.add_argument(
+        "--no-hub-spoke",
+        action="store_true",
+        help="Disable hub-and-spoke discovery (homepage links only)",
+    )
     return p
 
 
@@ -98,16 +119,24 @@ def load_schools(args: argparse.Namespace) -> list[SchoolInput]:
 def build_engine(args: argparse.Namespace) -> CaptureEngine:
     from school_capture.sources import (
         LocalNewsAdapter,
+        SchoolDocumentsAdapter,
         SchoolWebsiteAdapter,
         SocialMediaAdapter,
     )
 
-    adapters = [SchoolWebsiteAdapter()]
+    learned = None if args.no_learned_terms else load_learned_terms(args.learned_terms)
+    website = SchoolWebsiteAdapter(
+        learned_terms=learned,
+        hub_spoke=not args.no_hub_spoke,
+    )
+    adapters: list = [website]
+    if not args.no_documents:
+        adapters.append(SchoolDocumentsAdapter(website_adapter=website))
     if not args.no_news:
         adapters.append(LocalNewsAdapter())
     if not args.no_social:
         adapters.append(SocialMediaAdapter())
-    return CaptureEngine(adapters=adapters)
+    return CaptureEngine(adapters=adapters, learned_terms=learned)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -122,6 +151,10 @@ def main(argv: list[str] | None = None) -> int:
     for school in schools:
         print(f"Capturing {school.urn} {school.name}...", file=sys.stderr)
         records.append(engine.capture_school(school))
+
+    if engine.learned_terms is not None and not args.no_learned_terms:
+        save_learned_terms(engine.learned_terms, args.learned_terms)
+        print(f"Updated learned URL terms ({len(engine.learned_terms)})", file=sys.stderr)
 
     index = QualitativeCaptureIndex(
         generatedAt=today_iso(),

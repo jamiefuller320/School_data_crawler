@@ -1,3 +1,5 @@
-# Runtime: stdlib only (urllib, html.parser, json).
+# Runtime dependencies
+pypdf>=4.0
+
 # Optional dev:
 # pytest>=8.0

@@ -8,13 +8,16 @@ version = "0.1.0"
 description = "Experimental qualitative data capture engine for schoolcompass.uk"
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "pypdf>=4.0",
+]
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0"]
 
 [project.scripts]
 school-capture = "school_capture.cli:main"
+contact-capture = "school_capture.contact_cli:main"
 
 [tool.setuptools.packages.find]
 where = ["."]

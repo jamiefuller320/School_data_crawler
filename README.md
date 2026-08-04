@@ -37,6 +37,9 @@ output/
 schemas/qualitative-capture.schema.json
 types/qualitative-capture.ts   # Mirror for Comparison-tool types.ts
 scripts/merge-qualitative.py   # Join sidecars onto schools-index.json
+scripts/merge-contacts.py      # Join contact-capture onto schools-index.json
+scripts/handover-comparison-tool.sh  # Apply Comparison-tool patch + optional capture
+handover/COMPARISON_TOOL.md    # Handover guide for Comparison-tool repo
 ```
 
 ### Data flow
@@ -176,9 +179,9 @@ pytest -q
 
 Offline tests mock HTTP and use HTML fixtures under `tests/fixtures/pages/`.
 
-## Quality filters (v0.4)
+## Quality filters (v0.5)
 
-Phase 1–2 deterministic extraction favours concrete provision over marketing copy:
+Phase 1–3 deterministic extraction favours concrete provision over marketing copy:
 
 - URL blocklist (privacy, cookies, accessibility statements, login, etc.)
 - Sentence blocklist (cookie banners, compliance text, form labels)
@@ -187,7 +190,73 @@ Phase 1–2 deterministic extraction favours concrete provision over marketing c
 - **Structured list extraction** — pulls clubs, subjects, wraparound care from `<ul>`/`<ol>` under headings
 - **Section-scoped parsing** — content grouped by h1/h2/h3 headings
 - **Cross-page corroboration** — offerings mentioned on multiple pages score higher
+- **Site document scan** — discovers PDFs/DOC/XLS linked from crawled pages; extracts text from PDFs (up to 8 per school)
+- **Document inventory** — per-school list of discovered files with extraction status in the sidecar and viewer
 - Concrete **offerings** list per subject area; summaries lead with listed provision
+
+Disable document extraction for faster runs:
+
+```bash
+python -m school_capture.cli --no-documents ...
+```
+
+Summarise documents found across a batch:
+
+```bash
+python scripts/document-inventory-report.py output/qualitative-capture.json
+```
+
+## Contact capture (v0.1)
+
+A separate sidecar captures **factual directory data** — headteacher, SENCO, postal address, email and telephone — with provenance on every field.
+
+Sources (in trust order):
+
+1. **DfE index baseline** — address, town, postcode already on `schools-index.json`
+2. **GIAS Edubase** — official telephone, school email, headteacher name, postal address
+3. **School website** — contact/staff pages: `mailto:` / `tel:` links, definition lists, schema.org
+
+```bash
+# Hampshire pilot batch (downloads Edubase on first run)
+python -m school_capture.contact_cli \
+  --comparison-tool /path/to/Comparison-tool \
+  --la Hampshire --require-website --limit 12
+
+# Index + GIAS only (no website scrape)
+python -m school_capture.contact_cli --no-website ...
+
+# Merge into Comparison-tool index
+python scripts/merge-contacts.py \
+  --index /path/to/Comparison-tool/public/data/schools-index.json \
+  --capture output/contact-capture.json
+```
+
+Output: `output/contact-capture.json` · schema: `schemas/contact-capture.schema.json` · types: `types/contact-capture.ts`
+
+Merged schools gain `contactCapture` and, when missing, a top-level `telephone` from GIAS/office contacts.
+
+### Comparison-tool handover
+
+Visit-pack UI and harvest `telephone` fix live in the **Comparison-tool** repo. Apply from this repo:
+
+```bash
+chmod +x scripts/handover-comparison-tool.sh scripts/publish-contacts-pilot.sh
+./scripts/handover-comparison-tool.sh /path/to/Comparison-tool
+```
+
+See `handover/COMPARISON_TOOL.md` for manual steps, patch location, and env flags (`SKIP_PATCH`, `RUN_HARVEST`, `CAPTURE_CONTACTS`).
+
+## URL discovery (v0.6)
+
+The website adapter uses **hub-and-spoke** crawling: after scanning the homepage it follows curriculum hub pages (e.g. “Subject curriculum overviews”) and discovers linked subject pages (Maths, English, etc.). A redirect-aware same-site check handles schools whose live domain differs from the index URL (e.g. Abbotswood).
+
+**Learned cross-school terms** — when a page yields useful evidence, its URL path segments and anchor text are saved to `output/learned-url-terms.json` and boost discovery scores on later schools in the same batch:
+
+```bash
+python -m school_capture.cli --learned-terms output/learned-url-terms.json ...
+```
+
+Disable with `--no-learned-terms` or `--no-hub-spoke`.
 
 Re-run the pilot after engine changes:
 

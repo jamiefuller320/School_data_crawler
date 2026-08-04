@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schoolcompass.uk/schemas/contact-capture.schema.json",
+  "title": "ContactCaptureIndex",
+  "description": "School contact directory sidecar for School Compass comparison_tool",
+  "type": "object",
+  "required": ["generatedAt", "engineVersion", "schoolCount", "records"],
+  "properties": {
+    "generatedAt": { "type": "string", "format": "date" },
+    "engineVersion": { "type": "string" },
+    "schoolCount": { "type": "integer", "minimum": 0 },
+    "stats": { "type": "object" },
+    "records": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/ContactCaptureRecord" }
+    }
+  },
+  "$defs": {
+    "ContactEntry": {
+      "type": "object",
+      "required": ["role", "sourceType", "sourceUrl", "capturedAt"],
+      "properties": {
+        "role": {
+          "enum": [
+            "headteacher",
+            "senco",
+            "office",
+            "admissions",
+            "safeguarding",
+            "governor",
+            "other"
+          ]
+        },
+        "sourceType": {
+          "enum": ["gias", "dfe-index", "school-website", "school-document", "other"]
+        },
+        "sourceUrl": { "type": "string" },
+        "capturedAt": { "type": "string", "format": "date" },
+        "name": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "phone": { "type": "string" },
+        "address": { "type": "string" },
+        "town": { "type": "string" },
+        "postcode": { "type": "string" },
+        "label": { "type": "string" }
+      }
+    },
+    "ContactCaptureRecord": {
+      "type": "object",
+      "required": ["urn", "name", "assessedAt", "engineVersion", "contacts"],
+      "properties": {
+        "urn": { "type": "string" },
+        "name": { "type": "string" },
+        "assessedAt": { "type": "string", "format": "date" },
+        "engineVersion": { "type": "string" },
+        "contacts": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/ContactEntry" }
+        },
+        "captureNotes": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

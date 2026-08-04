@@ -19,12 +19,13 @@ class SubjectArea(str, Enum):
 
 class SourceType(str, Enum):
     SCHOOL_WEBSITE = "school-website"
+    SCHOOL_DOCUMENT = "school-document"
     LOCAL_NEWS = "local-news"
     SOCIAL_MEDIA = "social-media"
     OTHER = "other"
 
 
-ENGINE_VERSION = "0.4.0"
+ENGINE_VERSION = "0.5.0"
 
 
 @dataclass
@@ -79,6 +80,9 @@ class QualitativeCaptureRecord:
     sourceTypes: list[str] = field(default_factory=list)
     areas: list[SubjectAreaAssessment] = field(default_factory=list)
     captureNotes: list[str] = field(default_factory=list)
+    documentsDiscovered: int = 0
+    documentsExtracted: int = 0
+    documentInventory: list[dict[str, str]] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -90,6 +94,9 @@ class QualitativeCaptureRecord:
             "sourceTypes": self.sourceTypes,
             "areas": [a.to_dict() for a in self.areas],
             "captureNotes": self.captureNotes,
+            "documentsDiscovered": self.documentsDiscovered,
+            "documentsExtracted": self.documentsExtracted,
+            "documentInventory": self.documentInventory,
         }
 
 
@@ -123,6 +130,9 @@ class SchoolInput:
     town: str | None = None
     localAuthority: str | None = None
     postcode: str | None = None
+    address: str | None = None
+    telephone: str | None = None
+    giasUrl: str | None = None
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> SchoolInput:
@@ -133,6 +143,9 @@ class SchoolInput:
             town=(data.get("town") or None),
             localAuthority=(data.get("localAuthority") or None),
             postcode=(data.get("postcode") or None),
+            address=(data.get("address") or None),
+            telephone=(data.get("telephone") or None),
+            giasUrl=(data.get("giasUrl") or None),
         )
 
 

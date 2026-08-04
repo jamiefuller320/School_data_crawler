@@ -1,0 +1,350 @@
+From 7db7ebb3676d8a7360d361a2bc8dc69e482d309f Mon Sep 17 00:00:00 2001
+From: Cursor Agent <cursoragent@cursor.com>
+Date: Tue, 4 Aug 2026 13:09:24 +0000
+Subject: [PATCH] Visit pack contacts and preserve telephone in harvest
+
+Add contactCapture to SchoolRecord and show headteacher, SENCO, phone and
+email in visit packs with source links. Include telephone in LEAN_KEYS so
+DfE harvest data reaches the schools index.
+---
+ scripts/harvest-schools.py   |  1 +
+ scripts/test-visit-pack.mjs  | 35 +++++++++++++
+ src/app/globals.css          | 17 +++++++
+ src/components/VisitPack.tsx | 42 +++++++++++++++
+ src/lib/types.ts             | 42 +++++++++++++++
+ src/lib/visitPack.ts         | 99 +++++++++++++++++++++++++++++++++++-
+ 6 files changed, 235 insertions(+), 1 deletion(-)
+
+diff --git a/scripts/harvest-schools.py b/scripts/harvest-schools.py
+index 95df63f..96dddff 100644
+--- a/scripts/harvest-schools.py
++++ b/scripts/harvest-schools.py
+@@ -612,6 +612,7 @@ LEAN_KEYS = [
+     "town",
+     "postcode",
+     "address",
++    "telephone",
+     "ageRange",
+     "phase",
+     "phases",
+diff --git a/scripts/test-visit-pack.mjs b/scripts/test-visit-pack.mjs
+index a96cfba..2c27c8e 100644
+--- a/scripts/test-visit-pack.mjs
++++ b/scripts/test-visit-pack.mjs
+@@ -103,6 +103,41 @@ async function main() {
+     console.error("FAIL school contact row", schoolRow);
+     process.exit(1);
+   }
++
++  const withContacts = toVisitContactRow(
++    {
++      ...primary,
++      telephone: "01962 000000",
++      contactCapture: {
++        urn: "116000",
++        name: "Test Junior",
++        assessedAt: "2026-08-04",
++        engineVersion: "0.1.0",
++        contacts: [
++          {
++            role: "headteacher",
++            name: "Alex Example",
++            sourceType: "gias",
++            sourceUrl: "https://example.test/gias/116000",
++            capturedAt: "2026-08-04",
++          },
++          {
++            role: "senco",
++            name: "Sam Senco",
++            email: "senco@example.test",
++            sourceType: "school-website",
++            sourceUrl: "https://example.test/contact",
++            capturedAt: "2026-08-04",
++          },
++        ],
++      },
++    },
++    "school",
++  );
++  if (!withContacts?.headteacher?.includes("Alex") || !withContacts.senco) {
++    console.error("FAIL contact capture merge on visit row", withContacts);
++    process.exit(1);
++  }
+   if (questionsForKind("school").length < 6) {
+     console.error("FAIL school visit questions too short");
+     process.exit(1);
+diff --git a/src/app/globals.css b/src/app/globals.css
+index 47c911b..197d288 100644
+--- a/src/app/globals.css
++++ b/src/app/globals.css
+@@ -3108,6 +3108,23 @@ html.tour-running .hero-inner > * {
+   line-height: 1.35;
+ }
+ 
++.visit-contact-lines {
++  margin: 0.35rem 0 0.5rem;
++  padding-left: 1.1rem;
++  color: var(--ink);
++  font-size: 0.9rem;
++  line-height: 1.4;
++}
++
++.visit-contact-lines li {
++  margin: 0.15rem 0;
++}
++
++.visit-contact-source {
++  color: var(--ink-soft);
++  font-size: 0.82rem;
++}
++
+ .visit-status select {
+   appearance: none;
+   border: 1px solid var(--line);
+diff --git a/src/components/VisitPack.tsx b/src/components/VisitPack.tsx
+index afb07e1..134c89c 100644
+--- a/src/components/VisitPack.tsx
++++ b/src/components/VisitPack.tsx
+@@ -120,6 +120,23 @@ function ScreenStatusRow({
+           {row.kindLabel}
+           {row.addressLine ? ` · ${row.addressLine}` : null}
+         </p>
++        {row.contactRows?.length ? (
++          <ul className="visit-contact-lines no-print">
++            {row.contactRows.map((line) => (
++              <li key={`${line.role}-${line.label}-${line.value}`}>
++                <strong>{line.label}:</strong> {line.value}
++                {line.sourceUrl ? (
++                  <>
++                    {" "}
++                    <a href={line.sourceUrl} target="_blank" rel="noopener noreferrer">
++                      source
++                    </a>
++                  </>
++                ) : null}
++              </li>
++            ))}
++          </ul>
++        ) : null}
+       </div>
+       <label className="visit-status">
+         <span className="visually-hidden">Contact status</span>
+@@ -177,6 +194,31 @@ function SchoolNotesPage({
+               : null}
+           </p>
+           <p className="visit-address">{row.addressLine}</p>
++          {row.contactRows?.length ? (
++            <ul className="visit-contact-lines">
++              {row.contactRows.map((line) => (
++                <li key={`${line.role}-${line.label}-${line.value}`}>
++                  <strong>{line.label}:</strong> {line.value}
++                  {line.sourceUrl ? (
++                    <>
++                      {" "}
++                      <span className="visit-contact-source">
++                        (
++                        <a
++                          href={line.sourceUrl}
++                          target="_blank"
++                          rel="noopener noreferrer"
++                        >
++                          {line.sourceType?.replaceAll("-", " ") || "source"}
++                        </a>
++                        )
++                      </span>
++                    </>
++                  ) : null}
++                </li>
++              ))}
++            </ul>
++          ) : null}
+           <p className="visit-contact-meta">
+             {[row.localAuthority, row.ofstedInspectionDate]
+               .filter(Boolean)
+diff --git a/src/lib/types.ts b/src/lib/types.ts
+index a479f76..dbf6df2 100644
+--- a/src/lib/types.ts
++++ b/src/lib/types.ts
+@@ -116,6 +116,45 @@ export interface InspectionQuote {
+   sourceUrl: string;
+ }
+ 
++export type ContactRole =
++  | "headteacher"
++  | "senco"
++  | "office"
++  | "admissions"
++  | "safeguarding"
++  | "governor"
++  | "other";
++
++export type ContactSourceType =
++  | "gias"
++  | "dfe-index"
++  | "school-website"
++  | "school-document"
++  | "other";
++
++export interface ContactEntry {
++  role: ContactRole;
++  sourceType: ContactSourceType;
++  sourceUrl: string;
++  capturedAt: string;
++  name?: string | null;
++  email?: string | null;
++  phone?: string | null;
++  address?: string | null;
++  town?: string | null;
++  postcode?: string | null;
++  label?: string | null;
++}
++
++export interface ContactCaptureRecord {
++  urn: string;
++  name: string;
++  assessedAt: string;
++  engineVersion: string;
++  contacts: ContactEntry[];
++  captureNotes?: string[];
++}
++
+ export interface SchoolRecord extends SchoolMetrics, IndependentMetrics {
+   urn: string;
+   name: string;
+@@ -154,6 +193,9 @@ export interface SchoolRecord extends SchoolMetrics, IndependentMetrics {
+   openDate?: string | null;
+   /** GIAS ReasonEstablishmentOpened label when known. */
+   reasonEstablishmentOpened?: string | null;
++  /** Merged from contact-capture sidecar when enriched. */
++  contactCapture?: ContactCaptureRecord | null;
++  contactCaptureEnrichedAt?: string | null;
+ }
+ 
+ export interface DirectorySchool {
+diff --git a/src/lib/visitPack.ts b/src/lib/visitPack.ts
+index 5e190b9..bf839e4 100644
+--- a/src/lib/visitPack.ts
++++ b/src/lib/visitPack.ts
+@@ -1,4 +1,4 @@
+-import type { SchoolRecord } from "@/lib/types";
++import type { ContactEntry, SchoolRecord } from "@/lib/types";
+ import {
+   CHILDMINDER_VETTING_CHECKLIST,
+   type ChecklistItem,
+@@ -197,6 +197,94 @@ export interface VisitContactRow {
+   inspectionReportFileUrl?: string | null;
+   inspectionReportLabel?: string | null;
+   inspectionPrecisSource?: SchoolRecord["inspectionPrecisSource"];
++  /** Directory contacts from contactCapture sidecar (when enriched). */
++  telephone?: string | null;
++  officeEmail?: string | null;
++  headteacher?: string | null;
++  senco?: string | null;
++  contactRows?: VisitPackContactLine[];
++}
++
++export interface VisitPackContactLine {
++  role: string;
++  label: string;
++  value: string;
++  sourceUrl?: string | null;
++  sourceType?: string | null;
++}
++
++function pickContact(
++  contacts: ContactEntry[] | undefined,
++  role: ContactEntry["role"],
++  field: "name" | "email" | "phone",
++): ContactEntry | undefined {
++  return (contacts || []).find((c) => c.role === role && c[field]);
++}
++
++function firstContactField(
++  contacts: ContactEntry[] | undefined,
++  field: "email" | "phone",
++): ContactEntry | undefined {
++  return (contacts || []).find((c) => c[field]);
++}
++
++export function contactLinesForRecord(record: SchoolRecord): VisitPackContactLine[] {
++  const contacts = record.contactCapture?.contacts || [];
++  const lines: VisitPackContactLine[] = [];
++  const seen = new Set<string>();
++
++  const add = (
++    role: string,
++    label: string,
++    value: string | null | undefined,
++    source?: ContactEntry,
++  ) => {
++    const v = (value || "").trim();
++    if (!v) return;
++    const key = `${role}:${v.toLowerCase()}`;
++    if (seen.has(key)) return;
++    seen.add(key);
++    lines.push({
++      role,
++      label,
++      value: v,
++      sourceUrl: source?.sourceUrl,
++      sourceType: source?.sourceType,
++    });
++  };
++
++  const phone =
++    record.telephone ||
++    pickContact(contacts, "office", "phone")?.phone ||
++    firstContactField(contacts, "phone")?.phone;
++  const email =
++    pickContact(contacts, "office", "email")?.email ||
++    firstContactField(contacts, "email")?.email;
++  const head =
++    pickContact(contacts, "headteacher", "name")?.name ||
++    pickContact(contacts, "headteacher", "email")?.name;
++  const senco =
++    pickContact(contacts, "senco", "name")?.name ||
++    pickContact(contacts, "senco", "email")?.name;
++
++  add("office", "Telephone", phone, pickContact(contacts, "office", "phone"));
++  add("office", "Email", email, pickContact(contacts, "office", "email"));
++  add(
++    "headteacher",
++    "Headteacher",
++    head,
++    pickContact(contacts, "headteacher", "name"),
++  );
++  add("senco", "SENCO", senco, pickContact(contacts, "senco", "name"));
++
++  for (const entry of contacts) {
++    if (entry.role === "office" && entry.address) {
++      add("office", "Address", entry.address, entry);
++      break;
++    }
++  }
++
++  return lines;
+ }
+ 
+ export function toVisitContactRow(
+@@ -208,6 +296,7 @@ export function toVisitContactRow(
+   const addressLine = [record.address, record.town, record.postcode]
+     .filter(Boolean)
+     .join(", ");
++  const contactLines = contactLinesForRecord(record);
+   const schoolLabel =
+     record.schoolTypeLabel ||
+     record.phase ||
+@@ -246,5 +335,13 @@ export function toVisitContactRow(
+     inspectionReportFileUrl: record.inspectionReportFileUrl,
+     inspectionReportLabel: record.inspectionReportLabel,
+     inspectionPrecisSource: record.inspectionPrecisSource,
++    telephone:
++      record.telephone ||
++      contactLines.find((l) => l.label === "Telephone")?.value ||
++      null,
++    officeEmail: contactLines.find((l) => l.label === "Email")?.value || null,
++    headteacher: contactLines.find((l) => l.label === "Headteacher")?.value || null,
++    senco: contactLines.find((l) => l.label === "SENCO")?.value || null,
++    contactRows: contactLines,
+   };
+ }
