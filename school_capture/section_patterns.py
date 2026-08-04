@@ -6,6 +6,8 @@ SECTION_PATTERNS: dict[str, tuple[str, ...]] = {
     "curriculum": (
         "curriculum",
         "subjects",
+        "subject-curriculum",
+        "curriculum-overview",
         "learning",
         "academic",
         "key-stage",

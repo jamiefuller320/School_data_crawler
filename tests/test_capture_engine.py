@@ -29,11 +29,11 @@ def test_website_adapter_discovers_themed_pages():
     adapter = SchoolWebsiteAdapter()
     homepage = _page("homepage.html")
 
-    with patch("school_capture.sources.website.safe_fetch") as mock_fetch:
+    with patch("school_capture.url_discovery.safe_fetch") as mock_fetch:
         mock_fetch.return_value = ("https://example.testvalley.sch.uk/", homepage)
         urls = adapter.discover(school)
 
-    assert "https://example.testvalley.sch.uk/" in urls
+    assert any(u.rstrip("/") == "https://example.testvalley.sch.uk" for u in urls)
 
 
 def test_assessor_rejects_vague_ethos():

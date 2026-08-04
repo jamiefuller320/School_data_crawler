@@ -7,65 +7,37 @@ from urllib.parse import urlparse
 
 from school_capture.filters import classify_page_type, is_blocked_url
 from school_capture.html_sections import parse_structured_page
-from school_capture.http_utils import (
-    link_matches,
-    normalize_url,
-    same_site,
-    safe_fetch,
-)
+from school_capture.http_utils import normalize_url, safe_fetch
 from school_capture.models import SchoolInput
-from school_capture.section_patterns import PRIORITY_URL_TERMS, SECTION_PATTERNS
+from school_capture.section_patterns import SECTION_PATTERNS
 from school_capture.sources.base import RawCapture, StructuredSection
-
-MAX_PAGES = 10
-MAX_LINKS_SCAN = 150
+from school_capture.url_discovery import discover_site_pages
 
 
 class SchoolWebsiteAdapter:
     source_type = "school-website"
 
+    def __init__(
+        self,
+        *,
+        learned_terms: dict[str, int] | None = None,
+        hub_spoke: bool = True,
+        max_pages: int = 18,
+    ) -> None:
+        self._learned_terms = learned_terms
+        self._hub_spoke = hub_spoke
+        self._max_pages = max_pages
+
     def discover(self, school: SchoolInput) -> list[str]:
         root = normalize_url(school.schoolWebsite or "")
         if not root:
             return []
-        final, html = safe_fetch(root)
-        if not final or not html:
-            return [root]
-
-        parsed = parse_structured_page(html)
-        candidates: list[tuple[int, str]] = []
-        seen: set[str] = {final}
-
-        for href, anchor in parsed.links[:MAX_LINKS_SCAN]:
-            abs_url = normalize_url(href, final)
-            if not abs_url or abs_url in seen:
-                continue
-            if not same_site(abs_url, final):
-                continue
-            if is_blocked_url(abs_url):
-                continue
-            seen.add(abs_url)
-            score = self._url_score(abs_url, anchor)
-            if score:
-                candidates.append((score, abs_url))
-
-        candidates.sort(key=lambda x: (-x[0], x[1]))
-        urls = [final] if not is_blocked_url(final) else []
-        for _, url in candidates[: MAX_PAGES - len(urls)]:
-            if url not in urls:
-                urls.append(url)
-        return urls or [final]
-
-    def _url_score(self, url: str, anchor: str) -> int:
-        score = 0
-        blob = f"{url} {anchor}".lower()
-        for sec, patterns in SECTION_PATTERNS.items():
-            if link_matches(anchor, url, patterns):
-                score += 3
-            for priority in PRIORITY_URL_TERMS.get(sec, ()):
-                if priority in blob:
-                    score += 2
-        return score
+        return discover_site_pages(
+            root,
+            learned_terms=self._learned_terms,
+            hub_spoke=self._hub_spoke,
+            max_pages=self._max_pages,
+        )
 
     def capture(self, school: SchoolInput, url: str) -> RawCapture | None:
         if is_blocked_url(url):

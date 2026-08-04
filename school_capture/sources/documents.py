@@ -26,8 +26,8 @@ from school_capture.sources.website import SchoolWebsiteAdapter
 class SchoolDocumentsAdapter:
     source_type = "school-document"
 
-    def __init__(self) -> None:
-        self._website = SchoolWebsiteAdapter()
+    def __init__(self, website_adapter: SchoolWebsiteAdapter | None = None) -> None:
+        self._website = website_adapter or SchoolWebsiteAdapter()
         self._last_inventory: list[dict[str, str]] = []
 
     @property

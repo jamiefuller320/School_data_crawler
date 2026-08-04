@@ -5,6 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 from school_capture.analysis.assessor import assess_captures, dedupe_captures
+from school_capture.learned_terms import update_learned_terms
 from school_capture.models import (
     ENGINE_VERSION,
     QualitativeCaptureRecord,
@@ -19,7 +20,8 @@ from school_capture.sources.documents import SchoolDocumentsAdapter
 @dataclass
 class CaptureEngine:
     adapters: list[SourceAdapter] = field(default_factory=default_adapters)
-    max_urls_per_adapter: int = 10
+    max_urls_per_adapter: int = 18
+    learned_terms: dict[str, int] | None = None
 
     def capture_school(self, school: SchoolInput) -> QualitativeCaptureRecord:
         notes: list[str] = []
@@ -53,6 +55,20 @@ class CaptureEngine:
 
         captures = dedupe_captures(captures)
         areas = assess_captures(captures)
+        if self.learned_terms is not None:
+            for area in areas:
+                signal_count = len(area.signals)
+                if signal_count <= 0:
+                    continue
+                for signal in area.signals:
+                    if signal.sourceType != "school-website":
+                        continue
+                    update_learned_terms(
+                        self.learned_terms,
+                        url=signal.sourceUrl,
+                        area=area.area,
+                        signal_count=signal_count,
+                    )
         docs_extracted = sum(1 for d in document_inventory if d.get("status") == "extracted")
 
         return QualitativeCaptureRecord(

@@ -5,7 +5,13 @@ from __future__ import annotations
 from pathlib import Path
 
 from school_capture.contact_engine import ContactCaptureEngine
-from school_capture.contacts import infer_role, normalize_email, normalize_phone, parse_contact_html
+from school_capture.contacts import (
+    infer_role,
+    infer_role_from_email,
+    normalize_email,
+    normalize_phone,
+    parse_contact_html,
+)
 from school_capture.models import SchoolInput, today_iso
 
 FIXTURE = Path(__file__).parent / "fixtures" / "pages" / "contact.html"
@@ -38,6 +44,11 @@ def test_parse_contact_html_fixture():
     assert "office@example.hants.sch.uk" in emails
     assert "senco@example.hants.sch.uk" in emails
     assert any("123456" in (p or "") for p in phones)
+
+
+def test_infer_role_from_email():
+    assert infer_role_from_email("admin.office@school.hants.sch.uk") == "office"
+    assert infer_role_from_email("senco@school.hants.sch.uk") == "senco"
 
 
 def test_index_baseline_without_network():
