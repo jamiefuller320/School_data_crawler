@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>School Compass · Website evidence prototype</title>
+    <meta
+      name="description"
+      content="Prototype evidence viewer — paragraph summaries with expandable sources from school websites and documents."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>From their website</h1>
+      <p>
+        Prototype for
+        <a href="https://schoolcompass.uk">schoolcompass.uk</a>
+        — what schools publish about curriculum, clubs, ethos and related topics.
+        Summaries are drawn from scanned public pages; expand any section to see
+        links and quoted excerpts.
+      </p>
+      <span class="badge"
+        >Prototype · Hampshire · scanned <span id="generated-at">—</span></span
+      >
+      <a class="badge badge-link" href="../index.html">Legacy score-based viewer</a>
+    </header>
+
+    <main>
+      <div class="disclaimer">
+        <strong>Not a school rating.</strong> This shows what was found (or not
+        found) on school websites and linked documents during an automated scan.
+        It does not judge quality or compare schools on an absolute scale. Always
+        visit schools and read original sources before deciding.
+      </div>
+
+      <section class="pilot-insights" aria-label="Pilot discovery insights">
+        <h2>What this pilot is learning to look for</h2>
+        <p class="lede">
+          As schools are scanned, recurring URL and page-title terms are collected
+          to improve discovery on later sites — similar themes may surface as new
+          focus areas over time.
+        </p>
+        <div id="learned-terms" class="learned-terms"></div>
+        <div id="emerging-themes" class="emerging-themes"></div>
+      </section>
+
+      <section class="stats" aria-label="Pilot summary">
+        <div class="stat">
+          <div class="label">Schools scanned</div>
+          <div class="value" id="stat-schools">—</div>
+        </div>
+        <div class="stat">
+          <div class="label">With website evidence</div>
+          <div class="value" id="stat-covered">—</div>
+        </div>
+        <div class="stat">
+          <div class="label">Source excerpts</div>
+          <div class="value" id="stat-signals">—</div>
+        </div>
+        <div class="stat">
+          <div class="label">Site documents</div>
+          <div class="value" id="stat-docs">—</div>
+        </div>
+        <div class="stat">
+          <div class="label">Discovery terms</div>
+          <div class="value" id="stat-learned">—</div>
+        </div>
+      </section>
+
+      <div class="controls">
+        <input
+          id="search"
+          type="search"
+          placeholder="Search by school name or URN…"
+        />
+        <select id="sort" aria-label="Sort schools">
+          <option value="name">Sort: name</option>
+          <option value="coverage">Sort: most evidence</option>
+        </select>
+      </div>
+
+      <section id="school-grid" class="grid" aria-label="School results"></section>
+      <section id="detail-panel" class="detail hidden" aria-live="polite"></section>
+    </main>
+
+    <footer>
+      <a href="https://github.com/jamiefuller320/School_data_crawler">School_data_crawler</a>
+      evidence prototype — not for admissions decisions.
+    </footer>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

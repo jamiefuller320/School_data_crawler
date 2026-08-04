@@ -115,3 +115,25 @@ def merge_learned_terms(base: dict[str, int], incoming: dict[str, int]) -> dict[
         if is_useful_term(term):
             merged[term] = merged.get(term, 0) + count
     return merged
+
+
+def build_from_capture_file(capture_path: Path) -> dict[str, int]:
+    """Rebuild learned terms from an existing qualitative-capture index."""
+    import json
+
+    payload = json.loads(capture_path.read_text(encoding="utf-8"))
+    store: dict[str, int] = {}
+    for record in payload.get("records") or []:
+        for area in record.get("areas") or []:
+            signal_count = len(area.get("signals") or [])
+            if signal_count <= 0:
+                continue
+            for signal in area.get("signals") or []:
+                update_learned_terms(
+                    store,
+                    url=signal.get("sourceUrl") or "",
+                    anchor=signal.get("pageTitle") or signal.get("text") or "",
+                    area=area.get("area") or "general",
+                    signal_count=signal_count,
+                )
+    return store
