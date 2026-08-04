@@ -37,6 +37,9 @@ output/
 schemas/qualitative-capture.schema.json
 types/qualitative-capture.ts   # Mirror for Comparison-tool types.ts
 scripts/merge-qualitative.py   # Join sidecars onto schools-index.json
+scripts/merge-contacts.py      # Join contact-capture onto schools-index.json
+scripts/handover-comparison-tool.sh  # Apply Comparison-tool patch + optional capture
+handover/COMPARISON_TOOL.md    # Handover guide for Comparison-tool repo
 ```
 
 ### Data flow
@@ -231,6 +234,17 @@ python scripts/merge-contacts.py \
 Output: `output/contact-capture.json` · schema: `schemas/contact-capture.schema.json` · types: `types/contact-capture.ts`
 
 Merged schools gain `contactCapture` and, when missing, a top-level `telephone` from GIAS/office contacts.
+
+### Comparison-tool handover
+
+Visit-pack UI and harvest `telephone` fix live in the **Comparison-tool** repo. Apply from this repo:
+
+```bash
+chmod +x scripts/handover-comparison-tool.sh scripts/publish-contacts-pilot.sh
+./scripts/handover-comparison-tool.sh /path/to/Comparison-tool
+```
+
+See `handover/COMPARISON_TOOL.md` for manual steps, patch location, and env flags (`SKIP_PATCH`, `RUN_HARVEST`, `CAPTURE_CONTACTS`).
 
 ## URL discovery (v0.6)
 
