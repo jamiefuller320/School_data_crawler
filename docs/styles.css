@@ -288,6 +288,78 @@ input[type="search"] {
   text-align: center;
 }
 
+.doc-inventory {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.85rem;
+  margin-bottom: 0.35rem;
+}
+
+.doc-inventory h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+
+.doc-table-wrap {
+  overflow-x: auto;
+  margin-top: 0.5rem;
+}
+
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.doc-table th,
+.doc-table td {
+  text-align: left;
+  padding: 0.45rem 0.55rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.doc-table th {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.doc-meta {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+.doc-status {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.12rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.doc-status-ok {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.doc-status-pending {
+  background: #eef2f8;
+  color: #3d4f66;
+}
+
+.doc-status-muted {
+  background: #f0f0f0;
+  color: var(--muted);
+}
+
+.doc-status-warn {
+  background: var(--warn-bg);
+  color: var(--warn);
+}
+
 footer {
   max-width: 1100px;
   margin: 2rem auto 1.5rem;

@@ -176,9 +176,9 @@ pytest -q
 
 Offline tests mock HTTP and use HTML fixtures under `tests/fixtures/pages/`.
 
-## Quality filters (v0.4)
+## Quality filters (v0.5)
 
-Phase 1–2 deterministic extraction favours concrete provision over marketing copy:
+Phase 1–3 deterministic extraction favours concrete provision over marketing copy:
 
 - URL blocklist (privacy, cookies, accessibility statements, login, etc.)
 - Sentence blocklist (cookie banners, compliance text, form labels)
@@ -187,7 +187,21 @@ Phase 1–2 deterministic extraction favours concrete provision over marketing c
 - **Structured list extraction** — pulls clubs, subjects, wraparound care from `<ul>`/`<ol>` under headings
 - **Section-scoped parsing** — content grouped by h1/h2/h3 headings
 - **Cross-page corroboration** — offerings mentioned on multiple pages score higher
+- **Site document scan** — discovers PDFs/DOC/XLS linked from crawled pages; extracts text from PDFs (up to 8 per school)
+- **Document inventory** — per-school list of discovered files with extraction status in the sidecar and viewer
 - Concrete **offerings** list per subject area; summaries lead with listed provision
+
+Disable document extraction for faster runs:
+
+```bash
+python -m school_capture.cli --no-documents ...
+```
+
+Summarise documents found across a batch:
+
+```bash
+python scripts/document-inventory-report.py output/qualitative-capture.json
+```
 
 Re-run the pilot after engine changes:
 
