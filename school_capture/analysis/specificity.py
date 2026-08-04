@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import re
 
+from school_capture.list_filters import is_nav_or_junk_list_item
 from school_capture.models import SubjectArea
 
 # Unevidenced marketing language — low evidential merit on its own.
@@ -250,6 +251,12 @@ def _has_list_like_content(sentence: str) -> bool:
     parts = [_clean_offering(p) for p in LIST_SPLIT.split(sentence)]
     valid = [p for p in parts if _is_meaningful_offering(p)]
     return len(valid) >= 2
+
+
+def is_meaningful_offering(item: str) -> bool:
+    if is_nav_or_junk_list_item(item):
+        return False
+    return _is_meaningful_offering(item)
 
 
 def _is_meaningful_offering(item: str) -> bool:

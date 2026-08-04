@@ -9,6 +9,14 @@ from school_capture.models import SchoolInput
 
 
 @dataclass
+class StructuredSection:
+    heading: str
+    inferred_section: str
+    paragraphs: list[str] = field(default_factory=list)
+    list_items: list[str] = field(default_factory=list)
+
+
+@dataclass
 class RawCapture:
     """Unstructured text pulled from one URL before area assessment."""
 
@@ -18,6 +26,8 @@ class RawCapture:
     page_title: str | None = None
     section: str | None = None
     meta: dict[str, str] = field(default_factory=dict)
+    structured_sections: list[StructuredSection] = field(default_factory=list)
+    list_items: list[str] = field(default_factory=list)
 
 
 class SourceAdapter(Protocol):

@@ -194,7 +194,7 @@ function renderDetail(record) {
           ${themes ? `<div class="themes">${themes}</div>` : ""}
       ${
         (area.offerings || []).length
-          ? `<div class="offerings"><strong>Specific offerings:</strong> ${(area.offerings || [])
+          ? `<div class="offerings"><strong>Listed provision:</strong> ${(area.offerings || [])
               .map((o) => `<span class="theme">${escapeHtml(o)}</span>`)
               .join("")}</div>`
           : ""

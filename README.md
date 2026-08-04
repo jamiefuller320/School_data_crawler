@@ -176,17 +176,18 @@ pytest -q
 
 Offline tests mock HTTP and use HTML fixtures under `tests/fixtures/pages/`.
 
-## Quality filters (v0.3)
+## Quality filters (v0.4)
 
-Phase 1–2 deterministic filters reduce boilerplate and vague marketing copy:
+Phase 1–2 deterministic extraction favours concrete provision over marketing copy:
 
 - URL blocklist (privacy, cookies, accessibility statements, login, etc.)
 - Sentence blocklist (cookie banners, compliance text, form labels)
 - Main-content HTML extraction (skips nav/footer/aside)
 - **Specificity gate** — rejects unevidenced claims ("we are inclusive", "caring community")
-- **Concrete offerings** — extracts clubs, subjects, wraparound/breakfast care where listed
-- Relevance-ranked signals; scores favour specific provision over generic values language
-- Evidence thresholds — scores stay low unless concrete offerings or specific excerpts found
+- **Structured list extraction** — pulls clubs, subjects, wraparound care from `<ul>`/`<ol>` under headings
+- **Section-scoped parsing** — content grouped by h1/h2/h3 headings
+- **Cross-page corroboration** — offerings mentioned on multiple pages score higher
+- Concrete **offerings** list per subject area; summaries lead with listed provision
 
 Re-run the pilot after engine changes:
 
