@@ -69,6 +69,11 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Disable social media adapter",
     )
+    p.add_argument(
+        "--no-documents",
+        action="store_true",
+        help="Disable school document (PDF) extraction",
+    )
     return p
 
 
@@ -98,11 +103,14 @@ def load_schools(args: argparse.Namespace) -> list[SchoolInput]:
 def build_engine(args: argparse.Namespace) -> CaptureEngine:
     from school_capture.sources import (
         LocalNewsAdapter,
+        SchoolDocumentsAdapter,
         SchoolWebsiteAdapter,
         SocialMediaAdapter,
     )
 
-    adapters = [SchoolWebsiteAdapter()]
+    adapters: list = [SchoolWebsiteAdapter()]
+    if not args.no_documents:
+        adapters.append(SchoolDocumentsAdapter())
     if not args.no_news:
         adapters.append(LocalNewsAdapter())
     if not args.no_social:

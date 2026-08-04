@@ -32,6 +32,26 @@ function formatSourceType(type) {
   return String(type || "other").replaceAll("-", " ");
 }
 
+const DOC_STATUS_LABELS = {
+  discovered: "Queued",
+  extracted: "Extracted",
+  unsupported_format: "Unsupported",
+  failed: "Fetch failed",
+  extract_failed: "Parse failed",
+  empty: "No text",
+};
+
+function docStatusLabel(status) {
+  return DOC_STATUS_LABELS[status] || status || "—";
+}
+
+function docStatusClass(status) {
+  if (status === "extracted") return "doc-status-ok";
+  if (status === "discovered") return "doc-status-pending";
+  if (status === "unsupported_format") return "doc-status-muted";
+  return "doc-status-warn";
+}
+
 function averageAreaScores(records) {
   const totals = {};
   const counts = {};
@@ -77,6 +97,17 @@ function renderStats() {
   );
   document.getElementById("stat-covered").textContent = String(withSignals);
   document.getElementById("stat-avg").textContent = String(avgScore);
+  const docsDiscovered = records.reduce(
+    (sum, r) => sum + (r.documentsDiscovered || 0),
+    0,
+  );
+  const docsExtracted = records.reduce(
+    (sum, r) => sum + (r.documentsExtracted || 0),
+    0,
+  );
+  document.getElementById("stat-docs").textContent = String(docsDiscovered);
+  document.getElementById("stat-docs-extracted").textContent =
+    String(docsExtracted);
   document.getElementById("generated-at").textContent =
     state.data.generatedAt || "—";
   document.getElementById("pilot-la").textContent =
@@ -139,7 +170,7 @@ function renderCards() {
       (record) => `
       <article class="card" tabindex="0" data-urn="${escapeHtml(record.urn)}" aria-label="View ${escapeHtml(record.name)}">
         <h2>${escapeHtml(record.name)}</h2>
-        <div class="meta">URN ${escapeHtml(record.urn)} · ${record.sourcesScanned} source page(s) · engine ${escapeHtml(record.engineVersion || "")}</div>
+        <div class="meta">URN ${escapeHtml(record.urn)} · ${record.sourcesScanned} sources · ${record.documentsDiscovered || 0} docs found · engine ${escapeHtml(record.engineVersion || "")}</div>
         <div class="area-bars">${renderAreaBars(record.areas)}</div>
       </article>`,
     )
@@ -204,15 +235,54 @@ function renderDetail(record) {
     })
     .join("");
 
+  const inventory = record.documentInventory || [];
+  const docsHtml = inventory.length
+    ? `
+    <section class="doc-inventory">
+      <h3>Site documents · ${record.documentsDiscovered || inventory.length} found · ${record.documentsExtracted || 0} extracted</h3>
+      <p class="summary">PDFs and other files linked from the school website. Extracted PDFs feed club lists and curriculum evidence.</p>
+      <div class="doc-table-wrap">
+        <table class="doc-table">
+          <thead>
+            <tr>
+              <th scope="col">Document</th>
+              <th scope="col">Format</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${inventory
+              .map(
+                (doc) => `
+              <tr>
+                <td>
+                  <a href="${escapeHtml(doc.url)}" target="_blank" rel="noopener noreferrer">
+                    ${escapeHtml(doc.label || doc.url)}
+                  </a>
+                  ${doc.listItems ? `<div class="doc-meta">${escapeHtml(doc.listItems)} list items</div>` : ""}
+                  ${doc.pageCount ? `<div class="doc-meta">${escapeHtml(doc.pageCount)} pages scanned</div>` : ""}
+                </td>
+                <td>${escapeHtml((doc.format || "").toUpperCase())}</td>
+                <td><span class="doc-status ${docStatusClass(doc.status)}">${escapeHtml(docStatusLabel(doc.status))}</span></td>
+              </tr>`,
+              )
+              .join("")}
+          </tbody>
+        </table>
+      </div>
+    </section>`
+    : `<section class="doc-inventory"><h3>Site documents</h3><p class="summary">No downloadable documents were found on scanned pages.</p></section>`;
+
   panel.classList.remove("hidden");
   panel.innerHTML = `
     <div class="detail-header">
       <div>
         <h2>${escapeHtml(record.name)}</h2>
-        <div class="meta">URN ${escapeHtml(record.urn)} · assessed ${escapeHtml(record.assessedAt)} · engine ${escapeHtml(record.engineVersion)}</div>
+        <div class="meta">URN ${escapeHtml(record.urn)} · assessed ${escapeHtml(record.assessedAt)} · engine ${escapeHtml(record.engineVersion)} · ${record.documentsDiscovered || 0} docs · ${record.sourcesScanned} sources</div>
       </div>
       <button class="close-btn" type="button" id="close-detail">Close</button>
     </div>
+    ${docsHtml}
     ${areasHtml}
   `;
 

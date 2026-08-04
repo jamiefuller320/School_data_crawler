@@ -23,14 +23,42 @@
         "text": { "type": "string", "minLength": 1 },
         "sourceUrl": { "type": "string", "format": "uri" },
         "sourceType": {
-          "enum": ["school-website", "local-news", "social-media", "other"]
+          "enum": [
+            "school-website",
+            "school-document",
+            "local-news",
+            "social-media",
+            "other"
+          ]
         },
         "capturedAt": { "type": "string", "format": "date" },
         "pageTitle": { "type": "string" },
         "section": { "type": "string" }
       }
     },
-    "SubjectAreaAssessment": {
+    "DocumentInventoryItem": {
+      "type": "object",
+      "required": ["url", "label", "format", "status"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "label": { "type": "string" },
+        "format": { "type": "string" },
+        "status": {
+          "enum": [
+            "discovered",
+            "extracted",
+            "unsupported_format",
+            "failed",
+            "extract_failed",
+            "empty"
+          ]
+        },
+        "foundOn": { "type": "string", "format": "uri" },
+        "pageCount": { "type": "string" },
+        "charCount": { "type": "string" },
+        "listItems": { "type": "string" }
+      }
+    },
       "type": "object",
       "required": ["area", "score", "confidence", "summary", "themes", "signals"],
       "properties": {
@@ -74,10 +102,22 @@
         "sourceTypes": {
           "type": "array",
           "items": {
-            "enum": ["school-website", "local-news", "social-media", "other"]
+            "enum": [
+              "school-website",
+              "school-document",
+              "local-news",
+              "social-media",
+              "other"
+            ]
           }
         },
         "captureNotes": { "type": "array", "items": { "type": "string" } },
+        "documentsDiscovered": { "type": "integer", "minimum": 0 },
+        "documentsExtracted": { "type": "integer", "minimum": 0 },
+        "documentInventory": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/DocumentInventoryItem" }
+        },
         "areas": {
           "type": "array",
           "items": { "$ref": "#/$defs/SubjectAreaAssessment" }

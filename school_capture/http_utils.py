@@ -51,7 +51,11 @@ def normalize_url(url: str, base: str | None = None) -> str | None:
     parsed = urllib.parse.urlparse(url)
     if not parsed.netloc:
         return None
-    return urllib.parse.urlunparse(parsed._replace(fragment=""))
+    path = urllib.parse.quote(
+        urllib.parse.unquote(parsed.path),
+        safe="/%:@!$&'()*+,;=-._~",
+    )
+    return urllib.parse.urlunparse(parsed._replace(path=path, fragment=""))
 
 
 def same_site(url: str, root: str) -> bool:

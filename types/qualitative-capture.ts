@@ -5,6 +5,7 @@
 
 export type QualitativeSourceType =
   | "school-website"
+  | "school-document"
   | "local-news"
   | "social-media"
   | "other";
@@ -41,6 +42,26 @@ export interface SubjectAreaAssessment {
   signals: QualitativeSignal[];
 }
 
+export type DocumentInventoryStatus =
+  | "discovered"
+  | "extracted"
+  | "unsupported_format"
+  | "failed"
+  | "extract_failed"
+  | "empty";
+
+/** One downloadable file discovered on a school website. */
+export interface DocumentInventoryItem {
+  url: string;
+  label: string;
+  format: string;
+  status: DocumentInventoryStatus;
+  foundOn?: string;
+  pageCount?: string;
+  charCount?: string;
+  listItems?: string;
+}
+
 /** Per-school qualitative capture sidecar (keyed by URN). */
 export interface QualitativeCaptureRecord {
   urn: string;
@@ -51,6 +72,9 @@ export interface QualitativeCaptureRecord {
   sourceTypes?: QualitativeSourceType[];
   areas: SubjectAreaAssessment[];
   captureNotes?: string[];
+  documentsDiscovered?: number;
+  documentsExtracted?: number;
+  documentInventory?: DocumentInventoryItem[];
 }
 
 export interface QualitativeCaptureIndex {

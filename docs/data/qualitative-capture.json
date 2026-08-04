@@ -1,14 +1,14 @@
 {
   "generatedAt": "2026-08-04",
-  "engineVersion": "0.4.0",
+  "engineVersion": "0.5.0",
   "schoolCount": 12,
   "records": [
     {
       "urn": "116482",
       "name": "Abbotswood Junior School",
       "assessedAt": "2026-08-04",
-      "engineVersion": "0.4.0",
-      "sourcesScanned": 8,
+      "engineVersion": "0.5.0",
+      "sourcesScanned": 10,
       "sourceTypes": [
         "school-website"
       ],
@@ -181,49 +181,108 @@
       ],
       "captureNotes": [
         "No URLs discovered for local-news."
-      ]
+      ],
+      "documentsDiscovered": 0,
+      "documentsExtracted": 0,
+      "documentInventory": []
     },
     {
       "urn": "116266",
       "name": "Abbotts Ann Church of England Primary School",
       "assessedAt": "2026-08-04",
-      "engineVersion": "0.4.0",
-      "sourcesScanned": 6,
+      "engineVersion": "0.5.0",
+      "sourcesScanned": 12,
       "sourceTypes": [
+        "school-document",
         "school-website"
       ],
       "areas": [
         {
           "area": "curriculum",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about curriculum from scanned sources.",
+          "score": 90,
+          "confidence": 0.94,
+          "summary": "Strong publicly visible evidence for curriculum (32 specific items). Listed provision includes mathematics, chess, Fractions and Decimals, Graphs and Data, Number and Place Value, Ratio and Proportion, Roman Numerals\u2019 Basics:, Shape and Position.",
           "themes": [
-            "curriculum",
-            "high expectations",
             "key stage",
-            "phonics",
-            "progress",
-            "reading"
+            "mastery",
+            "mathematics",
+            "reading",
+            "science",
+            "writing"
           ],
-          "offerings": [],
-          "signals": []
+          "offerings": [
+            "mathematics",
+            "chess",
+            "Fractions and Decimals",
+            "Graphs and Data",
+            "Number and Place Value",
+            "Ratio and Proportion",
+            "Roman Numerals\u2019 Basics:",
+            "Shape and Position"
+          ],
+          "signals": [
+            {
+              "text": "Parents Complete Guide to the National Curriculum: English in Year 1....................... 16",
+              "sourceUrl": "https://www.abbottsann.hants.sch.uk/docs/imported/curriculum-and-assessment-abbotts-ann-church-of-england-primary-school/Parents-Complete-Guide%20to%20the%20National%20Curriculum.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Parents Complete Guide to the National Curriculum",
+              "section": "curriculum"
+            },
+            {
+              "text": "Parents Complete Guide to the National Curriculum: English in Year 2....................... 17",
+              "sourceUrl": "https://www.abbottsann.hants.sch.uk/docs/imported/curriculum-and-assessment-abbotts-ann-church-of-england-primary-school/Parents-Complete-Guide%20to%20the%20National%20Curriculum.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Parents Complete Guide to the National Curriculum",
+              "section": "curriculum"
+            },
+            {
+              "text": "Parents Complete Guide to the National Curriculum: Mathematics in Year 1",
+              "sourceUrl": "https://www.abbottsann.hants.sch.uk/docs/imported/curriculum-and-assessment-abbotts-ann-church-of-england-primary-school/Parents-Complete-Guide%20to%20the%20National%20Curriculum.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Parents Complete Guide to the National Curriculum",
+              "section": "curriculum"
+            },
+            {
+              "text": "Parents Complete Guide to the National Curriculum: Mathematics in Year 1 .................... 5",
+              "sourceUrl": "https://www.abbottsann.hants.sch.uk/docs/imported/curriculum-and-assessment-abbotts-ann-church-of-england-primary-school/Parents-Complete-Guide%20to%20the%20National%20Curriculum.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Parents Complete Guide to the National Curriculum",
+              "section": "curriculum"
+            },
+            {
+              "text": "Parents Complete Guide to the National Curriculum: Mathematics in Year 2",
+              "sourceUrl": "https://www.abbottsann.hants.sch.uk/docs/imported/curriculum-and-assessment-abbotts-ann-church-of-england-primary-school/Parents-Complete-Guide%20to%20the%20National%20Curriculum.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Parents Complete Guide to the National Curriculum",
+              "section": "curriculum"
+            }
+          ]
         },
         {
           "area": "enrichment",
-          "score": 94,
+          "score": 100,
           "confidence": 0.94,
-          "summary": "Strong publicly visible evidence for enrichment and extra-curricular activity (13 specific items). Listed provision includes Climate Ambassador, Collective Worship Monitors, Eco Team, House Captain, Junior Librarian, Junior Road Safety Officer, School Council, Sport Champion\u2026.",
+          "summary": "Strong publicly visible evidence for enrichment and extra-curricular activity (18 specific items). Listed provision includes football, netball, Thursday, Climate Ambassador, Collective Worship Monitors, Eco Team, House Captain, Junior Librarian\u2026. 4 items corroborated across multiple pages.",
           "themes": [
             "after school",
             "art",
             "club",
             "clubs",
             "drama",
+            "interests",
             "opportunities",
-            "sport"
+            "sport",
+            "wide range"
           ],
           "offerings": [
+            "football",
+            "netball",
+            "Thursday",
             "Climate Ambassador",
             "Collective Worship Monitors",
             "Eco Team",
@@ -232,14 +291,40 @@
             "Junior Road Safety Officer",
             "School Council",
             "Sport Champion",
-            "football",
-            "netball",
             "coding",
             "drama",
             "art",
+            "design technology",
+            "dance",
+            "communicate through art",
+            "dance activities where they explore",
             "wraparound care"
           ],
           "signals": [
+            {
+              "text": "CLUBS LIST   2026   Summer 1: 3.15 \u2013 4.15 Football",
+              "sourceUrl": "https://www.abbottsann.hants.sch.uk/docs/Clubs/CLUBS_LIST_-_2026_-_Summer_1.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "CLUBS LIST   2026   Summer 1",
+              "section": "enrichment"
+            },
+            {
+              "text": "CLUBS LIST   2026   Summer 1: 3.15 \u2013 4.15 Netball Momentum Netball",
+              "sourceUrl": "https://www.abbottsann.hants.sch.uk/docs/Clubs/CLUBS_LIST_-_2026_-_Summer_1.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "CLUBS LIST   2026   Summer 1",
+              "section": "enrichment"
+            },
+            {
+              "text": "CLUBS LIST   2026   Summer 1: Thursday",
+              "sourceUrl": "https://www.abbottsann.hants.sch.uk/docs/Clubs/CLUBS_LIST_-_2026_-_Summer_1.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "CLUBS LIST   2026   Summer 1",
+              "section": "enrichment"
+            },
             {
               "text": "Pupil Enrichment and Leadership: Climate Ambassador",
               "sourceUrl": "https://www.abbottsann.hants.sch.uk/Curriculum/Pupil-Enrichment-and-Leadership/",
@@ -250,30 +335,6 @@
             },
             {
               "text": "Pupil Enrichment and Leadership: Collective Worship Monitors",
-              "sourceUrl": "https://www.abbottsann.hants.sch.uk/Curriculum/Pupil-Enrichment-and-Leadership/",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-04",
-              "pageTitle": "Abbotts Ann Church of England Primary School - Pupil Enrichment and Leadership",
-              "section": "curriculum"
-            },
-            {
-              "text": "Pupil Enrichment and Leadership: Eco Team",
-              "sourceUrl": "https://www.abbottsann.hants.sch.uk/Curriculum/Pupil-Enrichment-and-Leadership/",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-04",
-              "pageTitle": "Abbotts Ann Church of England Primary School - Pupil Enrichment and Leadership",
-              "section": "curriculum"
-            },
-            {
-              "text": "Pupil Enrichment and Leadership: House Captain",
-              "sourceUrl": "https://www.abbottsann.hants.sch.uk/Curriculum/Pupil-Enrichment-and-Leadership/",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-04",
-              "pageTitle": "Abbotts Ann Church of England Primary School - Pupil Enrichment and Leadership",
-              "section": "curriculum"
-            },
-            {
-              "text": "Pupil Enrichment and Leadership: Junior Librarian",
               "sourceUrl": "https://www.abbottsann.hants.sch.uk/Curriculum/Pupil-Enrichment-and-Leadership/",
               "sourceType": "school-website",
               "capturedAt": "2026-08-04",
@@ -315,12 +376,24 @@
         },
         {
           "area": "send",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about SEND and inclusion from scanned sources.",
-          "themes": [],
+          "score": 20,
+          "confidence": 0.13,
+          "summary": "Limited public evidence for SEND and inclusion (1 excerpt; mostly general statements rather than specific provision).",
+          "themes": [
+            "individual",
+            "tailored"
+          ],
           "offerings": [],
-          "signals": []
+          "signals": [
+            {
+              "text": "There are many elements to ensuring children at Abbotts Ann CE Primary experience a smooth and effective transition, as listed below, however we believe every child is unique, so the transition experience will be tailored to meet the child\u2019s individual needs.",
+              "sourceUrl": "https://www.abbottsann.hants.sch.uk/Curriculum/Early-Years-Foundation-Stage/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Abbotts Ann Church of England Primary School - Early Years Foundation Stage",
+              "section": "curriculum"
+            }
+          ]
         },
         {
           "area": "community",
@@ -353,40 +426,310 @@
       ],
       "captureNotes": [
         "Fetched 1 local-news URL(s) but no usable text."
+      ],
+      "documentsDiscovered": 31,
+      "documentsExtracted": 4,
+      "documentInventory": [
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/Clubs/CLUBS_LIST_-_2026_-_Summer_1.pdf",
+          "label": "Club List - Summer Term 2026",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Parents/Clubs/",
+          "pageCount": "1",
+          "charCount": "1616",
+          "listItems": "3"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/Clubs/Young_Heroes_Club_Invite.pdf",
+          "label": "Young Heroes Invite",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Parents/Clubs/",
+          "pageCount": "1",
+          "charCount": "302",
+          "listItems": "0"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/imported/curriculum-and-assessment-abbotts-ann-church-of-england-primary-school/How%20we%20Celebrate%20Achievement%20and%20Success%20at%20Abbotts%20Ann.pdf",
+          "label": "How we Celebrate Achievement and Success at Abbotts Ann",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/imported/curriculum-and-assessment-abbotts-ann-church-of-england-primary-school/Parent%20Consultations%20Overview%20for%20the%20Year.pdf",
+          "label": "Parent Consultations Overview for the Year",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/imported/curriculum-and-assessment-abbotts-ann-church-of-england-primary-school/Parental%20Involvement%20in%20the%20Curriculum.pdf",
+          "label": "Parental Involvement in the Curriculum",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/imported/curriculum-and-assessment-abbotts-ann-church-of-england-primary-school/Parents-Complete-Guide%20to%20the%20National%20Curriculum.pdf",
+          "label": "Parents-Complete-Guide to the National Curriculum",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information",
+          "pageCount": "15",
+          "charCount": "16000",
+          "listItems": "28"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/imported/curriculum-and-assessment-abbotts-ann-church-of-england-primary-school/Primary%20National%20Curriculum%20-%20English.pdf",
+          "label": "Primary National Curriculum - English",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/imported/curriculum-and-assessment-abbotts-ann-church-of-england-primary-school/Primary%20National%20Curriculum%20-%20Mathematics.pdf",
+          "label": "Primary National Curriculum - Mathematics",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/Copy_of_English_Intent_Implementation_and_Impact.pdf",
+          "label": "English Intent, Implementation and Impact Statement",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/Mathematics.pdf",
+          "label": "Mathematics Intent, Implementation and Impact Statement",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/Science.pdf",
+          "label": "Science Intent, Implementation and Impact Statement",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/Art_and_Design_-_Statement_of_Intent.pdf",
+          "label": "Art and Design Intent, Implementation and Impact Statement",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/Copy_of_Computing_Intent__Implementation__Impact.pdf",
+          "label": "Computing Intent, Implementation and Impact Statement",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/Design_Technology_-_Statement_of_Intent.pdf",
+          "label": "Design Technology Intent, Implementation and Impact Statement",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/Modern_Foreign_Language_-_Statement_of_Intent.pdf",
+          "label": "French - Modern Foreign Language Intent, Implementation and Impact Statement",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/Geography-_intent__implementation__impact.pdf",
+          "label": "Geography Intent, Implementation and Impact. Statement",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/Copy_of_History_at_Abbotts_Ann_School.pdf",
+          "label": "History Intent, Implementation and Impact Statement",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/Copy_of_Music_intent__implementation__impact.pdf",
+          "label": "Music Intent, Implementation and Impact Statement",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/Physical_Education_-_Statement_of_Intent.pdf",
+          "label": "Physical Education Intent, Implementation and Impact Statement",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/PDL_Statement.pdf",
+          "label": "Personal Development Learning Intent, Implementation and Impact Statement",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/RE_at_Abbotts_Ann__1_.pdf",
+          "label": "Religious Education Intent, Implementation and Impact Statement",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Information"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/Curriculum/Penguins_-_2025-26_-_Year_R.pdf",
+          "label": "Year R Curriculum Overview Cycle A 2025-2026",
+          "format": "pdf",
+          "status": "failed",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Overviews/"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/ltp-year-r-2024-2025.pdf",
+          "label": "Year R Curriculum Overview Cycle B 2024-2025",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Overviews/"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/Curriculum/Penguins_-_2025-26_-_Year_1.pdf",
+          "label": "Year 1 Curriculum Overview Cycle A 2025-2026",
+          "format": "pdf",
+          "status": "failed",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Overviews/"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/ltp-y1-penguins-2024-2025.pdf",
+          "label": "Year 1 Curriculum Overview Cycle B 2024-2025",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Overviews/"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/Curriculum/Dolphins_-_2025-26_-_Year_1_and_2.pdf",
+          "label": "Year 1 and 2 mixed Curriculum Overview Cycle A 2025-2026",
+          "format": "pdf",
+          "status": "failed",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Overviews/"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/ltp-y1-y2-24-to-25.pdf",
+          "label": "Year 1 and 2 mixed Curriculum Overview Cycle B 2024-2025",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Overviews/"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/Curriculum/Hedgehogs_-_2025-26_-_Year_3_and_4.pdf",
+          "label": "Year 3 and 4 mixed Curriculum Overview Cycle A 2025-2026",
+          "format": "pdf",
+          "status": "failed",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Overviews/"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/copy-of-ltp-y3-and-4-cycle-b-2024-25.pdf",
+          "label": "Year 3 and 4 mixed Curriculum Overview Cycle B 2024-2025",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Overviews/"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/Curriculum/Owls_Cycle_A_2025-26.pdf",
+          "label": "Year 5 and 6 mixed Curriculum Overview Cycle A 2025-26",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Overviews/",
+          "pageCount": "2",
+          "charCount": "3945",
+          "listItems": "13"
+        },
+        {
+          "url": "https://www.abbottsann.hants.sch.uk/docs/detailed-english-units-owls-cycle-b_docx.pdf",
+          "label": "Year 5 and 6 mixed Curriculum Overview Cycle B 2024-2025",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.abbottsann.hants.sch.uk/Curriculum/Curriculum-Overviews/"
+        }
       ]
     },
     {
       "urn": "116234",
       "name": "Alderwood School",
       "assessedAt": "2026-08-04",
-      "engineVersion": "0.4.0",
-      "sourcesScanned": 8,
+      "engineVersion": "0.5.0",
+      "sourcesScanned": 15,
       "sourceTypes": [
+        "school-document",
         "school-website"
       ],
       "areas": [
         {
           "area": "curriculum",
-          "score": 20,
-          "confidence": 0.13,
-          "summary": "Limited public evidence for curriculum (1 excerpt; mostly general statements rather than specific provision).",
+          "score": 85,
+          "confidence": 0.94,
+          "summary": "Strong publicly visible evidence for curriculum (10 specific items). Listed provision includes citizenship, citizenship gcse curriculum vision, art, art 4-16 curriculum vision, Core Values Raising Aspirations, Independence & Commitment. 1 item corroborated across multiple pages.",
           "themes": [
             "curriculum",
-            "key stage",
-            "progress",
-            "reading",
-            "stem",
-            "subjects"
+            "gcse",
+            "stem"
           ],
-          "offerings": [],
+          "offerings": [
+            "citizenship",
+            "citizenship gcse curriculum vision",
+            "art",
+            "art 4-16 curriculum vision",
+            "Core Values Raising Aspirations",
+            "Independence & Commitment"
+          ],
           "signals": [
             {
-              "text": "The school ethos throughout the school is centred on our school values of Kindness, Honesty, Respect, Commitment, Resilience and Independence, not only within the curriculum but also through our House System on the junior and senior sites.",
-              "sourceUrl": "https://www.alderwood.hants.sch.uk/",
-              "sourceType": "school-website",
+              "text": "Art Curriculum Vision Jan 2022: Honesty, Respect, Kindness, Resilience,",
+              "sourceUrl": "https://www.alderwood.hants.sch.uk/docs/Curriculum/Art_Design___Photography/Art_Curriculum_Vision_Jan_2022.pdf",
+              "sourceType": "school-document",
               "capturedAt": "2026-08-04",
-              "pageTitle": "Alderwood School - Home",
-              "section": "homepage"
+              "pageTitle": "Art Curriculum Vision Jan 2022",
+              "section": "curriculum"
+            },
+            {
+              "text": "Citizenship Curriculumn Vision 22: Determination, Inspiration, Courage, Equality",
+              "sourceUrl": "https://www.alderwood.hants.sch.uk/docs/Curriculum/Citizenship/Citizenship_Curriculumn_Vision_22.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Citizenship Curriculumn Vision 22",
+              "section": "curriculum"
+            },
+            {
+              "text": "Citizenship Curriculumn Vision 22: Friendship, Respect, Excellence,",
+              "sourceUrl": "https://www.alderwood.hants.sch.uk/docs/Curriculum/Citizenship/Citizenship_Curriculumn_Vision_22.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Citizenship Curriculumn Vision 22",
+              "section": "curriculum"
+            },
+            {
+              "text": "Citizenship Curriculumn Vision 22: Subject: Citizenship GCSE Curriculum Vision",
+              "sourceUrl": "https://www.alderwood.hants.sch.uk/docs/Curriculum/Citizenship/Citizenship_Curriculumn_Vision_22.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Citizenship Curriculumn Vision 22",
+              "section": "curriculum"
+            },
+            {
+              "text": "Art Curriculum Vision Jan 2022: Subject: Art 4-16 Curriculum Vision",
+              "sourceUrl": "https://www.alderwood.hants.sch.uk/docs/Curriculum/Art_Design___Photography/Art_Curriculum_Vision_Jan_2022.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Art Curriculum Vision Jan 2022",
+              "section": "curriculum"
             }
           ]
         },
@@ -504,90 +847,224 @@
       ],
       "captureNotes": [
         "Fetched 2 local-news URL(s) but no usable text."
+      ],
+      "documentsDiscovered": 6,
+      "documentsExtracted": 5,
+      "documentInventory": [
+        {
+          "url": "https://www.alderwood.hants.sch.uk/docs/Policies/Remote_education_-_policy_2.pdf",
+          "label": "Remote Learning Policy",
+          "format": "pdf",
+          "status": "failed",
+          "foundOn": "https://www.alderwood.hants.sch.uk/Parents/Remote-Learning"
+        },
+        {
+          "url": "https://www.alderwood.hants.sch.uk/docs/Curriculum/Curriculum_vision_flowchart_Jan_2024.pdf",
+          "label": "Alderwood School 4-16 Curriculum Vision",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.alderwood.hants.sch.uk/Curriculum",
+          "pageCount": "1",
+          "charCount": "2101",
+          "listItems": "0"
+        },
+        {
+          "url": "https://www.alderwood.hants.sch.uk/docs/Curriculum/Art_Design___Photography/Whole_school_Art_overview_4-16.pdf",
+          "label": "4-16 Overview",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.alderwood.hants.sch.uk/Curriculum/Art-Design-Photography",
+          "pageCount": "12",
+          "charCount": "16000",
+          "listItems": "40"
+        },
+        {
+          "url": "https://www.alderwood.hants.sch.uk/docs/Curriculum/Art_Design___Photography/Art_Curriculum_Vision_Jan_2022.pdf",
+          "label": "Curriculum Vision",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.alderwood.hants.sch.uk/Curriculum/Art-Design-Photography",
+          "pageCount": "1",
+          "charCount": "2842",
+          "listItems": "4"
+        },
+        {
+          "url": "https://www.alderwood.hants.sch.uk/docs/Curriculum/Citizenship/Citizenship_Yr_10_long_term_plan_-21-22.pdf",
+          "label": "Year 10 Overview",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.alderwood.hants.sch.uk/Curriculum/Citizenship",
+          "pageCount": "2",
+          "charCount": "2684",
+          "listItems": "34"
+        },
+        {
+          "url": "https://www.alderwood.hants.sch.uk/docs/Curriculum/Citizenship/Citizenship_Curriculumn_Vision_22.pdf",
+          "label": "Curriculum Vision",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.alderwood.hants.sch.uk/Curriculum/Citizenship",
+          "pageCount": "2",
+          "charCount": "3499",
+          "listItems": "5"
+        }
       ]
     },
     {
       "urn": "116358",
       "name": "All Saints Church of England Aided Junior School",
       "assessedAt": "2026-08-04",
-      "engineVersion": "0.4.0",
-      "sourcesScanned": 6,
+      "engineVersion": "0.5.0",
+      "sourcesScanned": 15,
       "sourceTypes": [
+        "school-document",
         "school-website"
       ],
       "areas": [
         {
           "area": "curriculum",
-          "score": 30,
-          "confidence": 0.17,
-          "summary": "Concrete curriculum details found on the school website. Listed provision includes music.",
+          "score": 100,
+          "confidence": 0.94,
+          "summary": "Strong publicly visible evidence for curriculum (31 specific items). Listed provision includes mathematics, Jo Boaler\u2019s Positive Norms, Teaching for Mastery, Addition and Subtraction, Measure: Length, Weight and, Number and Place Value, Value, Addition and, Additive Relationship and\u2026. 1 item corroborated across multiple pages.",
           "themes": [
             "balanced",
             "broad",
             "curriculum",
-            "subjects"
+            "key stage",
+            "languages",
+            "mastery",
+            "mathematics",
+            "progress",
+            "stem"
           ],
           "offerings": [
+            "mathematics",
+            "Jo Boaler\u2019s Positive Norms",
+            "Teaching for Mastery",
+            "Addition and Subtraction",
+            "Measure: Length, Weight and",
+            "Number and Place Value",
+            "Value, Addition and",
+            "Additive Relationship and",
+            "Composition and Place Value of",
+            "Mop Up Revision and",
+            "Multiplication and Division",
+            "Number: Multiplication and",
+            "Right Angles, Parallel and",
+            "SATS Fractions Fractions",
+            "Secondary School Ready",
+            "Subtraction Number: Multiplication and Division",
             "music"
           ],
           "signals": [
             {
-              "text": "The curriculum offered combines planning provided by the Hampshire Music Service, as well as our own, allowing for a broad and balanced range of learning.",
-              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/music",
-              "sourceType": "school-website",
+              "text": "mathssequence 20230327142429887: Number, Place Value,",
+              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/mathssequence_20230327142429887.pdf",
+              "sourceType": "school-document",
               "capturedAt": "2026-08-04",
-              "pageTitle": "All Saints Junior School - Music",
+              "pageTitle": "mathssequence 20230327142429887",
+              "section": "curriculum"
+            },
+            {
+              "text": "Maths Parent Workshop 56199 20240221144338246: Be positive about Maths",
+              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/Maths%20Parent%20Workshop-56199_20240221144338246.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Maths Parent Workshop 56199 20240221144338246",
+              "section": "curriculum"
+            },
+            {
+              "text": "Maths Parent Workshop 56199 20240221144338246: Mastery of Mathematics is more\u2026..",
+              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/Maths%20Parent%20Workshop-56199_20240221144338246.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Maths Parent Workshop 56199 20240221144338246",
+              "section": "curriculum"
+            },
+            {
+              "text": "Maths Parent Workshop 56199 20240221144338246: Maths Teaching has changed",
+              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/Maths%20Parent%20Workshop-56199_20240221144338246.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Maths Parent Workshop 56199 20240221144338246",
+              "section": "curriculum"
+            },
+            {
+              "text": "Maths Parent Workshop 56199 20240221144338246: and master mathematics",
+              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/Maths%20Parent%20Workshop-56199_20240221144338246.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Maths Parent Workshop 56199 20240221144338246",
               "section": "curriculum"
             }
           ]
         },
         {
           "area": "enrichment",
-          "score": 55,
-          "confidence": 0.72,
-          "summary": "Moderate publicly visible evidence for enrichment and extra-curricular activity (4 specific items). Listed provision includes music, geography.",
+          "score": 97,
+          "confidence": 0.94,
+          "summary": "Strong publicly visible evidence for enrichment and extra-curricular activity (28 specific items). Listed provision includes orchestra, music, HMS Old Unit, Mystic Moments HMS, Pitch and Singing, Rehearsing and Performing,, Singing & Performing, Timbre, Listening and\u2026. 1 item corroborated across multiple pages.",
           "themes": [
             "art",
             "music",
             "opportunities",
+            "orchestra",
+            "participate",
             "trip"
           ],
           "offerings": [
+            "orchestra",
             "music",
+            "HMS Old Unit",
+            "Mystic Moments HMS",
+            "Pitch and Singing",
+            "Rehearsing and Performing,",
+            "Singing & Performing",
+            "Timbre, Listening and",
+            "KS2 National Curriculum Expectations:",
+            "through the teaching of french",
             "geography"
           ],
           "signals": [
             {
-              "text": "Through music the children increase their self-confidence, creativity and imagination and are provided with opportunities for self-expression and a sense of personal achievement, ensuring that every child fulfils their musical potential.",
-              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/music",
-              "sourceType": "school-website",
+              "text": "musiccoveragemap 20230426103722014: Instruments of the Orchestra",
+              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/musiccoveragemap_20230426103722014.pdf",
+              "sourceType": "school-document",
               "capturedAt": "2026-08-04",
-              "pageTitle": "All Saints Junior School - Music",
-              "section": "curriculum"
+              "pageTitle": "musiccoveragemap 20230426103722014",
+              "section": "enrichment"
             },
             {
-              "text": "Our children will have opportunities to explore geography in action (completing fieldwork trips in every year group).",
-              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/geography",
-              "sourceType": "school-website",
+              "text": "musiccoveragemap 20230426103722014: Music Coverage Map",
+              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/musiccoveragemap_20230426103722014.pdf",
+              "sourceType": "school-document",
               "capturedAt": "2026-08-04",
-              "pageTitle": "All Saints Junior School - Geography",
-              "section": "curriculum"
+              "pageTitle": "musiccoveragemap 20230426103722014",
+              "section": "enrichment"
             },
             {
-              "text": "All Saints Junior School At All Saints Junior School we feel whole-heartedly that music contributes to the development of the whole child emotionally, spiritually and socially.",
-              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/music",
-              "sourceType": "school-website",
+              "text": "musiccoveragemap 20230426103722014: Music in Victorian Times",
+              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/musiccoveragemap_20230426103722014.pdf",
+              "sourceType": "school-document",
               "capturedAt": "2026-08-04",
-              "pageTitle": "All Saints Junior School - Music",
-              "section": "curriculum"
+              "pageTitle": "musiccoveragemap 20230426103722014",
+              "section": "enrichment"
             },
             {
-              "text": "Singing is a highly important part of our music curriculum.",
-              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/music",
-              "sourceType": "school-website",
+              "text": "musicsequence 20230426103700027: Listen to and discover how music",
+              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/musicsequence_20230426103700027.pdf",
+              "sourceType": "school-document",
               "capturedAt": "2026-08-04",
-              "pageTitle": "All Saints Junior School - Music",
-              "section": "curriculum"
+              "pageTitle": "musicsequence 20230426103700027",
+              "section": "enrichment"
+            },
+            {
+              "text": "musicsequence 20230426103700027: Music Sequence of Skills and Knowledge",
+              "sourceUrl": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/musicsequence_20230426103700027.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "musicsequence 20230426103700027",
+              "section": "enrichment"
             }
           ]
         },
@@ -665,33 +1142,178 @@
       ],
       "captureNotes": [
         "No URLs discovered for local-news."
+      ],
+      "documentsDiscovered": 17,
+      "documentsExtracted": 7,
+      "documentInventory": [
+        {
+          "url": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/musicsequence_20230426103700027.pdf",
+          "label": "musicsequence 20230426103700027",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/music",
+          "pageCount": "8",
+          "charCount": "16000",
+          "listItems": "14"
+        },
+        {
+          "url": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/musiccoveragemap_20230426103722014.pdf",
+          "label": "musiccoveragemap 20230426103722014",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/music",
+          "pageCount": "3",
+          "charCount": "2997",
+          "listItems": "9"
+        },
+        {
+          "url": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/computingsequence_20230424110708612.pdf",
+          "label": "computingsequence 20230424110708612",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/computing"
+        },
+        {
+          "url": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/computingcoveragemap_20230419094129371.pdf",
+          "label": "computingcoveragemap 20230419094129371",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/computing"
+        },
+        {
+          "url": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/dtsequence_20230502101444558.pdf",
+          "label": "dtsequence 20230502101444558",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/dt"
+        },
+        {
+          "url": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/geographysequence_20230417100453235.pdf",
+          "label": "geographysequence 20230417100453235",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/geography"
+        },
+        {
+          "url": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/geographycoveragemap_20230417100505993.pdf",
+          "label": "geographycoveragemap 20230417100505993",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/geography"
+        },
+        {
+          "url": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/historysequence_20230502095001457.pdf",
+          "label": "historysequence 20230502095001457",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/history"
+        },
+        {
+          "url": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/historycoveragemap_20250205103125264.pdf",
+          "label": "historycoveragemap 20250205103125264",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/history"
+        },
+        {
+          "url": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/Maths%20Parent%20Workshop-56199_20240221144338246.pdf",
+          "label": "Maths Parent Workshop 56199 20240221144338246",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/maths",
+          "pageCount": "15",
+          "charCount": "4040",
+          "listItems": "6"
+        },
+        {
+          "url": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/parent-guide-to-learning-times-tables-88145_20240221144338187.pdf",
+          "label": "parent guide to learning times tables 88145 20240221144338187",
+          "format": "pdf",
+          "status": "empty",
+          "foundOn": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/maths"
+        },
+        {
+          "url": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/Learning%20tables-20020_20240221144338155.pdf",
+          "label": "Learning tables 20020 20240221144338155",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/maths",
+          "pageCount": "1",
+          "charCount": "694",
+          "listItems": "0"
+        },
+        {
+          "url": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/mathssequence_20230327142429887.pdf",
+          "label": "mathssequence 20230327142429887",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/maths",
+          "pageCount": "9",
+          "charCount": "16000",
+          "listItems": "6"
+        },
+        {
+          "url": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/mathsyearlyoverviews_20230328101423460.pdf",
+          "label": "mathsyearlyoverviews 20230328101423460",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/maths",
+          "pageCount": "4",
+          "charCount": "4102",
+          "listItems": "10"
+        },
+        {
+          "url": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/allsaintsfluencypolicy_20230417102111878.pdf",
+          "label": "allsaintsfluencypolicy 20230417102111878",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/maths",
+          "pageCount": "2",
+          "charCount": "1494",
+          "listItems": "1"
+        },
+        {
+          "url": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/mflsequence_20231121111806863.pdf",
+          "label": "mflsequence 20231121111806863",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/modernforeignlanuages(mfl)"
+        },
+        {
+          "url": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/arenas/websitecontent/web/mflcoveragemap_20231206101302395.pdf",
+          "label": "mflcoveragemap 20231206101302395",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://www.allsaintsfleet.co.uk/hants/primary/allsaints/site/pages/pupils/subjects/modernforeignlanuages(mfl)"
+        }
       ]
     },
     {
       "urn": "116326",
       "name": "All Saints Church of England Primary School",
       "assessedAt": "2026-08-04",
-      "engineVersion": "0.4.0",
-      "sourcesScanned": 7,
+      "engineVersion": "0.5.0",
+      "sourcesScanned": 9,
       "sourceTypes": [
         "school-website"
       ],
       "areas": [
         {
           "area": "curriculum",
-          "score": 99,
+          "score": 100,
           "confidence": 0.94,
-          "summary": "Strong publicly visible evidence for curriculum (23 specific items). Listed provision includes music, computing, geography, mathematics, physical education, religious education, Curriculum and Assessment, Teaching & Learning\u2026. 3 items corroborated across multiple pages.",
+          "summary": "Strong publicly visible evidence for curriculum (32 specific items). Listed provision includes computing, music, geography, mathematics, physical education, religious education, Curriculum and Assessment, Teaching & Learning\u2026. 7 items corroborated across multiple pages.",
           "themes": [
             "ambitious",
+            "broad",
             "curriculum",
             "mathematics",
             "progress",
             "science"
           ],
           "offerings": [
-            "music",
             "computing",
+            "music",
             "geography",
             "mathematics",
             "physical education",
@@ -700,9 +1322,18 @@
             "Teaching & Learning",
             "All Saints Curriculum Overview",
             "Year R LTP",
-            "art"
+            "art",
+            "design technology"
           ],
           "signals": [
+            {
+              "text": "Our Computing Curriculum: Our Computing Curriculum",
+              "sourceUrl": "https://www.allsaintsceprimary.co.uk/our-computing-curriculum/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Our Computing Curriculum | All Saints Church of England Primary School",
+              "section": "curriculum"
+            },
             {
               "text": "Our Music Curriculum: Our Music Curriculum",
               "sourceUrl": "https://www.allsaintsceprimary.co.uk/our-music-curriculum/",
@@ -729,14 +1360,6 @@
             },
             {
               "text": "Our Safeguarding Curriculum: Our Geography Curriculum",
-              "sourceUrl": "https://www.allsaintsceprimary.co.uk/curriculum-and-assessment/",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-04",
-              "pageTitle": "Curriculum and Assessment | All Saints Church of England Primary School",
-              "section": "curriculum"
-            },
-            {
-              "text": "Our Safeguarding Curriculum: Our History Curriculum",
               "sourceUrl": "https://www.allsaintsceprimary.co.uk/curriculum-and-assessment/",
               "sourceType": "school-website",
               "capturedAt": "2026-08-04",
@@ -805,14 +1428,18 @@
         },
         {
           "area": "ethos",
-          "score": 20,
-          "confidence": 0.13,
-          "summary": "Limited public evidence for ethos and values (1 excerpt; mostly general statements rather than specific provision).",
+          "score": 47,
+          "confidence": 0.565,
+          "summary": "Moderate publicly visible evidence for ethos and values (2 specific items). Listed provision includes computing.",
           "themes": [
             "community",
+            "respect",
+            "safe",
             "values"
           ],
-          "offerings": [],
+          "offerings": [
+            "computing"
+          ],
           "signals": [
             {
               "text": "Through our curriculum, we develop the essential knowledge, skills and understanding children need - foundations built on our values of Love, Hope and Community.",
@@ -820,6 +1447,14 @@
               "sourceType": "school-website",
               "capturedAt": "2026-08-04",
               "pageTitle": "Curriculum and Assessment | All Saints Church of England Primary School",
+              "section": "curriculum"
+            },
+            {
+              "text": "All computing learning will be built on the foundation of safety and respect and we will ask the question \u201cIs it safe and is it respectful?\u201d when doing so.",
+              "sourceUrl": "https://www.allsaintsceprimary.co.uk/our-computing-curriculum/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Our Computing Curriculum | All Saints Church of England Primary School",
               "section": "curriculum"
             }
           ]
@@ -894,15 +1529,25 @@
         },
         {
           "area": "community",
-          "score": 20,
-          "confidence": 0.13,
-          "summary": "Limited public evidence for community and parental engagement (1 excerpt; mostly general statements rather than specific provision).",
+          "score": 35,
+          "confidence": 0.565,
+          "summary": "Limited publicly visible evidence for community and parental engagement (2 specific items). Listed provision includes E-Safety and Online Advice.",
           "themes": [
             "local",
             "partnership"
           ],
-          "offerings": [],
+          "offerings": [
+            "E-Safety and Online Advice"
+          ],
           "signals": [
+            {
+              "text": "Acceptable Use of Technology in School: E-Safety and Online Advice",
+              "sourceUrl": "https://www.allsaintsceprimary.co.uk/our-computing-curriculum/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Our Computing Curriculum | All Saints Church of England Primary School",
+              "section": "curriculum"
+            },
             {
               "text": "Statutory Info SEND Information Hampshire Local Offer Ordinarily Available Provision and SEND support Information from Hampshire County Council - Local SEND Partnership Strategy School policy on supporting children with SEND Below is our SEND Padlet.",
               "sourceUrl": "https://www.allsaintsceprimary.co.uk/send-information/",
@@ -916,13 +1561,16 @@
       ],
       "captureNotes": [
         "Fetched 3 local-news URL(s) but no usable text."
-      ]
+      ],
+      "documentsDiscovered": 0,
+      "documentsExtracted": 0,
+      "documentInventory": []
     },
     {
       "urn": "151336",
       "name": "All's Well",
       "assessedAt": "2026-08-04",
-      "engineVersion": "0.4.0",
+      "engineVersion": "0.5.0",
       "sourcesScanned": 6,
       "sourceTypes": [
         "school-website"
@@ -1033,14 +1681,17 @@
       ],
       "captureNotes": [
         "No URLs discovered for local-news."
-      ]
+      ],
+      "documentsDiscovered": 0,
+      "documentsExtracted": 0,
+      "documentInventory": []
     },
     {
       "urn": "115850",
       "name": "Alton Infant School",
       "assessedAt": "2026-08-04",
-      "engineVersion": "0.4.0",
-      "sourcesScanned": 6,
+      "engineVersion": "0.5.0",
+      "sourcesScanned": 7,
       "sourceTypes": [
         "school-website"
       ],
@@ -1069,9 +1720,9 @@
         },
         {
           "area": "enrichment",
-          "score": 73,
-          "confidence": 0.805,
-          "summary": "Strong publicly visible evidence for enrichment and extra-curricular activity (5 specific items). Listed provision includes childcare, cricket, tennis, drama, after school club.",
+          "score": 80,
+          "confidence": 0.92,
+          "summary": "Strong publicly visible evidence for enrichment and extra-curricular activity (6 specific items). Listed provision includes childcare, Children's ICT Activities, cricket, tennis, drama, after school club.",
           "themes": [
             "after school",
             "club",
@@ -1083,6 +1734,7 @@
           ],
           "offerings": [
             "childcare",
+            "Children's ICT Activities",
             "cricket",
             "tennis",
             "drama",
@@ -1095,6 +1747,14 @@
               "sourceType": "school-website",
               "capturedAt": "2026-08-04",
               "pageTitle": "Wraparound Childcare & Extra-Curricular Activities - Alton Infant School",
+              "section": "enrichment"
+            },
+            {
+              "text": "Children's ICT Activities",
+              "sourceUrl": "https://www.alton-inf.hants.sch.uk/page/?title=Children%27s+ICT+Activities&pid=85",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Children's ICT Activities - Alton Infant School",
               "section": "enrichment"
             },
             {
@@ -1115,14 +1775,6 @@
             },
             {
               "text": "Anstey Junior School After School Club Please contact Anstey Junior School on: 01420 84486 for further information or collect an information pack from our school office.",
-              "sourceUrl": "https://www.alton-inf.hants.sch.uk/page/?title=Wraparound+Childcare+%26amp%3B+Extra%2DCurricular+Activities&pid=77",
-              "sourceType": "school-website",
-              "capturedAt": "2026-08-04",
-              "pageTitle": "Wraparound Childcare & Extra-Curricular Activities - Alton Infant School",
-              "section": "enrichment"
-            },
-            {
-              "text": "This club is run after school on a Tuesday from 3.15pm - 4.30pm.",
               "sourceUrl": "https://www.alton-inf.hants.sch.uk/page/?title=Wraparound+Childcare+%26amp%3B+Extra%2DCurricular+Activities&pid=77",
               "sourceType": "school-website",
               "capturedAt": "2026-08-04",
@@ -1224,15 +1876,19 @@
       ],
       "captureNotes": [
         "Fetched 1 local-news URL(s) but no usable text."
-      ]
+      ],
+      "documentsDiscovered": 0,
+      "documentsExtracted": 0,
+      "documentInventory": []
     },
     {
       "urn": "116174",
       "name": "Alver Valley Infant and Nursery School",
       "assessedAt": "2026-08-04",
-      "engineVersion": "0.4.0",
-      "sourcesScanned": 8,
+      "engineVersion": "0.5.0",
+      "sourcesScanned": 13,
       "sourceTypes": [
+        "school-document",
         "school-website"
       ],
       "areas": [
@@ -1309,15 +1965,80 @@
         },
         {
           "area": "enrichment",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about enrichment and extra-curricular activity from scanned sources.",
+          "score": 79,
+          "confidence": 0.94,
+          "summary": "Strong publicly visible evidence for enrichment and extra-curricular activity (38 specific items). Listed provision includes Absence Reporting & Request, Alver Valley Creative Hub, Alver Valley Gets Growing, Alver Valley School Nursery, Alver Valley Troopers, Anti-Bullying, Arts Council, Before and After School Provision\u2026.",
           "themes": [
+            "after school",
             "art",
-            "award"
+            "club",
+            "clubs",
+            "sport"
           ],
-          "offerings": [],
-          "signals": []
+          "offerings": [
+            "Absence Reporting & Request",
+            "Alver Valley Creative Hub",
+            "Alver Valley Gets Growing",
+            "Alver Valley School Nursery",
+            "Alver Valley Troopers",
+            "Anti-Bullying",
+            "Arts Council",
+            "Before and After School Provision",
+            "Current Vacancies",
+            "Diversity & Inclusion",
+            "EY Network",
+            "Financial Information",
+            "Food and School Meals",
+            "Forest School",
+            "General Data Protection Regulations",
+            "Hampshire School Holidays",
+            "Home and School Partnerships",
+            "Junior School Ofsted Report",
+            "Junior School Performance Table",
+            "Online Payments"
+          ],
+          "signals": [
+            {
+              "text": "Clubs and Sports",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/childcare/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Before and After School Provision - Alver Valley Schools",
+              "section": "enrichment"
+            },
+            {
+              "text": "Absence Reporting & Request",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/childcare/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Before and After School Provision - Alver Valley Schools",
+              "section": "enrichment"
+            },
+            {
+              "text": "Alver Valley Creative Hub",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/childcare/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Before and After School Provision - Alver Valley Schools",
+              "section": "enrichment"
+            },
+            {
+              "text": "Alver Valley Gets Growing",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/childcare/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Before and After School Provision - Alver Valley Schools",
+              "section": "enrichment"
+            },
+            {
+              "text": "Alver Valley School Nursery",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/childcare/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Before and After School Provision - Alver Valley Schools",
+              "section": "enrichment"
+            }
+          ]
         },
         {
           "area": "ethos",
@@ -1355,42 +2076,79 @@
         },
         {
           "area": "behaviour",
-          "score": 54,
-          "confidence": 0.625,
-          "summary": "Moderate publicly visible evidence for behaviour and pastoral care (3 specific items). Listed provision includes health education (pshe).",
+          "score": 91,
+          "confidence": 0.94,
+          "summary": "Strong publicly visible evidence for behaviour and pastoral care (41 specific items). Listed provision includes Absence Reporting & Request, Alver Valley Creative Hub, Alver Valley Gets Growing, Alver Valley School Nursery, Alver Valley Troopers, Anti-Bullying, Arts Council, Before and After School Provision\u2026.",
           "themes": [
+            "anti-bullying",
             "behaviour",
             "positive",
             "respectful",
+            "safeguarding",
             "wellbeing"
           ],
           "offerings": [
-            "health education (pshe)"
+            "Absence Reporting & Request",
+            "Alver Valley Creative Hub",
+            "Alver Valley Gets Growing",
+            "Alver Valley School Nursery",
+            "Alver Valley Troopers",
+            "Anti-Bullying",
+            "Arts Council",
+            "Before and After School Provision",
+            "Current Vacancies",
+            "Connect...",
+            "This Devon Partnership NHS Trust",
+            "Diversity & Inclusion",
+            "EY Network",
+            "Financial Information",
+            "Food and School Meals",
+            "Forest School",
+            "General Data Protection Regulations",
+            "Hampshire School Holidays",
+            "Home and School Partnerships",
+            "Junior School Ofsted Report"
           ],
           "signals": [
             {
-              "text": "For videos and articles about personal development curriculum please see below and https://www.coramlifeeducation.org.uk/family-scarf Personal, Social and Health Education (PSHE); Social, Moral, Spiritual and Cultural education (SMSC); Wellbeing; British Values; and our Six Strands learning behaviours curriculum.",
-              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/personal-development/",
+              "text": "Clubs and Sports",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/anti-bullying/",
               "sourceType": "school-website",
               "capturedAt": "2026-08-04",
-              "pageTitle": "Personal Development - Alver Valley Schools",
-              "section": "curriculum"
+              "pageTitle": "Anti-Bullying - Alver Valley Schools",
+              "section": "behaviour"
             },
             {
-              "text": "The impact on respectful behaviour was so significant, with children, staff and parents all focused and using the language related to the strand after only one term, that we now also use this approach for an additional strand each half term.",
-              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/six-strands/",
+              "text": "Absence Reporting & Request",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/anti-bullying/",
               "sourceType": "school-website",
               "capturedAt": "2026-08-04",
-              "pageTitle": "The Six Strands - Alver Valley Schools",
-              "section": "curriculum"
+              "pageTitle": "Anti-Bullying - Alver Valley Schools",
+              "section": "behaviour"
             },
             {
-              "text": "There is now a common language which is focused on developing children\u2019s learning behaviours, working from a starting point of what they can do and targeting the areas for development in a positive, strategic way which children can understand.",
-              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/six-strands/",
+              "text": "Alver Valley Creative Hub",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/anti-bullying/",
               "sourceType": "school-website",
               "capturedAt": "2026-08-04",
-              "pageTitle": "The Six Strands - Alver Valley Schools",
-              "section": "curriculum"
+              "pageTitle": "Anti-Bullying - Alver Valley Schools",
+              "section": "behaviour"
+            },
+            {
+              "text": "Alver Valley Gets Growing",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/anti-bullying/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Anti-Bullying - Alver Valley Schools",
+              "section": "behaviour"
+            },
+            {
+              "text": "Alver Valley School Nursery",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/anti-bullying/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Anti-Bullying - Alver Valley Schools",
+              "section": "behaviour"
             }
           ]
         },
@@ -1471,37 +2229,112 @@
         },
         {
           "area": "community",
-          "score": 20,
-          "confidence": 0.13,
-          "summary": "Limited public evidence for community and parental engagement (1 excerpt; mostly general statements rather than specific provision).",
+          "score": 44,
+          "confidence": 0.76,
+          "summary": "Moderate publicly visible evidence for community and parental engagement (6 specific items). Themes include community, local, parents.",
           "themes": [
+            "community",
             "local",
             "parents"
           ],
           "offerings": [],
           "signals": [
             {
-              "text": "Hampshire\u2019s Local Offer (co-produced with parents, carers and young people) aims to help you find your way through the maze of information to reach the best solutions for you / your child.",
-              "sourceUrl": "https://www.alvervalleyschools.co.uk/send-provision/",
-              "sourceType": "school-website",
+              "text": "At home, work, school or in your local community.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/wp-content/uploads/2020/09/DPT-fivewaypostcards_.pdf",
+              "sourceType": "school-document",
               "capturedAt": "2026-08-04",
-              "pageTitle": "SEND Provision - Alver Valley Schools",
-              "section": "send"
+              "pageTitle": "DPT fivewaypostcards ",
+              "section": "general"
+            },
+            {
+              "text": "At home, work, school or in your local community.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/wp-content/uploads/2020/09/DPT-fivewaypostcards_.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "DPT fivewaypostcards ",
+              "section": "general"
+            },
+            {
+              "text": "At home, work, school or in your local community.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/wp-content/uploads/2020/09/DPT-fivewaypostcards_.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "DPT fivewaypostcards ",
+              "section": "general"
+            },
+            {
+              "text": "At home, work, school or in your local community.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/wp-content/uploads/2020/09/DPT-fivewaypostcards_.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "DPT fivewaypostcards ",
+              "section": "general"
+            },
+            {
+              "text": "At home, work, school or in your local community.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/wp-content/uploads/2020/09/DPT-fivewaypostcards_.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "DPT fivewaypostcards ",
+              "section": "general"
             }
           ]
         }
       ],
       "captureNotes": [
         "Fetched 1 local-news URL(s) but no usable text."
+      ],
+      "documentsDiscovered": 4,
+      "documentsExtracted": 3,
+      "documentInventory": [
+        {
+          "url": "https://www.alvervalleyschools.co.uk/wp-content/uploads/2020/09/DPT-Five-ways2wellbeing-poster-.pdf",
+          "label": "Poster",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.alvervalleyschools.co.uk/curriculum/personal-development/",
+          "pageCount": "1",
+          "charCount": "321",
+          "listItems": "2"
+        },
+        {
+          "url": "https://www.alvervalleyschools.co.uk/wp-content/uploads/2020/09/DPT-fivewaypostcards_.pdf",
+          "label": "Postcards",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.alvervalleyschools.co.uk/curriculum/personal-development/",
+          "pageCount": "10",
+          "charCount": "15049",
+          "listItems": "2"
+        },
+        {
+          "url": "https://www.alvervalleyschools.co.uk/wp-content/uploads/2020/09/DPT-Five-ways-self-help-booklet.pdf",
+          "label": "Booklet",
+          "format": "pdf",
+          "status": "failed",
+          "foundOn": "https://www.alvervalleyschools.co.uk/curriculum/personal-development/"
+        },
+        {
+          "url": "https://www.alvervalleyschools.co.uk/wp-content/uploads/2024/04/SCARF-Long-term-Overview-2023-1.pdf",
+          "label": "long term plan",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.alvervalleyschools.co.uk/curriculum/personal-development/",
+          "pageCount": "1",
+          "charCount": "4538",
+          "listItems": "1"
+        }
       ]
     },
     {
       "urn": "116172",
       "name": "Alver Valley Junior School",
       "assessedAt": "2026-08-04",
-      "engineVersion": "0.4.0",
-      "sourcesScanned": 8,
+      "engineVersion": "0.5.0",
+      "sourcesScanned": 13,
       "sourceTypes": [
+        "school-document",
         "school-website"
       ],
       "areas": [
@@ -1578,15 +2411,80 @@
         },
         {
           "area": "enrichment",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about enrichment and extra-curricular activity from scanned sources.",
+          "score": 79,
+          "confidence": 0.94,
+          "summary": "Strong publicly visible evidence for enrichment and extra-curricular activity (38 specific items). Listed provision includes Absence Reporting & Request, Alver Valley Creative Hub, Alver Valley Gets Growing, Alver Valley School Nursery, Alver Valley Troopers, Anti-Bullying, Arts Council, Before and After School Provision\u2026.",
           "themes": [
+            "after school",
             "art",
-            "award"
+            "club",
+            "clubs",
+            "sport"
           ],
-          "offerings": [],
-          "signals": []
+          "offerings": [
+            "Absence Reporting & Request",
+            "Alver Valley Creative Hub",
+            "Alver Valley Gets Growing",
+            "Alver Valley School Nursery",
+            "Alver Valley Troopers",
+            "Anti-Bullying",
+            "Arts Council",
+            "Before and After School Provision",
+            "Current Vacancies",
+            "Diversity & Inclusion",
+            "EY Network",
+            "Financial Information",
+            "Food and School Meals",
+            "Forest School",
+            "General Data Protection Regulations",
+            "Hampshire School Holidays",
+            "Home and School Partnerships",
+            "Junior School Ofsted Report",
+            "Junior School Performance Table",
+            "Online Payments"
+          ],
+          "signals": [
+            {
+              "text": "Clubs and Sports",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/childcare/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Before and After School Provision - Alver Valley Schools",
+              "section": "enrichment"
+            },
+            {
+              "text": "Absence Reporting & Request",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/childcare/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Before and After School Provision - Alver Valley Schools",
+              "section": "enrichment"
+            },
+            {
+              "text": "Alver Valley Creative Hub",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/childcare/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Before and After School Provision - Alver Valley Schools",
+              "section": "enrichment"
+            },
+            {
+              "text": "Alver Valley Gets Growing",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/childcare/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Before and After School Provision - Alver Valley Schools",
+              "section": "enrichment"
+            },
+            {
+              "text": "Alver Valley School Nursery",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/childcare/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Before and After School Provision - Alver Valley Schools",
+              "section": "enrichment"
+            }
+          ]
         },
         {
           "area": "ethos",
@@ -1624,42 +2522,79 @@
         },
         {
           "area": "behaviour",
-          "score": 54,
-          "confidence": 0.625,
-          "summary": "Moderate publicly visible evidence for behaviour and pastoral care (3 specific items). Listed provision includes health education (pshe).",
+          "score": 91,
+          "confidence": 0.94,
+          "summary": "Strong publicly visible evidence for behaviour and pastoral care (41 specific items). Listed provision includes Absence Reporting & Request, Alver Valley Creative Hub, Alver Valley Gets Growing, Alver Valley School Nursery, Alver Valley Troopers, Anti-Bullying, Arts Council, Before and After School Provision\u2026.",
           "themes": [
+            "anti-bullying",
             "behaviour",
             "positive",
             "respectful",
+            "safeguarding",
             "wellbeing"
           ],
           "offerings": [
-            "health education (pshe)"
+            "Absence Reporting & Request",
+            "Alver Valley Creative Hub",
+            "Alver Valley Gets Growing",
+            "Alver Valley School Nursery",
+            "Alver Valley Troopers",
+            "Anti-Bullying",
+            "Arts Council",
+            "Before and After School Provision",
+            "Current Vacancies",
+            "Connect...",
+            "This Devon Partnership NHS Trust",
+            "Diversity & Inclusion",
+            "EY Network",
+            "Financial Information",
+            "Food and School Meals",
+            "Forest School",
+            "General Data Protection Regulations",
+            "Hampshire School Holidays",
+            "Home and School Partnerships",
+            "Junior School Ofsted Report"
           ],
           "signals": [
             {
-              "text": "For videos and articles about personal development curriculum please see below and https://www.coramlifeeducation.org.uk/family-scarf Personal, Social and Health Education (PSHE); Social, Moral, Spiritual and Cultural education (SMSC); Wellbeing; British Values; and our Six Strands learning behaviours curriculum.",
-              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/personal-development/",
+              "text": "Clubs and Sports",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/anti-bullying/",
               "sourceType": "school-website",
               "capturedAt": "2026-08-04",
-              "pageTitle": "Personal Development - Alver Valley Schools",
-              "section": "curriculum"
+              "pageTitle": "Anti-Bullying - Alver Valley Schools",
+              "section": "behaviour"
             },
             {
-              "text": "The impact on respectful behaviour was so significant, with children, staff and parents all focused and using the language related to the strand after only one term, that we now also use this approach for an additional strand each half term.",
-              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/six-strands/",
+              "text": "Absence Reporting & Request",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/anti-bullying/",
               "sourceType": "school-website",
               "capturedAt": "2026-08-04",
-              "pageTitle": "The Six Strands - Alver Valley Schools",
-              "section": "curriculum"
+              "pageTitle": "Anti-Bullying - Alver Valley Schools",
+              "section": "behaviour"
             },
             {
-              "text": "There is now a common language which is focused on developing children\u2019s learning behaviours, working from a starting point of what they can do and targeting the areas for development in a positive, strategic way which children can understand.",
-              "sourceUrl": "https://www.alvervalleyschools.co.uk/curriculum/six-strands/",
+              "text": "Alver Valley Creative Hub",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/anti-bullying/",
               "sourceType": "school-website",
               "capturedAt": "2026-08-04",
-              "pageTitle": "The Six Strands - Alver Valley Schools",
-              "section": "curriculum"
+              "pageTitle": "Anti-Bullying - Alver Valley Schools",
+              "section": "behaviour"
+            },
+            {
+              "text": "Alver Valley Gets Growing",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/anti-bullying/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Anti-Bullying - Alver Valley Schools",
+              "section": "behaviour"
+            },
+            {
+              "text": "Alver Valley School Nursery",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/anti-bullying/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Anti-Bullying - Alver Valley Schools",
+              "section": "behaviour"
             }
           ]
         },
@@ -1740,81 +2675,215 @@
         },
         {
           "area": "community",
-          "score": 20,
-          "confidence": 0.13,
-          "summary": "Limited public evidence for community and parental engagement (1 excerpt; mostly general statements rather than specific provision).",
+          "score": 44,
+          "confidence": 0.76,
+          "summary": "Moderate publicly visible evidence for community and parental engagement (6 specific items). Themes include community, local, parents.",
           "themes": [
+            "community",
             "local",
             "parents"
           ],
           "offerings": [],
           "signals": [
             {
-              "text": "Hampshire\u2019s Local Offer (co-produced with parents, carers and young people) aims to help you find your way through the maze of information to reach the best solutions for you / your child.",
-              "sourceUrl": "https://www.alvervalleyschools.co.uk/send-provision/",
-              "sourceType": "school-website",
+              "text": "At home, work, school or in your local community.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/wp-content/uploads/2020/09/DPT-fivewaypostcards_.pdf",
+              "sourceType": "school-document",
               "capturedAt": "2026-08-04",
-              "pageTitle": "SEND Provision - Alver Valley Schools",
-              "section": "send"
+              "pageTitle": "DPT fivewaypostcards ",
+              "section": "general"
+            },
+            {
+              "text": "At home, work, school or in your local community.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/wp-content/uploads/2020/09/DPT-fivewaypostcards_.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "DPT fivewaypostcards ",
+              "section": "general"
+            },
+            {
+              "text": "At home, work, school or in your local community.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/wp-content/uploads/2020/09/DPT-fivewaypostcards_.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "DPT fivewaypostcards ",
+              "section": "general"
+            },
+            {
+              "text": "At home, work, school or in your local community.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/wp-content/uploads/2020/09/DPT-fivewaypostcards_.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "DPT fivewaypostcards ",
+              "section": "general"
+            },
+            {
+              "text": "At home, work, school or in your local community.",
+              "sourceUrl": "https://www.alvervalleyschools.co.uk/wp-content/uploads/2020/09/DPT-fivewaypostcards_.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "DPT fivewaypostcards ",
+              "section": "general"
             }
           ]
         }
       ],
       "captureNotes": [
         "Fetched 1 local-news URL(s) but no usable text."
+      ],
+      "documentsDiscovered": 4,
+      "documentsExtracted": 3,
+      "documentInventory": [
+        {
+          "url": "https://www.alvervalleyschools.co.uk/wp-content/uploads/2020/09/DPT-Five-ways2wellbeing-poster-.pdf",
+          "label": "Poster",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.alvervalleyschools.co.uk/curriculum/personal-development/",
+          "pageCount": "1",
+          "charCount": "321",
+          "listItems": "2"
+        },
+        {
+          "url": "https://www.alvervalleyschools.co.uk/wp-content/uploads/2020/09/DPT-fivewaypostcards_.pdf",
+          "label": "Postcards",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.alvervalleyschools.co.uk/curriculum/personal-development/",
+          "pageCount": "10",
+          "charCount": "15049",
+          "listItems": "2"
+        },
+        {
+          "url": "https://www.alvervalleyschools.co.uk/wp-content/uploads/2020/09/DPT-Five-ways-self-help-booklet.pdf",
+          "label": "Booklet",
+          "format": "pdf",
+          "status": "failed",
+          "foundOn": "https://www.alvervalleyschools.co.uk/curriculum/personal-development/"
+        },
+        {
+          "url": "https://www.alvervalleyschools.co.uk/wp-content/uploads/2024/04/SCARF-Long-term-Overview-2023-1.pdf",
+          "label": "long term plan",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://www.alvervalleyschools.co.uk/curriculum/personal-development/",
+          "pageCount": "1",
+          "charCount": "4538",
+          "listItems": "1"
+        }
       ]
     },
     {
       "urn": "116392",
       "name": "Alverstoke Church of England Aided Junior School",
       "assessedAt": "2026-08-04",
-      "engineVersion": "0.4.0",
-      "sourcesScanned": 8,
+      "engineVersion": "0.5.0",
+      "sourcesScanned": 18,
       "sourceTypes": [
+        "school-document",
         "school-website"
       ],
       "areas": [
         {
           "area": "curriculum",
-          "score": 20,
-          "confidence": 0.13,
-          "summary": "Limited public evidence for curriculum (1 excerpt; mostly general statements rather than specific provision).",
+          "score": 94,
+          "confidence": 0.94,
+          "summary": "Strong publicly visible evidence for curriculum (50 specific items). Listed provision includes art, computing, geography, music, Alverstoke Junior School, Comparison of London and Reykjavik, Comparison of Portsmouth and Sao, PE \u2013 Coaching\u2026.",
           "themes": [
-            "ambitious",
-            "balanced",
-            "broad",
-            "challenge",
             "curriculum",
-            "high expectations",
+            "phonics",
             "progress",
             "reading",
+            "science",
+            "stem",
             "writing"
           ],
-          "offerings": [],
+          "offerings": [
+            "art",
+            "computing",
+            "geography",
+            "music",
+            "Alverstoke Junior School",
+            "Comparison of London and Reykjavik",
+            "Comparison of Portsmouth and Sao",
+            "PE \u2013 Coaching",
+            "Saxons and Scots",
+            "More Domino Activities1",
+            "Playing Card Games KS11",
+            "Playing Card Games KS21",
+            "HIAS HOME LEARNING RESOURCE"
+          ],
           "signals": [
             {
-              "text": "Assessment of Learning Assessment at Alverstoke Junior School At Alverstoke Junior School we have adopted the Hampshire model of assessment for tracking attainment and progress in reading, writing and maths.",
-              "sourceUrl": "https://alverstoke-jun.hants.sch.uk/Assessment-of-Learning/",
-              "sourceType": "school-website",
+              "text": "Curriculum overview   whole school: Art \u2013 Andy Goldsworthy, sculpture",
+              "sourceUrl": "https://alverstoke-jun.hants.sch.uk/docs/General/Curriculum_overview_-_whole_school.pdf",
+              "sourceType": "school-document",
               "capturedAt": "2026-08-04",
-              "pageTitle": "Alverstoke Church of England Junior School - Assessment of Learning",
+              "pageTitle": "Curriculum overview   whole school",
+              "section": "curriculum"
+            },
+            {
+              "text": "Curriculum overview   whole school: Art \u2013 Banksy, paint",
+              "sourceUrl": "https://alverstoke-jun.hants.sch.uk/docs/General/Curriculum_overview_-_whole_school.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Curriculum overview   whole school",
+              "section": "curriculum"
+            },
+            {
+              "text": "Curriculum overview   whole school: Art \u2013 Derek Gores, self-portraits collage",
+              "sourceUrl": "https://alverstoke-jun.hants.sch.uk/docs/General/Curriculum_overview_-_whole_school.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Curriculum overview   whole school",
+              "section": "curriculum"
+            },
+            {
+              "text": "Curriculum overview   whole school: Art \u2013 Gaudi, clay sculpture",
+              "sourceUrl": "https://alverstoke-jun.hants.sch.uk/docs/General/Curriculum_overview_-_whole_school.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Curriculum overview   whole school",
+              "section": "curriculum"
+            },
+            {
+              "text": "Curriculum overview   whole school: Art \u2013 Henri Matisse, paint colour",
+              "sourceUrl": "https://alverstoke-jun.hants.sch.uk/docs/General/Curriculum_overview_-_whole_school.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Curriculum overview   whole school",
               "section": "curriculum"
             }
           ]
         },
         {
           "area": "enrichment",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about enrichment and extra-curricular activity from scanned sources.",
-          "themes": [
-            "art",
-            "festival",
-            "participate",
-            "sport"
+          "score": 33,
+          "confidence": 0.52,
+          "summary": "Limited publicly visible evidence for enrichment and extra-curricular activity (2 specific items). Listed provision includes More Domino Activities, Windows:.",
+          "themes": [],
+          "offerings": [
+            "More Domino Activities",
+            "Windows:"
           ],
-          "offerings": [],
-          "signals": []
+          "signals": [
+            {
+              "text": "More Domino Activities1: More Domino Activities",
+              "sourceUrl": "https://alverstoke-jun.hants.sch.uk/docs/maths_home_learning/More_Domino_Activities1.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "More Domino Activities1",
+              "section": "enrichment"
+            },
+            {
+              "text": "More Domino Activities1: Windows:",
+              "sourceUrl": "https://alverstoke-jun.hants.sch.uk/docs/maths_home_learning/More_Domino_Activities1.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "More Domino Activities1",
+              "section": "enrichment"
+            }
+          ]
         },
         {
           "area": "ethos",
@@ -1867,12 +2936,32 @@
         },
         {
           "area": "send",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about SEND and inclusion from scanned sources.",
-          "themes": [],
+          "score": 29,
+          "confidence": 0.58,
+          "summary": "Limited publicly visible evidence for SEND and inclusion (2 specific items). Themes include sen, send.",
+          "themes": [
+            "sen",
+            "send"
+          ],
           "offerings": [],
-          "signals": []
+          "signals": [
+            {
+              "text": "Once you are able to go outside email FoundationStones@Big-Ideas.org for the postal address and send your safely packaged Foundation Stones to be included in the foundations of the Memorial.",
+              "sourceUrl": "https://alverstoke-jun.hants.sch.uk/docs/art_home_learning/Foundation-Stones-at-Home.pdf",
+              "sourceType": "school-document",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Foundation Stones at Home",
+              "section": "general"
+            },
+            {
+              "text": "https://www.stem.org.uk/primary-science SEND A collection of games and resources designed for a range of educational needs and stages.",
+              "sourceUrl": "https://alverstoke-jun.hants.sch.uk/Home-Blended-learning/",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Alverstoke Church of England Junior School - Home Blended Learning",
+              "section": "curriculum"
+            }
+          ]
         },
         {
           "area": "community",
@@ -1900,31 +2989,258 @@
       ],
       "captureNotes": [
         "No URLs discovered for local-news."
+      ],
+      "documentsDiscovered": 27,
+      "documentsExtracted": 8,
+      "documentInventory": [
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/General/Concept_coverage.pdf",
+          "label": "Curriculum Concept coverage",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Our-Curriculum",
+          "pageCount": "1",
+          "charCount": "1754",
+          "listItems": "0"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/General/Curriculum_overview_-_whole_school.pdf",
+          "label": "Curriculum overview whole school",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Our-Curriculum",
+          "pageCount": "2",
+          "charCount": "5073",
+          "listItems": "40"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/General/French_lessons_at_Alverstoke_Juniors_starting_Sept_2025.pdf",
+          "label": "Flyer",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Wider-Curriculum-Opportunities"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/General/Alverstoke_Junior_School_Sept_26docx.pdf",
+          "label": "Flyer",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Wider-Curriculum-Opportunities"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/General/2019_04_02-ALVERSTOKE-SCHOOL-DIGITAL-ARCHIVE.pdf",
+          "label": "2019_04_02-ALVERSTOKE-SCHOOL-DIGITAL-ARCHIVE.pdf",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/About-Alverstoke"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/General/Class-Photographs-1946-1950.pdf",
+          "label": "Class-Photographs-1946-1950.pdf",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/About-Alverstoke"
+        },
+        {
+          "url": "https://www.alverstoke-jun.hants.sch.uk/wp-content/uploads/2020/05/What-is-a-Church-School-March-16.pdf",
+          "label": "What is a Church School",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Admissions"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/governors/AJS_Governor_Attendance_Archive_2024_25__002_.pdf",
+          "label": "AJS Governor Attendance Archive 2024 25 002",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Governors"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/governors/AJS_Pecuniary_Interest_May_2026__1_.pdf",
+          "label": "AJS Pecuniary Interest May 2026 1",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Governors"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/governors/Instrument_of_Government_Alverstoke_CE__Aided__Junior_School.pdf",
+          "label": "Instrument of Government Alverstoke CE Aided Junior School",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Governors"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/governors/Terms_of_Reference_-_GB_2025_26.pdf",
+          "label": "Terms of Reference GB 2025 26",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Governors"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/home_blended_learning/Online_Teaching_and_Learning_Policy_Jan_2024_28.pdf",
+          "label": "Online Teaching and Learning Policy Jan 2024 28",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Home-Blended-learning"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/art_home_learning/Foundation-Stones-at-Home.pdf",
+          "label": "Foundation Stones at Home",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Home-Blended-learning",
+          "pageCount": "2",
+          "charCount": "4880",
+          "listItems": "1"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/art_home_learning/Make-a-family-cross.pdf",
+          "label": "Make a family cross",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Home-Blended-learning",
+          "pageCount": "4",
+          "charCount": "1382",
+          "listItems": "2"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/art_home_learning/Perfect-picture-Kandinsky.pdf",
+          "label": "Perfect picture Kandinsky",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Home-Blended-learning",
+          "pageCount": "1",
+          "charCount": "843",
+          "listItems": "1"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/art_home_learning/Standing-Together-stamp-activity.pdf",
+          "label": "Standing Together stamp activity",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Home-Blended-learning"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/english_home_learning/Bank_of_writing_ideas_-_lower_KS2_updated1.pdf",
+          "label": "Bank of writing ideas lower KS2 updated1",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Home-Blended-learning"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/english_home_learning/Bank_of_writing_ideas_-_upper_KS21.pdf",
+          "label": "Bank of writing ideas upper KS21",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Home-Blended-learning"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/english_home_learning/Menu_of_reading_response_ideas_KS21.pdf",
+          "label": "Menu of reading response ideas KS21",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Home-Blended-learning",
+          "pageCount": "4",
+          "charCount": "4424",
+          "listItems": "2"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/maths_home_learning/Domino_activities_1.pdf",
+          "label": "Domino activities 1",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Home-Blended-learning",
+          "pageCount": "1",
+          "charCount": "740",
+          "listItems": "0"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/maths_home_learning/Dominos_-_basic_game1.pdf",
+          "label": "Dominos basic game1",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Home-Blended-learning"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/maths_home_learning/More_Domino_Activities1.pdf",
+          "label": "More Domino Activities1",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Home-Blended-learning",
+          "pageCount": "2",
+          "charCount": "2081",
+          "listItems": "2"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/maths_home_learning/Playing_Card_Games_KS11.pdf",
+          "label": "Playing Card Games KS11",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Home-Blended-learning"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/maths_home_learning/Playing_Card_Games_KS21.pdf",
+          "label": "Playing Card Games KS21",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Home-Blended-learning"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/maths_home_learning/Snakes_and_Ladders_1.pdf",
+          "label": "Snakes and Ladders 1",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Home-Blended-learning"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/music_home_learning/Keep-Calm-and-Make-Music-Weekly-Wonder-for-KS1-and-Lower-KS2-Find-it-Make-it-Play-it.pptx",
+          "label": "Keep Calm and Make Music Weekly Wonder for KS1 and Lower KS2 Find it Make it Play it.pptx",
+          "format": "pptx",
+          "status": "unsupported_format",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Home-Blended-learning"
+        },
+        {
+          "url": "https://alverstoke-jun.hants.sch.uk/docs/music_home_learning/Keep-Calm-and-Make-Music-Weekly-Wonder-for-Upper-KS2-Find-it-Make-it-Play-it.pptx",
+          "label": "Keep Calm and Make Music Weekly Wonder for Upper KS2 Find it Make it Play it.pptx",
+          "format": "pptx",
+          "status": "unsupported_format",
+          "foundOn": "https://alverstoke-jun.hants.sch.uk/Home-Blended-learning"
+        }
       ]
     },
     {
       "urn": "116169",
       "name": "Alverstoke Community Infant and Pre-School",
       "assessedAt": "2026-08-04",
-      "engineVersion": "0.4.0",
-      "sourcesScanned": 8,
+      "engineVersion": "0.5.0",
+      "sourcesScanned": 18,
       "sourceTypes": [
+        "school-document",
         "school-website"
       ],
       "areas": [
         {
           "area": "curriculum",
-          "score": 94,
+          "score": 100,
           "confidence": 0.94,
-          "summary": "Strong publicly visible evidence for curriculum (57 specific items). Listed provision includes COVID Risk Assessment, Contact Details, Cool Milk, Data Protection, E-Safety, Extra Curricular Offers, Friends of Alverstoke, Home Link Support\u2026. 20 items corroborated across multiple pages.",
+          "summary": "Strong publicly visible evidence for curriculum (151 specific items). Listed provision includes computing, art, athletics, tennis, dance, geography, music, gymnastics\u2026. 19 items corroborated across multiple pages.",
           "themes": [
             "curriculum",
             "phonics",
             "reading",
             "science",
+            "stem",
             "writing"
           ],
           "offerings": [
+            "computing",
+            "art",
+            "athletics",
+            "tennis",
+            "dance",
+            "geography",
+            "music",
+            "gymnastics",
             "COVID Risk Assessment",
             "Contact Details",
             "Cool Milk",
@@ -1936,55 +3252,47 @@
             "Job Vacancies",
             "Learning Characters",
             "Lunch Menus",
-            "Ofsted Report",
-            "Online Payments",
-            "PE and Sports Funding",
-            "Pre-School",
-            "Pupil Premium",
-            "Safeguarding Support",
-            "School Council",
-            "School Development Plan",
-            "School Performance Tables"
+            "Ofsted Report"
           ],
           "signals": [
             {
-              "text": "Our Learning Characters: COVID Risk Assessment",
-              "sourceUrl": "https://alverstokeinfant.co.uk/children/learning-characters/",
-              "sourceType": "school-website",
+              "text": "Year 1 Curriculum Plan 2022 2023: Roots, Stems, Leaves",
+              "sourceUrl": "https://alverstokeinfant.co.uk/wp-content/uploads/Year-1-Curriculum-Plan-2022-2023.pdf",
+              "sourceType": "school-document",
               "capturedAt": "2026-08-04",
-              "pageTitle": "Learning Characters | Alverstoke Infant School",
+              "pageTitle": "Year 1 Curriculum Plan 2022 2023",
               "section": "curriculum"
             },
             {
-              "text": "Our Learning Characters: Contact Details",
-              "sourceUrl": "https://alverstokeinfant.co.uk/children/learning-characters/",
-              "sourceType": "school-website",
+              "text": "Year 1 Curriculum Plan 2023 2024: Roots, Stems, Leaves and",
+              "sourceUrl": "https://alverstokeinfant.co.uk/wp-content/uploads/Year-1-Curriculum-Plan-2023-2024.pdf",
+              "sourceType": "school-document",
               "capturedAt": "2026-08-04",
-              "pageTitle": "Learning Characters | Alverstoke Infant School",
+              "pageTitle": "Year 1 Curriculum Plan 2023 2024",
               "section": "curriculum"
             },
             {
-              "text": "Our Learning Characters: Cool Milk",
-              "sourceUrl": "https://alverstokeinfant.co.uk/children/learning-characters/",
-              "sourceType": "school-website",
+              "text": "Year 1 Curriculum Plan 2024 2025: Roots, Stems, Leaves and",
+              "sourceUrl": "https://alverstokeinfant.co.uk/wp-content/uploads/Year-1-Curriculum-Plan-2024-2025.pdf",
+              "sourceType": "school-document",
               "capturedAt": "2026-08-04",
-              "pageTitle": "Learning Characters | Alverstoke Infant School",
+              "pageTitle": "Year 1 Curriculum Plan 2024 2025",
               "section": "curriculum"
             },
             {
-              "text": "Our Learning Characters: Data Protection",
-              "sourceUrl": "https://alverstokeinfant.co.uk/children/learning-characters/",
-              "sourceType": "school-website",
+              "text": "Year 1 Curriculum Plan 2022 2023: Ready, Steady Sow,",
+              "sourceUrl": "https://alverstokeinfant.co.uk/wp-content/uploads/Year-1-Curriculum-Plan-2022-2023.pdf",
+              "sourceType": "school-document",
               "capturedAt": "2026-08-04",
-              "pageTitle": "Learning Characters | Alverstoke Infant School",
+              "pageTitle": "Year 1 Curriculum Plan 2022 2023",
               "section": "curriculum"
             },
             {
-              "text": "Our Learning Characters: E-Safety",
-              "sourceUrl": "https://alverstokeinfant.co.uk/children/learning-characters/",
-              "sourceType": "school-website",
+              "text": "Year 1 Curriculum Plan 2023 2024: Ready, Steady Sow,",
+              "sourceUrl": "https://alverstokeinfant.co.uk/wp-content/uploads/Year-1-Curriculum-Plan-2023-2024.pdf",
+              "sourceType": "school-document",
               "capturedAt": "2026-08-04",
-              "pageTitle": "Learning Characters | Alverstoke Infant School",
+              "pageTitle": "Year 1 Curriculum Plan 2023 2024",
               "section": "curriculum"
             }
           ]
@@ -2232,29 +3540,142 @@
       ],
       "captureNotes": [
         "No URLs discovered for local-news."
+      ],
+      "documentsDiscovered": 12,
+      "documentsExtracted": 8,
+      "documentInventory": [
+        {
+          "url": "https://alverstokeinfant.co.uk/wp-content/uploads/10-facts-about-the-governing-body-1.pdf",
+          "label": "10 facts about the governing body",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstokeinfant.co.uk/about-us/our-governors/"
+        },
+        {
+          "url": "https://alverstokeinfant.co.uk/wp-content/uploads/Alverstoke-Infant-School-Pecuniary-Interest-2025.26-1.pdf",
+          "label": "Alverstoke Infant School Pecuniary Interest 2025.26",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstokeinfant.co.uk/about-us/our-governors/"
+        },
+        {
+          "url": "https://alverstokeinfant.co.uk/wp-content/uploads/Alverstoke-Infant-School-FGB-Archive-Attendance-Sept-25.pdf",
+          "label": "Alverstoke Infant School FGB Archive Attendance Sept 25",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstokeinfant.co.uk/about-us/our-governors/"
+        },
+        {
+          "url": "https://alverstokeinfant.co.uk/wp-content/uploads/Child-Protection-Policy-2024.25-1.pdf",
+          "label": "Child Protection Policy 2024.25",
+          "format": "pdf",
+          "status": "discovered",
+          "foundOn": "https://alverstokeinfant.co.uk/parents/safeguarding-support/"
+        },
+        {
+          "url": "https://alverstokeinfant.co.uk/wp-content/uploads/Year-2-Curriculum-Plan-2024-2025.pdf",
+          "label": "Year 2 Curriculum Plan 2024-2025",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://alverstokeinfant.co.uk/key-information/curriculum/",
+          "pageCount": "5",
+          "charCount": "8701",
+          "listItems": "15"
+        },
+        {
+          "url": "https://alverstokeinfant.co.uk/wp-content/uploads/Year-2-Curriculum-overview-2022-2023.pdf",
+          "label": "Year 2 Curriculum overview 2022-2023",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://alverstokeinfant.co.uk/key-information/curriculum/",
+          "pageCount": "3",
+          "charCount": "2601",
+          "listItems": "9"
+        },
+        {
+          "url": "https://alverstokeinfant.co.uk/wp-content/uploads/Year-1-Curriculum-Plan-2024-2025.pdf",
+          "label": "Year 1 Curriculum Plan 2024-2025",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://alverstokeinfant.co.uk/key-information/curriculum/",
+          "pageCount": "6",
+          "charCount": "8832",
+          "listItems": "17"
+        },
+        {
+          "url": "https://alverstokeinfant.co.uk/wp-content/uploads/Year-1-Curriculum-Plan-2023-2024.pdf",
+          "label": "Year 1 Curriculum Plan 2023-2024",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://alverstokeinfant.co.uk/key-information/curriculum/",
+          "pageCount": "7",
+          "charCount": "9004",
+          "listItems": "18"
+        },
+        {
+          "url": "https://alverstokeinfant.co.uk/wp-content/uploads/Year-1-Curriculum-Plan-2022-2023.pdf",
+          "label": "Year 1 Curriculum Plan 2022-2023",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://alverstokeinfant.co.uk/key-information/curriculum/",
+          "pageCount": "4",
+          "charCount": "5915",
+          "listItems": "17"
+        },
+        {
+          "url": "https://alverstokeinfant.co.uk/wp-content/uploads/Year-R-Curriculum-overview-2024-2025.pdf",
+          "label": "Year R Curriculum overview 2024-2025",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://alverstokeinfant.co.uk/key-information/curriculum/",
+          "pageCount": "4",
+          "charCount": "7185",
+          "listItems": "8"
+        },
+        {
+          "url": "https://alverstokeinfant.co.uk/wp-content/uploads/Year-R-Curriculum-overview-2023-2024-1.pdf",
+          "label": "Year R Curriculum overview 2023-2024",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://alverstokeinfant.co.uk/key-information/curriculum/",
+          "pageCount": "4",
+          "charCount": "7117",
+          "listItems": "8"
+        },
+        {
+          "url": "https://alverstokeinfant.co.uk/wp-content/uploads/Year-R-Curriculum-overview-2022-2023.pdf",
+          "label": "Year R Curriculum overview 2022-2023",
+          "format": "pdf",
+          "status": "extracted",
+          "foundOn": "https://alverstokeinfant.co.uk/key-information/curriculum/",
+          "pageCount": "2",
+          "charCount": "4535",
+          "listItems": "2"
+        }
       ]
     },
     {
       "urn": "137535",
       "name": "Amery Hill School",
       "assessedAt": "2026-08-04",
-      "engineVersion": "0.4.0",
-      "sourcesScanned": 7,
+      "engineVersion": "0.5.0",
+      "sourcesScanned": 10,
       "sourceTypes": [
         "school-website"
       ],
       "areas": [
         {
           "area": "curriculum",
-          "score": 61,
+          "score": 65,
           "confidence": 0.745,
-          "summary": "Moderate publicly visible evidence for curriculum (8 specific items). Listed provision includes science (either double.",
+          "summary": "Strong publicly visible evidence for curriculum (9 specific items). Listed provision includes science (either double.",
           "themes": [
             "broad",
             "curriculum",
             "gcse",
             "key stage",
             "options",
+            "progress",
             "science",
             "subjects"
           ],
@@ -2306,14 +3727,17 @@
         },
         {
           "area": "enrichment",
-          "score": 48,
-          "confidence": 0.565,
-          "summary": "Moderate publicly visible evidence for enrichment and extra-curricular activity (2 specific items). Listed provision includes science (either double.",
+          "score": 69,
+          "confidence": 0.685,
+          "summary": "Strong publicly visible evidence for enrichment and extra-curricular activity (4 specific items). Listed provision includes science (either double.",
           "themes": [
             "award",
+            "competition",
             "extra-curricular",
+            "music",
             "opportunities",
-            "trip"
+            "trip",
+            "visit"
           ],
           "offerings": [
             "science (either double"
@@ -2334,17 +3758,45 @@
               "capturedAt": "2026-08-04",
               "pageTitle": "Extra-curricular Activities - Amery Hill School",
               "section": "enrichment"
+            },
+            {
+              "text": "Our inclusive ethos ensures that all students can be accommodated in both curricular and extra-curricular activities, including educational trips and visits.",
+              "sourceUrl": "https://www.ameryhill.hants.sch.uk/177/send-student-hub",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "SEND Student Hub - Amery Hill School",
+              "section": "send"
+            },
+            {
+              "text": "To top off a truly wonderful evening, attendees were treated to showcase performances from the hugely talented winners and runners up of this year\u2019s Musician of the Year competition, highlighting the extraordinary depth of musical skill within our school community.",
+              "sourceUrl": "https://www.ameryhill.hants.sch.uk/193/latest-news/post/180/summer-music-concert",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Summer Music Concert - Summer Music Concert - Latest News - Amery Hill School",
+              "section": "enrichment"
             }
           ]
         },
         {
           "area": "ethos",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about ethos and values from scanned sources.",
-          "themes": [],
+          "score": 20,
+          "confidence": 0.13,
+          "summary": "Limited public evidence for ethos and values (1 excerpt; mostly general statements rather than specific provision).",
+          "themes": [
+            "ethos",
+            "inclusive"
+          ],
           "offerings": [],
-          "signals": []
+          "signals": [
+            {
+              "text": "Our inclusive ethos ensures that all students can be accommodated in both curricular and extra-curricular activities, including educational trips and visits.",
+              "sourceUrl": "https://www.ameryhill.hants.sch.uk/177/send-student-hub",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "SEND Student Hub - Amery Hill School",
+              "section": "send"
+            }
+          ]
         },
         {
           "area": "behaviour",
@@ -2386,17 +3838,34 @@
         },
         {
           "area": "community",
-          "score": 0,
-          "confidence": 0.05,
-          "summary": "Little public evidence found about community and parental engagement from scanned sources.",
-          "themes": [],
-          "offerings": [],
-          "signals": []
+          "score": 30,
+          "confidence": 0.17,
+          "summary": "Concrete community and parental engagement details found on the school website. Listed provision includes music.",
+          "themes": [
+            "families",
+            "together"
+          ],
+          "offerings": [
+            "music"
+          ],
+          "signals": [
+            {
+              "text": "Latest News Summer Music Concert Our recent summer music concert was a resounding success, bringing together students, staff, and families for a brilliant evening celebrating our young musicians' incredible talent.",
+              "sourceUrl": "https://www.ameryhill.hants.sch.uk/193/latest-news/post/180/summer-music-concert",
+              "sourceType": "school-website",
+              "capturedAt": "2026-08-04",
+              "pageTitle": "Summer Music Concert - Summer Music Concert - Latest News - Amery Hill School",
+              "section": "enrichment"
+            }
+          ]
         }
       ],
       "captureNotes": [
         "Fetched 4 local-news URL(s) but no usable text."
-      ]
+      ],
+      "documentsDiscovered": 0,
+      "documentsExtracted": 0,
+      "documentInventory": []
     }
   ],
   "stats": {
@@ -2404,6 +3873,7 @@
     "withWebsite": 12,
     "adapters": [
       "school-website",
+      "school-document",
       "local-news"
     ]
   }
