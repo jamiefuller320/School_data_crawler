@@ -1,0 +1,374 @@
+:root {
+  --bg: #f4f6f2;
+  --surface: #ffffff;
+  --ink: #1c2430;
+  --muted: #5a6575;
+  --accent: #2a5c4a;
+  --accent-soft: #e8f2ec;
+  --border: #d5dde6;
+  --radius: 12px;
+  --shadow: 0 6px 24px rgba(28, 36, 48, 0.07);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.55;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+header {
+  background: linear-gradient(145deg, #1c2430, #2a5c4a);
+  color: #fff;
+  padding: 2rem 1.25rem 1.5rem;
+}
+
+header h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.75rem;
+}
+
+header p {
+  margin: 0;
+  max-width: 46rem;
+  opacity: 0.94;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 0.75rem;
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 0.82rem;
+}
+
+.badge-link {
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.disclaimer {
+  background: #fff8e8;
+  border: 1px solid #ecd9b0;
+  color: #6b4f12;
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.92rem;
+}
+
+.pilot-insights {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.pilot-insights h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.1rem;
+}
+
+.pilot-insights h3 {
+  margin: 1rem 0 0.35rem;
+  font-size: 0.95rem;
+}
+
+.lede,
+.muted {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+.stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.65rem 0.75rem;
+}
+
+.stat .label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.stat .value {
+  font-size: 1.35rem;
+  font-weight: 650;
+  color: var(--accent);
+}
+
+.controls {
+  display: flex;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.controls input,
+.controls select {
+  font: inherit;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.controls input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: border-color 0.15s;
+}
+
+.card:hover,
+.card:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.card h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.cov-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.55rem;
+}
+
+.cov-pill,
+.cov-badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.12rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.cov-rich {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.cov-some {
+  background: #eef3fa;
+  color: #2d4a66;
+}
+
+.cov-thin,
+.cov-none {
+  background: #f0f0f0;
+  color: var(--muted);
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+.chip {
+  display: inline-block;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.78rem;
+}
+
+.chip-learned {
+  background: #eef0ff;
+  color: #3a4080;
+}
+
+.chip-theme {
+  background: #f5efe8;
+  color: #6b4a2a;
+}
+
+.detail {
+  margin-top: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.detail.hidden {
+  display: none;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.detail-header h2 {
+  margin: 0;
+}
+
+.close-btn {
+  border: 1px solid var(--border);
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 0.35rem 0.65rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+.detail-lede {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin: 0 0 1rem;
+}
+
+.area-evidence {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.area-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.area-head h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.area-summary {
+  margin: 0.5rem 0 0.65rem;
+  font-size: 0.98rem;
+}
+
+.offerings {
+  margin-bottom: 0.65rem;
+  font-size: 0.9rem;
+}
+
+.offerings-label {
+  color: var(--muted);
+  margin-right: 0.35rem;
+}
+
+.sources-toggle {
+  border: 1px solid var(--border);
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 0.35rem 0.75rem;
+  font: inherit;
+  cursor: pointer;
+  font-size: 0.88rem;
+}
+
+.sources-body {
+  margin-top: 0.65rem;
+}
+
+.source-group {
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.35rem 0.65rem;
+  background: #fafbfc;
+}
+
+.source-group summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.source-list {
+  margin: 0.5rem 0 0.25rem;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+}
+
+.source-list blockquote {
+  margin: 0.35rem 0 0.5rem;
+  padding-left: 0.65rem;
+  border-left: 3px solid var(--accent);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 2rem 0;
+}
+
+footer {
+  max-width: 920px;
+  margin: 2rem auto 1.5rem;
+  padding: 0 1.25rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .detail-header {
+    flex-direction: column;
+  }
+}

@@ -9,3 +9,4 @@ output/
 dist/
 build/
 .DS_Store
+handover/comparison-tool-patches-v2/

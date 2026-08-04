@@ -272,12 +272,16 @@ A static viewer for pilot results lives in `docs/`:
 # Re-run pilot and publish JSON to docs/data/
 ./scripts/publish-pilot.sh
 
-# Or copy existing output without re-capturing
-cp output/pilot-qualitative-capture.json docs/data/qualitative-capture.json
+# Publish evidence prototype (paragraph + sources UI)
+./scripts/publish-evidence-prototype.sh
 ```
 
-After pushing to `main`, GitHub Actions deploys to Pages:
+**Evidence prototype:** `docs/evidence/` — paragraph summaries, expandable sources, discovery lexicon (learned URL terms). Legacy score-based viewer: `docs/index.html`.
+
+After pushing to `main`, GitHub Pages deploys to:
 **https://jamiefuller320.github.io/School_data_crawler/**
+
+Prototype URL: **https://jamiefuller320.github.io/School_data_crawler/evidence/**
 
 Enable **Settings → Pages → Source: GitHub Actions** on first deploy.
 
