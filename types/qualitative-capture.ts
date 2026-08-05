@@ -39,6 +39,10 @@ export interface SubjectAreaAssessment {
   themes: string[];
   /** Concrete listable items: clubs, subjects, wraparound care, etc. */
   offerings?: string[];
+  /** Parent-facing paragraph with optional [n] citation markers. */
+  narrativeSummary?: string | null;
+  /** How narrativeSummary was produced. */
+  synthesisMethod?: "deterministic" | "llm" | null;
   signals: QualitativeSignal[];
 }
 

@@ -59,6 +59,7 @@
         "listItems": { "type": "string" }
       }
     },
+    "SubjectAreaAssessment": {
       "type": "object",
       "required": ["area", "score", "confidence", "summary", "themes", "signals"],
       "properties": {
@@ -77,6 +78,8 @@
         "summary": { "type": "string" },
         "themes": { "type": "array", "items": { "type": "string" } },
         "offerings": { "type": "array", "items": { "type": "string" } },
+        "narrativeSummary": { "type": "string" },
+        "synthesisMethod": { "enum": ["deterministic", "llm"] },
         "signals": {
           "type": "array",
           "items": { "$ref": "#/$defs/QualitativeSignal" }

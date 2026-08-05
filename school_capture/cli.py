@@ -20,6 +20,7 @@ from school_capture.index_loader import (  # noqa: E402
     resolve_comparison_tool_index,
 )
 from school_capture.learned_terms import load_learned_terms, save_learned_terms  # noqa: E402
+from school_capture.models import QualitativeCaptureIndex, SchoolInput, today_iso  # noqa: E402
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -90,6 +91,16 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Disable hub-and-spoke discovery (homepage links only)",
     )
+    p.add_argument(
+        "--synthesize",
+        action="store_true",
+        help="Generate parent-facing narrative summaries (LLM when OPENAI_API_KEY is set)",
+    )
+    p.add_argument(
+        "--synthesize-model",
+        default="gpt-4o-mini",
+        help="OpenAI model for --synthesize (default: gpt-4o-mini)",
+    )
     return p
 
 
@@ -150,7 +161,16 @@ def main(argv: list[str] | None = None) -> int:
     records = []
     for school in schools:
         print(f"Capturing {school.urn} {school.name}...", file=sys.stderr)
-        records.append(engine.capture_school(school))
+        record = engine.capture_school(school)
+        if args.synthesize:
+            from school_capture.analysis.synthesis import synthesize_record
+
+            record = synthesize_record(
+                record,
+                use_llm=True,
+                model=args.synthesize_model,
+            )
+        records.append(record)
 
     if engine.learned_terms is not None and not args.no_learned_terms:
         save_learned_terms(engine.learned_terms, args.learned_terms)

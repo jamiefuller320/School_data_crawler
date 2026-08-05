@@ -25,7 +25,7 @@ class SourceType(str, Enum):
     OTHER = "other"
 
 
-ENGINE_VERSION = "0.5.0"
+ENGINE_VERSION = "0.6.0"
 
 
 @dataclass
@@ -55,9 +55,11 @@ class SubjectAreaAssessment:
     themes: list[str] = field(default_factory=list)
     offerings: list[str] = field(default_factory=list)
     signals: list[QualitativeSignal] = field(default_factory=list)
+    narrativeSummary: str | None = None
+    synthesisMethod: str | None = None
 
     def to_dict(self) -> dict[str, Any]:
-        return {
+        out: dict[str, Any] = {
             "area": self.area,
             "score": self.score,
             "confidence": round(self.confidence, 3),
@@ -66,6 +68,11 @@ class SubjectAreaAssessment:
             "offerings": self.offerings,
             "signals": [s.to_dict() for s in self.signals],
         }
+        if self.narrativeSummary:
+            out["narrativeSummary"] = self.narrativeSummary
+        if self.synthesisMethod:
+            out["synthesisMethod"] = self.synthesisMethod
+        return out
 
 
 @dataclass
