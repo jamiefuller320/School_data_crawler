@@ -2,7 +2,33 @@
 
 School contact capture and visit-pack UI live in **two repos**. This repo (`School_data_crawler`) produces the `contactCapture` sidecar; **Comparison-tool** displays it and should preserve `telephone` from the DfE harvest.
 
-## Quick apply
+## Comparison-tool handover
+
+School contact capture, qualitative website evidence, and visit-pack UI integrate into **Comparison-tool**. This repo produces sidecars; Comparison-tool displays them.
+
+### Monorepo migration (v0.6.0)
+
+Apply the latest patch (school capture + LLM synthesis + Website evidence UI):
+
+```bash
+cd /path/to/Comparison-tool
+git checkout -b cursor/school-capture-monorepo-f652
+git apply /path/to/School_data_crawler/handover/comparison-tool-patches/0001-Add-school-capture-monorepo*.patch
+pip install -r requirements-data.txt
+npm run test:qualitative-evidence
+```
+
+Or cherry-pick / push branch `cursor/school-capture-monorepo-f652` if already created locally.
+
+Enrichment from Comparison-tool root:
+
+```bash
+python3 scripts/enrich-qualitative.py --la Hampshire --require-website --limit 12
+python3 scripts/enrich-qualitative.py --la Hampshire --limit 12 --synthesize  # OPENAI_API_KEY
+python3 scripts/enrich-contacts.py --la Hampshire --require-website --limit 12
+```
+
+## Quick apply (visit-pack contacts — already on Comparison-tool main)
 
 ```bash
 # From School_data_crawler root, with Comparison-tool cloned alongside or anywhere:

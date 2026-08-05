@@ -15,7 +15,9 @@ The engine scans mixed public sources — school websites, local news positively
 
 Every judgement is backed by **verifiable excerpts** with `sourceUrl` footnotes — the same provenance pattern as School Compass inspection précis.
 
-> **Experimental** — heuristic lexicon scoring, not LLM paraphrase. Scores reflect *public evidence richness*, not school quality rankings. Treat as research input until parent UX is designed.
+> **Experimental** — heuristic capture with optional LLM narrative synthesis (`--synthesize`). Scores reflect *public evidence richness*, not school quality rankings. Treat as research input until parent UX is designed.
+
+**Canonical home:** the engine now lives in [Comparison-tool](https://github.com/jamiefuller320/Comparison-tool) under `tools/school-capture/`. This repo remains the prototype / evidence viewer; apply `handover/comparison-tool-patches/0001-Add-school-capture-monorepo*.patch` to land the monorepo integration.
 
 ## Architecture
 
@@ -29,7 +31,8 @@ school_capture/
 │   └── social.py            # Discover public social links from homepage
 └── analysis/
     ├── lexicons.py          # Theme keywords per subject area
-    └── assessor.py          # Value judgements + confidence scores
+    ├── assessor.py          # Value judgements + confidence scores
+    └── synthesis.py         # Parent-facing narratives (LLM + deterministic fallback)
 
 output/
 └── qualitative-capture.json # Batch sidecar index
